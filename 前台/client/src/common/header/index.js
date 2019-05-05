@@ -21,7 +21,7 @@ import {
 } from './style.js'
 class Header extends Component {
     getListArea() {
-        const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage,handleChangePages } = this.props;
+        const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage, handleSearch } = this.props;
         const newList = list.toJS();//List是一个immutable对象，转换为js数组
         const pageList = [];
         if (newList.length) {
@@ -31,7 +31,6 @@ class Header extends Component {
                 )
             }
         }
-        console.log(pageList);
         if (focused || mouseIn) {
             return (
                 <SearchInfo
@@ -44,8 +43,12 @@ class Header extends Component {
                         ><i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i>
                             换一批</SearChInfoSwitch>
                     </SearchInfoTitle>
-                    <SearchInfoList onClick={()=>handleChangePages(page,totalPage)}>
-                        {pageList}
+                    <SearchInfoList >
+                        {
+                            pageList.map((item, index) => (
+                                <li key={index} onClick={() => handleSearch(item)}>{item}</li>
+                            ))
+                        }
                     </SearchInfoList>
                 </SearchInfo>
             )
@@ -130,10 +133,13 @@ const mapDispathToProps = (dispatch) => {
         handleMouseLeave() {
             dispatch(actionCreators.mouseLeave());
         },
-        handleChangePages(page,totalPage){
-            if(page<totalPage){
-                dispatch(actionCreators.changePage(page+1));
-            }else{
+        handleSearch(item){
+            dispatch(actionCreators.searchItem(item));
+        },
+        handleChangePages(page, totalPage) {
+            if (page < totalPage) {
+                dispatch(actionCreators.changePage(page + 1));
+            } else {
                 dispatch(actionCreators.changePage(1));
             }
         },

@@ -31,7 +31,8 @@ router.get("/home", (req, res) => {
             if (!topicList) {
                 return res.status(404).json("没有任何内容")
             }
-            result.data.topicList = topicList;
+            console.log(topicList);
+         result.data.topicList = topicList;
         }).catch(err => res.status(404).json(err));
     ArticleList.find()
         .then(articleList => {

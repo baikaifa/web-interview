@@ -22,10 +22,20 @@ export const changePage = (page) =>({
     type:constants.CHANGE_PAGE,
     page
 })
+export const searchItem =(item)=>{
+    // type:constants.SEARCH_ITEM
+    return (dispatch)=>{
+        console.log(item.props.children);
+        axios.post('/api/headerList/search',item.props.children).then((res)=>{
+            console.log(res.data);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+}
 export const getList = () => {
     return (dispatch) => {
         axios.get('/api/headerList/headerList').then((res) => {
-            console.log(res);
             const data = res.data;
             console.log(res.data);
             dispatch(changeList(data[0].data));

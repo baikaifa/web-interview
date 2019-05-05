@@ -8,7 +8,11 @@ export const HeaderWrapper = styled.div`
 `
 export const SearchInfoList = styled.div`
     overflow:hidden;
-    cursor:pointer;
+    
+    li{
+        list-style:none;
+        cursor:pointer;
+    }
 `
 
 export const Logo = styled.div`
