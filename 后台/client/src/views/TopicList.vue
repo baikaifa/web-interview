@@ -139,8 +139,6 @@ export default {
       };
     },
     handleDelete(index, row) {
-      console.log('delete');
-      console.log(`/api/topicList/delete/${row._id}`);
       this.$axios.delete(`/api/topicList/delete/${row._id}`).then(res => {
         this.$message("删除成功");
         this.getProfile();

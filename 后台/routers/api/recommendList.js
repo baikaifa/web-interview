@@ -21,6 +21,7 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     const profileFields = {};
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
+    if (req.body.id) { profileFields.id = req.body.id; }
     console.log('1',profileFields);
     new RecommendList(profileFields).save().then(recommentList => {
         res.json(recommentList)
@@ -31,6 +32,7 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     const profileFields = {};
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
+    if (req.body.id) { profileFields.id = req.body.id; }
     RecommendList.findOneAndUpdate(
         { _id: req.params.id },
         { $set: profileFields },
