@@ -22,6 +22,11 @@
             <span style="margin-left:10px">{{scope.row.date}}</span>
           </template>
         </el-table-column>
+         <el-table-column prop="id" label="id" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.id}}</span>
+          </template>
+        </el-table-column>
         <el-table-column prop="imgUrl" label="图片地址" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
