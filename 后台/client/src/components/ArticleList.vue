@@ -58,11 +58,11 @@ export default {
   },
   methods: {
     onSubmit(form) {
-      console.log("2", this.formData);
+      console.log('bb',this.formData);
       this.$refs[form].validate(valid => {
         if (valid) {
           const url =
-            this.dialog.option == "add" ? "add" : `edit/${this.formData.id}`;
+            this.dialog.option == "add" ? "add" : `edit/${this.formData._id}`;
           this.$axios
             .post(`/api/articleList/${url}`, this.formData)
             .then(res => {

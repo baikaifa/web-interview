@@ -98,7 +98,8 @@ export default {
         desc: "",
         imgUrl: "",
         title: "",
-        id: ""
+        id: "",
+        _id:"",
       },
       dialog: {
         show: false,
@@ -144,7 +145,7 @@ export default {
         imgUrl: row.imgUrl,
         title: row.title,
         id:row.id,
-        id: row._id
+        _id:row._id,
       };
     },
     handleDelete(index, row) {
@@ -164,7 +165,7 @@ export default {
         desc: "",
         title: "",
         id: "",
-        id:"",
+        _id:"",
       };
 
       this.dialog.show = true;

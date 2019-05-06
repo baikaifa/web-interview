@@ -23,7 +23,6 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.id) { profileFields.id = req.body.id; }
-    console.log('1',profileFields);
     new LoadMore(profileFields).save().then(loadMore => {
         res.json(loadMore)
     }).catch(err=>res.json(err));

@@ -15,14 +15,14 @@
           label-width="120px"
           style="margin:10px;width:auto;"
         >
-        <el-form-item prop="id"  label="id:">
+          <el-form-item prop="id" label="id:">
             <el-input type="id" v-model="formData.id"></el-input>
           </el-form-item>
-          <el-form-item prop="title"  label="标题:">
+          <el-form-item prop="title" label="标题:">
             <el-input type="title" v-model="formData.title"></el-input>
           </el-form-item>
           <el-form-item prop="imgUrl" label="图片地址:">
-            <el-input type="imgUrl"  v-model="formData.imgUrl"></el-input>
+            <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
@@ -42,7 +42,9 @@ export default {
       form_rules: {
         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
         title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
-        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
+        imgUrl: [
+          { required: true, message: "图片地址不能为空", trigger: "blur" }
+        ]
       }
     };
   },
@@ -52,11 +54,11 @@ export default {
   },
   methods: {
     onSubmit(form) {
-      console.log('2',this.formData);
+      console.log("2", this.formData);
       this.$refs[form].validate(valid => {
         if (valid) {
           const url =
-            this.dialog.option == "add" ? "add" : `edit/${this.formData.id}`;
+            this.dialog.option == "add" ? "add" : `edit/${this.formData._id}`;
           this.$axios.post(`/api/topicList/${url}`, this.formData).then(res => {
             //添加成功
             this.$message({
@@ -66,7 +68,7 @@ export default {
           });
           //隐藏dialog
           this.dialog.show = false;
-          this.$emit("update");//让父亲（FundList组件）执行这个方法，重新获取数据
+          this.$emit("update"); //让父亲（FundList组件）执行这个方法，重新获取数据
         }
       });
     }
@@ -75,7 +77,7 @@ export default {
 </script>
 
 <style scoped>
-#picUrl{
- color: blue;
+#picUrl {
+  color: blue;
 }
 </style>

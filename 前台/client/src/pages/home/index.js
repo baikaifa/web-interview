@@ -15,10 +15,8 @@ class Home extends PureComponent{
     }
     render(){
         return (
-         
             <HomeWrapper>
                 <HomeLeft>
-                <p>我是home</p>
                     <img alt='img' className='banner-img' src="http://placehold.it/800x300" />
                     <Topic />
                     <List />

@@ -52,7 +52,7 @@ export default {
       this.$refs[form].validate(valid => {
         if (valid) {
           const url =
-            this.dialog.option == "add" ? "add" : `edit/${this.formData.id}`;
+            this.dialog.option == "add" ? "add" : `edit/${this.formData._id}`;
           this.$axios.post(`/api/recommendList/${url}`, this.formData).then(res => {
             //添加成功
             this.$message({

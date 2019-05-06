@@ -17,7 +17,6 @@ axios.interceptors.request.use(config => {
     //加载动画
     startLoading();
     if (localStorage.eleToken) {
-        console.log('set header');
         //设置统一的请求header
         config.headers.Authorization = localStorage.eleToken;
     }
