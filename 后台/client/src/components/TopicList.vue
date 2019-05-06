@@ -15,11 +15,11 @@
           label-width="120px"
           style="margin:10px;width:auto;"
         >
-          <el-form-item prop="title" label="标题:">
+          <el-form-item prop="title"  label="标题:">
             <el-input type="title" v-model="formData.title"></el-input>
           </el-form-item>
           <el-form-item prop="imgUrl" label="图片地址:">
-            <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
+            <el-input type="imgUrl"  v-model="formData.imgUrl"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
@@ -71,4 +71,7 @@ export default {
 </script>
 
 <style scoped>
+#picUrl{
+ color: blue;
+}
 </style>
