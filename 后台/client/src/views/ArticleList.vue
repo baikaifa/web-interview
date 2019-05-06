@@ -27,6 +27,7 @@
             <span style="color:#f56767">{{scope.row.id}}</span>
           </template>
         </el-table-column>
+        
         <el-table-column prop="imgUrl" label="图片地址" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
@@ -117,7 +118,6 @@ export default {
         .get("/api/articleList")
         .then(res => {
           this.allTableData = res.data;
-          console.log( this.allTableData);
           //设置分页数据
           this.setPaginations();
         })

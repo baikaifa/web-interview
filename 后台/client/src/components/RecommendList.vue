@@ -15,6 +15,9 @@
           label-width="120px"
           style="margin:10px;width:auto;"
         >
+        <el-form-item prop="id" label="id:">
+            <el-input type="id" v-model="formData.id"></el-input>
+          </el-form-item>
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
@@ -34,6 +37,7 @@ export default {
   data() {
     return {
       form_rules: {
+         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
         imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
       }
     };

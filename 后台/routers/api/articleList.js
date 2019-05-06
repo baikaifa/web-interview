@@ -22,6 +22,7 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
+    if (req.body.id) { profileFields.id = req.body.id; }
     console.log('1',profileFields);
     new ArticleList(profileFields).save().then(articleList => {
         res.json(articleList)
@@ -33,6 +34,7 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
+    if (req.body.id) { profileFields.id = req.body.id; }
     ArticleList.findOneAndUpdate(
         { _id: req.params.id },
         { $set: profileFields },

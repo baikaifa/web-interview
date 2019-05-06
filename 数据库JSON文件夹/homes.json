@@ -1,0 +1,62 @@
+{ 
+    "_id" : ObjectId("5cca3b919f3d583ed058bbe2"), 
+    "success" : true, 
+    "data" : {
+        "topicList" : [
+            {
+                "id" : NumberInt(1), 
+                "title" : "社会热点", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }, 
+            {
+                "id" : NumberInt(2), 
+                "title" : "手5465绘", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }
+        ], 
+        "articleList" : [
+            {
+                "id" : NumberInt(1), 
+                "title" : "sdfdddddffdcxzxvxzxxvdfdsfdsjlfk", 
+                "desc" : "dasjfldasjfals;j;dslknc", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }, 
+            {
+                "id" : NumberInt(2), 
+                "title" : "sdfdddddffdcxzxvxzxxvdfdsfdsjlfk", 
+                "desc" : "dasjfldasjfals;j;dslknc", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }, 
+            {
+                "id" : NumberInt(3), 
+                "title" : "sdfdddddffdcxzxvxzxxvdfdsfdsjlfk", 
+                "desc" : "dasjfldasjfals;j;dslknc", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }, 
+            {
+                "id" : NumberInt(4), 
+                "title" : "sdfdddddffdcxzxvxzxxvdfdsfdsjlfk", 
+                "desc" : "dasjfldasjfals;j;dslknc", 
+                "imgUrl" : "http://placehold.it/800x300"
+            }
+        ], 
+        "recommendList" : [
+            {
+                "id" : NumberInt(1), 
+                "imgUrl" : "http://placehold.it/800x300"
+            }, 
+            {
+                "id" : NumberInt(2), 
+                "imgUrl" : "http://placehold.it/600x200"
+            }, 
+            {
+                "id" : NumberInt(3), 
+                "imgUrl" : "http://placehold.it/600x200"
+            }, 
+            {
+                "id" : NumberInt(4), 
+                "imgUrl" : "http://placehold.it/600x200"
+            }
+        ]
+    }
+}
