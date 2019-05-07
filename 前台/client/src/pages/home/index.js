@@ -1,69 +1,77 @@
-import  React,{PureComponent} from 'react';
-import  {connect} from 'react-redux'
-import  Topic from './components/Topic';
-import  List from './components/List';
-import  Recommend from './components/Recommend';
-import  Writer from './components/Writer';
-import  {actionCreators} from './store'
-import  {HomeWrapper,HomeLeft,HomeRight} from './style'
-import  {BackTop} from './style'
-import  axios from 'axios'
-class Home extends PureComponent{
-      
-    handleScrollTop(){
-        window.scrollTo(0,0);
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux'
+import Topic from './components/Topic';
+import List from './components/List';
+import Recommend from './components/Recommend';
+import Writer from './components/Writer';
+import { actionCreators } from './store'
+import { HomeWrapper, HomeLeft, HomeRight } from './style'
+import { BackTop } from './style'
+import axios from 'axios'
+import { Carousel } from 'antd';
+import './style.css'
+class Home extends PureComponent {
+
+    handleScrollTop() {
+        window.scrollTo(0, 0);
     }
-    render(){
+    render() {
         return (
             <HomeWrapper>
+          
                 <HomeLeft>
-                    <img alt='img' className='banner-img' src="http://placehold.it/800x300" />
+                <Carousel effect="fade">
+                        <div><h3>1</h3></div>
+                        <div><h3>2</h3></div>
+                        <div><h3>3</h3></div>
+                        <div><h3>4</h3></div>
+                    </Carousel>
                     <Topic />
                     <List />
                 </HomeLeft>
                 <HomeRight>
-                    {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop>:null }
+                    {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null}
                     <Recommend />
                     <Writer />
                 </HomeRight>
             </HomeWrapper>
         )
     }
-    componentDidMount(){
+    componentDidMount() {
         this.props.changeHomeData();
         this.bindEvents();
         axios.get('/api/home.json').then((res) => {
             console.log(res);
             const result = res.data.data;
             const action = {
-                type:'change_home_data',
-                topicList:result.articleList,
-                articleList:result.articleList,
-                recommendList:result.recommendList
+                type: 'change_home_data',
+                topicList: result.articleList,
+                articleList: result.articleList,
+                recommendList: result.recommendList
             }
             this.props.changeHomeData(action);
         })
     }
-    componentWillMount(){
-        window.removeEventListener('scroll',this.props.changeScrollTopShow)
+    componentWillMount() {
+        window.removeEventListener('scroll', this.props.changeScrollTopShow)
     }
-    bindEvents(){
-        window.addEventListener('scroll',this.props.changeScrollTopShow)
+    bindEvents() {
+        window.addEventListener('scroll', this.props.changeScrollTopShow)
     }
 }
-const mapState = (state) =>({
-    showScroll:state.getIn(['home','showScroll'])
+const mapState = (state) => ({
+    showScroll: state.getIn(['home', 'showScroll'])
 })
-const mapDispatch = (dispatch)=>({
-    changeHomeData(){
+const mapDispatch = (dispatch) => ({
+    changeHomeData() {
         dispatch(actionCreators.getHomeInfo());
     },
-    changeScrollTopShow(){
-        if(document.documentElement.scrollTop>100){
+    changeScrollTopShow() {
+        if (document.documentElement.scrollTop > 100) {
             dispatch(actionCreators.toggleTopShow(true))
-        }else{
+        } else {
             dispatch(actionCreators.toggleTopShow(false))
         }
     }
 })
-export default connect(mapState,mapDispatch)(Home);
+export default connect(mapState, mapDispatch)(Home);
