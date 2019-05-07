@@ -46,7 +46,7 @@ class Header extends Component {
                     <SearchInfoList >
                         {
                             pageList.map((item, index) => (
-                                <a  key={index} onClick={() => handleSearch(item)}>{item}</a>
+                                <a key={index} onClick={() => handleSearch(item)}>{item}</a>
                                 // <li key={index} onClick={() => handleSearch(item)}>{item}</li>
                             ))
                         }
@@ -65,7 +65,7 @@ class Header extends Component {
                     <Logo />
                 </Link>
                 <Nav>
-                   <Link to='/'> <NavItem className='left active' >首页</NavItem></Link>
+                    <Link to='/'> <NavItem className='left active' >首页</NavItem></Link>
                     <NavItem className='left'>下载App</NavItem>
                     {
                         login ?
@@ -94,8 +94,10 @@ class Header extends Component {
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Link to='./write'>
+                    <Link to='./register'>
                         <Button className='reg'>注册</Button>
+                    </Link>
+                    <Link to='./write'>
                         <Button className="writting">
                             <i className="iconfont">&#xe615;</i>
                             写文章
@@ -134,7 +136,7 @@ const mapDispathToProps = (dispatch) => {
         handleMouseLeave() {
             dispatch(actionCreators.mouseLeave());
         },
-        handleSearch(item){
+        handleSearch(item) {
             dispatch(actionCreators.searchItem(item));
         },
         handleChangePages(page, totalPage) {

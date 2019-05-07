@@ -56,13 +56,16 @@ router.post("/register", (req, res) => {
 //@desc 返回token jwt passport
 //@access public 接口类型
 router.post("/login", (req, res) => {
+  console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
   //查询数据库
   User.findOne({ email })
     .then(user => {
       if (!user) {
-        return res.status(404).json("用户不存在!" );
+        console.log('1');
+        res.json('用户不存在');
+        // return res.status(404).json("!" );
       }
       //密码匹配
       bcrypt.compare(password, user.password)
@@ -88,7 +91,8 @@ router.post("/login", (req, res) => {
             // jwt.sign("规则","加密名字","过期时间","箭头函数")
             // res.json({ msg: "success" });
           } else {
-            return res.status(400).json( "密码错误!" );
+            res.json('密码错误');
+            // return res.status(400).json( "密码错误!" );
           }
         })
     })
