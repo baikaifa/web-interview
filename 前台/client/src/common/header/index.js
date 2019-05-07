@@ -40,7 +40,8 @@ class Header extends Component {
                     <SearchInfoTitle>
                         热门搜索
                 <SearChInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}
-                        ><i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i>
+                        >
+                        {/* <i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i> */}
                             换一批</SearChInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList >
@@ -87,9 +88,9 @@ class Header extends Component {
                                 onBlur={handleInputBlur}
                             ></NavSearch>
                         </CSSTransition>
-                        <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
+                        {/* <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
                             &#xe615;
-            </i>
+            </i> */}
                         {this.getListArea()}
                     </SearchWrapper>
                 </Nav>
@@ -99,7 +100,7 @@ class Header extends Component {
                     </Link>
                     <Link to='./write'>
                         <Button className="writting">
-                            <i className="iconfont">&#xe615;</i>
+                            {/* <i className="iconfont">&#xe615;</i> */}
                             写文章
                         </Button>
                     </Link>
