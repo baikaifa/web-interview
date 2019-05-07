@@ -21,7 +21,6 @@ const addArticleList=(state, action) => {
         'articlePage': action.nextPage
     })
 }
-
 export default (state = defaultState, action) => {
     switch (action.type) {
         case constants.CHANGE_HOME_DATA:
@@ -30,6 +29,8 @@ export default (state = defaultState, action) => {
             return addArticleList(state,action)
         case constants.TOGGLE_SCROLL_TOP:
             return state.set('showScroll', action.show);
+        case constants.REDUCTION_PAGE:
+            return state.set('articlePage',1);
         default:
             return state;
     }

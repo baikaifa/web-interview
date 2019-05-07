@@ -54,6 +54,12 @@ export default {
           children: [
             { path: "loadMore", name: "加载更多数据" },
           ]
+        }, {
+          name: "详情管理",
+          path: "detail",
+          children: [
+            { path: "detail", name: "详情管理" },
+          ]
         },
         {
           icon: "fa-asterisk",

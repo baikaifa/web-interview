@@ -133,7 +133,7 @@ export const SearChInfoSwitch = styled.span`
     }
 
 `
-export const SearchInfoItem = styled.a`
+export const SearchInfoItem = styled.li`
     display: block;
     float:left;
     line-height: 20px;

@@ -4,7 +4,6 @@ export const DetailWrapper = styled.div`
     width: 620px;
     margin: 0 auto;
     padding-bottom:100px;
-    background: red;
 `
 export const Header = styled.div`
     margin:50px 0 20px 0;

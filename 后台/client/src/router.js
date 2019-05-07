@@ -5,11 +5,12 @@ import Register from './views/Register.vue'
 import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
-import  LoadMore from './views/LoadMore'
-import  infoShow from './views/infoShow.vue'
-import  TopicList from './views/TopicList.vue'
-import  ArticleList from './views/ArticleList.vue'
-import  RecommendList from './views/RecommendList'
+import LoadMore from './views/LoadMore'
+import infoShow from './views/infoShow.vue'
+import TopicList from './views/TopicList.vue'
+import ArticleList from './views/ArticleList.vue'
+import RecommendList from './views/RecommendList'
+import Detail from './views/Detail'
 Vue.use(Router)
 
 const router = new Router({
@@ -30,7 +31,8 @@ const router = new Router({
         { path: '/loadMore', name: 'loadMore', component: LoadMore },
         { path: '/topicList', name: 'topicList', component: TopicList },
         { path: '/articleList', name: 'articleList', component: ArticleList },
-        { path: '/recommendList', name: 'recommendList', component: RecommendList }
+        { path: '/recommendList', name: 'recommendList', component: RecommendList },
+        { path: '/detail', name: 'detail', component: Detail }
       ]
     },
     {
