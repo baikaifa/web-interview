@@ -2,14 +2,26 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const HeaderList = require('../../models/HeaderList');
-
+const ArticleList = require('../../models/ArticleList');
+const queryStringModule = require('querystring');
+// import result  from './home'
 router.get("/test", (req, res) => {
-    res.json({ msg: 'headerList works' })
+    console.log('12321');
+    res.json(result)
 })
 
 router.post("/search",(req,res)=>{
-    console.log('11',req.body);
-    res.json({"ok":"yes"});
+    console.log(req.body.keywords);
+
+    ArticleList.find({"title":req.body.keywords})
+    .then(articleList=>{
+        if(!articleList){
+            return res.status(404).json("没有任何内容")
+        }
+        res.json(articleList);
+    }).catch(err => res.status(404).json(err));
+
+
 })
 // router.post("/add", passport.authenticate('jwt', { session: false }), (req, res) => {
 //     const profileFields = {};

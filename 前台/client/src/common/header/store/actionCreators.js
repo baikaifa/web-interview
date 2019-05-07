@@ -26,7 +26,7 @@ export const searchItem =(item)=>{
     // type:constants.SEARCH_ITEM
     return (dispatch)=>{
         console.log(item.props.children);
-        axios.post('/api/headerList/search',item.props.children).then((res)=>{
+        axios.post('/api/headerList/search',{'keywords':item.props.children}).then((res)=>{
             console.log(res.data);
         }).catch((err) => {
             console.log(err);
