@@ -62,17 +62,18 @@ class Header extends Component {
         const { focused, handleInputFocus, handleInputBlur, list, login, logout } = this.props;
         return (
             <HeaderWrapper>
-                <Link to='/'>
-                    <Logo />
-                </Link>
+
                 <Nav>
-                    <Link to='/'> <NavItem className='left active' >首页</NavItem></Link>
-                    <NavItem className='left'>下载App</NavItem>
+                    <NavItem className="logo">前端面试指南</NavItem>
+                    <Link to='/'> <NavItem className='left active' >发现</NavItem></Link>
                     {
                         login ?
                             <NavItem onClick={logout} className='right'>退出</NavItem> :
                             <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
                     }
+                    <Link to='./register'>
+                        <NavItem className='reg'>注册</NavItem>
+                    </Link>
                     <NavItem className='right'>
                         <i className="iconfont icon-Aa"></i>
                     </NavItem>
@@ -88,19 +89,12 @@ class Header extends Component {
                                 onBlur={handleInputBlur}
                             ></NavSearch>
                         </CSSTransition>
-                        {/* <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
-                            &#xe615;
-            </i> */}
                         {this.getListArea()}
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Link to='./register'>
-                        <Button className='reg'>注册</Button>
-                    </Link>
                     <Link to='./write'>
                         <Button className="writting">
-                            {/* <i className="iconfont">&#xe615;</i> */}
                             写文章
                         </Button>
                     </Link>

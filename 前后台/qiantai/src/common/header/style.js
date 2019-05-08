@@ -15,26 +15,25 @@ export const SearchInfoList = styled.div`
     }
 `
 
-export const Logo = styled.div`
-    position:absolute;
-    top:0;
-    left:0;
-    display:block;
-    width: 100px;
-    height: 56px;
-    background: url(${logoPic});
-    background-size: contain;
-`
+// export const Logo = styled.div`
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     display:block;
+//     width: 100px;
+//     height: 56px;
+//     background-size: contain;
+// `
+
 export const Nav = styled.div`
-    width: 960px;
+    width: 85%;
     height: 100%;
-    padding-right:70px;
     box-sizing:border-box ;
-    margin: 0 auto;
+    margin: 0 ;
 `
 export const NavItem = styled.div`
 line-height: 59px;
-padding:0 15px;
+padding:0 35px;
 font-size: 17px;
 color: #333;
          &.left{
@@ -46,6 +45,16 @@ color: #333;
          }
          &.active{
              color: #ea6f5a;
+         }
+         &.logo{
+             float: left;
+             color: #ea6f5a;
+             font-size: 20px;
+             font-weight: bold;
+         }
+         &.reg{
+             float: right;
+             color: #969696
          }
 `
 
@@ -105,15 +114,15 @@ export const NavSearch = styled.input.attrs({
     }
 `
 export const SearchInfo = styled.div`
-position:absolute
-left:0;
-top:56px;
-width:240px;
-padding:0 20px;
-box-shadow: 0 0 8px rgba(0,0,0,0.2);
-background: #fff;
-z-index:1000;
-`;
+    position:absolute
+    left:0;
+    top:56px;
+    width:240px;
+    padding:0 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    background: #fff;
+    z-index:1000;
+`
 export const SearchInfoTitle = styled.div`
     margin-top:20px;
     margin-bottom:15px;
@@ -150,20 +159,19 @@ export const SearchInfoItem = styled.li`
 export const Addition = styled.div`
     position:absolute
     right:0;
-    top:0
-`;
+    top:0;
+`
 
 export const Button = styled.div`
-    float:right;
+    float: left;
+    margin-right: 40px;
     margin-top: 9px;
-    line-height: 38px;
-    margin-right: 20px;
-    border-radius: 19px;
-    border: 1px solid #ec6149;
-    &.reg{
-            color: #ec6149;
-    }
+    line-height: 38px;    
+    width:70px;
     &.writting{
-
+        color: #fff;
+        text-align: center;
+        background-color: #ec6149;
+        border-radius: 15px;
     }
 `
