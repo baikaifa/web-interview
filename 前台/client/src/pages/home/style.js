@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const HomeWrapper = styled.div`
     width: 960px;
     margin: 0auto;
@@ -73,7 +74,7 @@ float:left;
         color: #999;
     }
 `
-export const RecommendWrapper=styled.div`
+export const RecommendWrapper = styled.div`
     margin: 30px 0;
     width: 280px;
 `

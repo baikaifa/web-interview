@@ -26,7 +26,7 @@ export const searchItem =(item)=>{
     // type:constants.SEARCH_ITEM
     return (dispatch)=>{
         console.log(item.props.children);
-        axios.post('/api/headerList/search',item.props.children).then((res)=>{
+        axios.post('/api/headerList/search',{'keywords':item.props.children}).then((res)=>{
             console.log(res.data);
         }).catch((err) => {
             console.log(err);
@@ -37,7 +37,6 @@ export const getList = () => {
     return (dispatch) => {
         axios.get('/api/headerList/headerList').then((res) => {
             const data = res.data;
-            console.log(res.data);
             dispatch(changeList(data[0].data));
         }).catch(() => {
             console.log('error');

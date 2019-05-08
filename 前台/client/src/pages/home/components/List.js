@@ -10,7 +10,6 @@ class List extends PureComponent {
             <div>
                 {
                     list.map((item, index) => {
-                        console.log(item);
                         return (
                             <Link key={index} to={'/detail/' + item.get('id')}>
                             <ListItem key={index}>

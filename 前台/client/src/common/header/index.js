@@ -40,13 +40,14 @@ class Header extends Component {
                     <SearchInfoTitle>
                         热门搜索
                 <SearChInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}
-                        ><i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i>
+                        >
+                        {/* <i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i> */}
                             换一批</SearChInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList >
                         {
                             pageList.map((item, index) => (
-                                <a  key={index} onClick={() => handleSearch(item)}>{item}</a>
+                                <a key={index} onClick={() => handleSearch(item)}>{item}</a>
                                 // <li key={index} onClick={() => handleSearch(item)}>{item}</li>
                             ))
                         }
@@ -65,7 +66,7 @@ class Header extends Component {
                     <Logo />
                 </Link>
                 <Nav>
-                    <NavItem className='left active'>首页</NavItem>
+                    <Link to='/'> <NavItem className='left active' >首页</NavItem></Link>
                     <NavItem className='left'>下载App</NavItem>
                     {
                         login ?
@@ -87,17 +88,19 @@ class Header extends Component {
                                 onBlur={handleInputBlur}
                             ></NavSearch>
                         </CSSTransition>
-                        <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
+                        {/* <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
                             &#xe615;
-            </i>
+            </i> */}
                         {this.getListArea()}
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Link to='./write'>
+                    <Link to='./register'>
                         <Button className='reg'>注册</Button>
+                    </Link>
+                    <Link to='./write'>
                         <Button className="writting">
-                            <i className="iconfont">&#xe615;</i>
+                            {/* <i className="iconfont">&#xe615;</i> */}
                             写文章
                         </Button>
                     </Link>
@@ -134,7 +137,7 @@ const mapDispathToProps = (dispatch) => {
         handleMouseLeave() {
             dispatch(actionCreators.mouseLeave());
         },
-        handleSearch(item){
+        handleSearch(item) {
             dispatch(actionCreators.searchItem(item));
         },
         handleChangePages(page, totalPage) {

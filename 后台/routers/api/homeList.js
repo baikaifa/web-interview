@@ -12,18 +12,7 @@ var result =
         "imgUrl": ""
     }]
 }
-// router.get("/", (req, res) => {
-//     LoadMore.find()
-//         .then(loadMore => {
-//             if (!loadMore) {
-//                 return res.status(404).json("没有任何内容")
-//             } else {
-//                 result.data=loadMore;
-//                 res.json(result);
-//             }
-//         }).catch(err => res.status(404).json(err));
-       
-// })
+
 router.get("/", (req, res) => {
     console.log(req.query.page);
 

@@ -15,17 +15,14 @@
           label-width="120px"
           style="margin:10px;width:auto;"
         >
-              <el-form-item prop="id" label="这条消息的id:">
+              <el-form-item prop="id" label="id:">
             <el-input type="id" v-model="formData.id"></el-input>
           </el-form-item>
           <el-form-item prop="title" label="标题:">
             <el-input type="title" v-model="formData.title"></el-input>
           </el-form-item>
-           <el-form-item prop="desc" label="描述:">
-            <el-input type="desc" v-model="formData.desc"></el-input>
-          </el-form-item>
-          <el-form-item prop="imgUrl" label="图片地址:">
-            <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
+          <el-form-item prop="content" label="内容:">
+            <el-input type="content" v-model="formData.content"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
@@ -44,9 +41,8 @@ export default {
     return {
       form_rules: {
         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
-          desc: [{ required: true, message: "描述不能为空", trigger: "blur" }],
         title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
-        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
+        content: [{ required: true, message: "内容不能为空", trigger: "blur" }]
       }
     };
   },
@@ -56,12 +52,11 @@ export default {
   },
   methods: {
     onSubmit(form) {
-      console.log('2',this.formData);
       this.$refs[form].validate(valid => {
         if (valid) {
           const url =
             this.dialog.option == "add" ? "add" : `edit/${this.formData._id}`;
-          this.$axios.post(`/api/loadMore/${url}`, this.formData).then(res => {
+          this.$axios.post(`/api/detail/${url}`, this.formData).then(res => {
             //添加成功
             this.$message({
               message: "数据添加成功",

@@ -86,7 +86,8 @@ export default {
       allTableData: [],
       formData: {
         imgUrl: "",
-        id: ""
+        id: "",
+        _id:"",
       },
       dialog: {
         show: false,
@@ -131,7 +132,8 @@ export default {
         desc: row.desc,
         imgUrl: row.imgUrl,
         title: row.title,
-        id: row._id
+        id: row.id,
+        _id:row._id,
       };
     },
     handleDelete(index, row) {
@@ -150,7 +152,8 @@ export default {
         imgUrl: "",
         desc: "",
         title: "",
-        id: ""
+        id: "",
+        _id:"",
       };
 
       this.dialog.show = true;

@@ -12,14 +12,13 @@ export const logout = () => ({
 
 export const login = (account, password) => {
     return (dispatch) => {
-        axios.get('/api/login?account=' + account + '&password=' + password).then((res) => {
-            const result = res.data.data;
-            console.log(result);
-            if (result) {
+        axios.post('/api/users/login',{'email':account,'password':password}).then((res) => {
+            console.log(res);
+            if (res.data.success) {
                 dispatch(changeLogin())
             } else {
-                alert('登录失败');
+                alert(res.data);
             }
-        })
+        }).catch((err)=>{alert(err)})
     }
 }

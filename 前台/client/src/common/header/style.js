@@ -112,6 +112,7 @@ width:240px;
 padding:0 20px;
 box-shadow: 0 0 8px rgba(0,0,0,0.2);
 background: #fff;
+z-index:1000;
 `;
 export const SearchInfoTitle = styled.div`
     margin-top:20px;
@@ -133,7 +134,7 @@ export const SearChInfoSwitch = styled.span`
     }
 
 `
-export const SearchInfoItem = styled.a`
+export const SearchInfoItem = styled.li`
     display: block;
     float:left;
     line-height: 20px;

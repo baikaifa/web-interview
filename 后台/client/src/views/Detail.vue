@@ -27,14 +27,15 @@
             <span style="color:#f56767">{{scope.row.id}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="imgUrl" label="图片地址" width="130" align="center">
-          <template slot-scope="scope">
-            <span style="color:#f56767">{{scope.row.imgUrl}}</span>
-          </template>
-        </el-table-column>
+
                 <el-table-column prop="title" label="标题" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.title}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="content" label="内容" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.content}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
@@ -55,6 +56,7 @@
         </el-table-column>
       </el-table>
     </div>
+    <!-- 分页 -->
     <el-row>
       <el-col :span="24">
         <div class="pagination">
@@ -70,13 +72,13 @@
         </div>
       </el-col>
     </el-row>
-    <TopicList :dialog="dialog" :formData="formData" @update="getProfile"></TopicList>
+    <Detail :dialog="dialog" :formData="formData" @update="getProfile"></Detail>
   </div>
 </template>
 <script>
-import TopicList from "../components/TopicList";
+import Detail from "../components/Detail";
 export default {
-  name: "fundList",
+  name: "detail",
   data() {
     return {
       paginations: {
@@ -89,7 +91,7 @@ export default {
       tableData: [],
       allTableData: [],
       formData: {
-        imgUrl: "",
+        content: "",
         title: "",
         id: "",
         _id:"",
@@ -108,7 +110,7 @@ export default {
     getProfile() {
       //获取表格数据
       this.$axios
-        .get("/api/topicList")
+        .get("/api/detail")
         .then(res => {
           this.allTableData = res.data;
           //设置分页数据
@@ -132,16 +134,15 @@ export default {
         title: "修改资金信息",
         option: "edit"
       };
-      console.log('aaa',row);
       this.formData = {
-        imgUrl: row.imgUrl,
+        content: row.content,
         title: row.title,
-        id: row.id,
-        _id:row._id
+        id:row.id,
+        _id:row._id,
       };
     },
     handleDelete(index, row) {
-      this.$axios.delete(`/api/topicList/delete/${row._id}`).then(res => {
+      this.$axios.delete(`/api/detail/delete/${row._id}`).then(res => {
         this.$message("删除成功");
         this.getProfile();
       });
@@ -153,7 +154,7 @@ export default {
         option: "add"
       };
       this.formData = {
-        imgUrl: "",
+        contnet: "",
         title: "",
         id: "",
         _id:"",
@@ -183,12 +184,12 @@ export default {
             tables.push(this.allTableData[i]);
         }
         this.tableData=tables;
-        console.log('2',this.tableData);
+        console.log(this.tableData);
       }
     }
   },
   components: {
-    TopicList
+    Detail
   }
 };
 </script>

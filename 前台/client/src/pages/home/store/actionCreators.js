@@ -12,12 +12,14 @@ const addHomeList = (list, nextPage) => ({
     list: fromJS(list),
     nextPage
 })
+export const reductionPageAction=(articlePage)=>({
+    type:constants.REDUCTION_PAGE,
+    articlePage
+})
 export const getHomeInfo = () => {
     return (dispatch) => {
         axios.get('/api/home/home').then((res) => {
-            console.log(res.data);
             const result = res.data.data;
-            console.log(result);
             const action = {
                 type: 'change_home_data',
                 topicList: result.topicList,

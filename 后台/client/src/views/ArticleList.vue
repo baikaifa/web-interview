@@ -99,7 +99,8 @@ export default {
         desc: "",
         imgUrl: "",
         title: "",
-        id: ""
+        id: "",
+        _id:"",
       },
       dialog: {
         show: false,
@@ -139,11 +140,13 @@ export default {
         title: "修改资金信息",
         option: "edit"
       };
+      
       this.formData = {
         desc: row.desc,
         imgUrl: row.imgUrl,
         title: row.title,
-        id: row._id
+        id: row.id,
+        _id:row._id,
       };
     },
     handleDelete(index, row) {
@@ -162,7 +165,8 @@ export default {
         imgUrl: "",
         desc: "",
         title: "",
-        id: ""
+        id: "",
+        _id:""
       };
 
       this.dialog.show = true;

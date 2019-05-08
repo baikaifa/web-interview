@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Home = require('../../models/Home');
 const TopicList = require('../../models/TopicList');
+const Home = require('../../models/Home');
 const RecommendList = require('../../models/RecommendList');
 const ArticleList = require('../../models/ArticleList');
 var result = {
@@ -25,14 +25,12 @@ var result = {
     "success": true
 }
 router.get("/home", (req, res) => {
-    console.log(result);
     TopicList.find()
         .then(topicList => {
             if (!topicList) {
                 return res.status(404).json("没有任何内容")
             }
-            console.log(topicList);
-         result.data.topicList = topicList;
+            result.data.topicList = topicList;
         }).catch(err => res.status(404).json(err));
     ArticleList.find()
         .then(articleList => {
@@ -47,10 +45,14 @@ router.get("/home", (req, res) => {
                 return res.status(404).json("没有任何内容")
             }
             result.data.recommendList = recommendList;
+
+            // const profileFields = result;
+            // new Home(result).save().then(home => {
+            //     res.json(home)
+            // })
             res.json(result);
         }).catch(err => res.status(404).json(err));
 
-
 })
-
+// export const result,router;
 module.exports = router;
