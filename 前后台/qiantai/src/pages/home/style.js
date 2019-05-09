@@ -133,3 +133,53 @@ text-align:center;
 border: 1px solid #ccc;
 font-size: 14px;
 `
+export const InterviewWrapper = styled.div`
+height:50%;
+width:100%;
+
+`
+export const Div1Wrapper = styled.div
+`
+width:80%；
+margin-left:10%;
+margin-right:10%;
+margin-top:5%;
+height:17%;
+
+border:1px solid whitesmoke;
+border-radius:10px;
+background:orange;
+`
+export const Div2Wrapper = styled.div
+`
+width:80%；
+margin-left:10%;
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#F7C2D4;
+`
+export const Div3Wrapper = styled.div
+`
+width:80%；
+margin-left:10%;
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#BAE389;
+`
+export const Div4Wrapper = styled.div
+`
+width:80%；
+margin-left:10%;
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#C5CCF0;
+`
