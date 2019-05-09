@@ -6,6 +6,7 @@ class Topic extends PureComponent {
     render() {
         const { list } = this.props;
         return (
+            
             <TopicWrapper>
                 {
                     list.map((item) => (

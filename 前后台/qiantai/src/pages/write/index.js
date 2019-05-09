@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { HomeWrapper, HomeRight, LeftWhite, RightWhite } from '../home/style.js'
 import  {HomeLeft,NewArticle,NoTitleArticle} from './style.js'
+import  './style.css'
 class Write extends PureComponent {
     render() {
         const { loginStatus } = this.props;
@@ -10,11 +11,21 @@ class Write extends PureComponent {
         if (loginStatus) {
             return (
                 <HomeWrapper>
-                    <HomeLeft>
-                        <NewArticle>新建文章</NewArticle>
-                        <NoTitleArticle>无标题文章</NoTitleArticle>
+                    <HomeLeft className="homeLeft">
+                        <NewArticle>
+                            <div className="jiahao_xjwz">
+                            <span className="jiahao">+</span>
+                            <span className="xjwz">新建文章</span>
+                            </div>
+                            </NewArticle>
+                        <NoTitleArticle>
+                            <div className="wbtwz">
+                            无标题文章
+                            </div>
+                            <p>字数 0</p>
+                        </NoTitleArticle>
                     </HomeLeft>
-                    <HomeRight>
+                    <HomeRight className="homeRgiht">
                         456
                     </HomeRight>
                     <LeftWhite></LeftWhite>

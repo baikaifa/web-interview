@@ -19,14 +19,14 @@ class Home extends PureComponent {
 
         return (
             <HomeWrapper>
-                
                 <HomeLeft>
-                    <Carousel className="carousel" effect="fade">
-                        <div><h3>1</h3></div>
+                    {/* <Carousel className="carousel"  effect="fade">
+                        <div><h3>123u213oi21uo3iu21oiuo</h3></div>
                         <div><h3>2</h3></div>
                         <div><h3>3</h3></div>
                         <div><h3>4</h3></div>
-                    </Carousel>
+                    </Carousel> */}
+
                     <Topic />
                     <List />
                 </HomeLeft>
