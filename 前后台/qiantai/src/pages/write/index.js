@@ -8,7 +8,7 @@ class Write extends PureComponent {
     render() {
         const { loginStatus } = this.props;
         console.log(loginStatus);
-        if (loginStatus) {
+        // if (loginStatus) {
             return (
                 <HomeWrapper>
                     <HomeLeft className="homeLeft">
@@ -19,23 +19,40 @@ class Write extends PureComponent {
                             </div>
                             </NewArticle>
                         <NoTitleArticle>
-                            <div className="wbtwz">
+                            <div id="wbtwz">
                             无标题文章
                             </div>
-                            <p>字数 0</p>
+                            <p className="zs">字数 0</p>
+                            <div className="shezhi">
+                                设置
+                            </div>
                         </NoTitleArticle>
                     </HomeLeft>
                     <HomeRight className="homeRgiht">
-                        456
+                        <div className="wbtwz">
+                                无标题文章
+                        </div>
+                        <div className="wbtwz_content">
+                            <div className="wbtwz_line">
+                        <ul>
+                            <li>B</li>
+                            <li>U</li>
+                            <li>/</li>
+                            <li>图片</li>
+                            <li>表格</li>
+                            <li>笑脸</li>
+                        </ul>
+                            </div>
+                        </div>
                     </HomeRight>
                     <LeftWhite></LeftWhite>
                     <RightWhite></RightWhite>
                 </HomeWrapper>
-            )
-        } else {
-            return <Redirect to='/login' />
-        }
-    }
+            )}
+    //     } else {
+    //         return <Redirect to='/login' />
+    //     }
+    // }
 }
 
 const mapState = (state) => ({
