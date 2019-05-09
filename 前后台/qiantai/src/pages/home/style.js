@@ -2,23 +2,38 @@ import styled from 'styled-components';
 
 
 export const HomeWrapper = styled.div`
-    width: 960px;
-    margin: auto 13%;
-    height: 300px;
+display: flex;
+flex-direction: row;
+width: 100%;
+// height: 200px;
+margin: 0 auto;
 `
 export const HomeLeft = styled.div`
-    float:left;
-    margin-left:15px;
-    padding-top:30px;
-    width: 625px;
+flex: 1;
+// height: 200px;
+border: 1px solid red;
+    // float:left;
+    // margin-left:15px;
+    // padding-top:30px;
+    // width: 625px;
     .banner-img{
         width: 625px;
         height: 270px;
     }
 `
+export const LeftWhite= styled.div`
+flex-basis: 100px;
+order: -1;
+// height: 200px;
+`
+export const RightWhite= styled.div`
+flex-basis: 100px;
+// height: 200px;
+`
 export const HomeRight = styled.div`
-    width: 280px;
-    float:right;
+flex: 1;
+// height: 200px;
+border: 1px solid blue;
 `
 export const TopicWrapper = styled.div`
     overflow:hidden;
