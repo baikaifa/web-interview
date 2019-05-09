@@ -204,4 +204,11 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:#C5CCF0;
 `
+export const PWrapper = styled.p
+`
+height:100%;
+margin-left:5%;
+padding-top:5%;
+`
+
 
