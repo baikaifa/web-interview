@@ -9,8 +9,9 @@ width: 100%;
 margin: 0 auto;
 `
 export const HomeLeft = styled.div`
-flex: 1;
+flex: 1.5;
 // height: 200px;
+margin-right: 30px;
 border: 1px solid red;
     // float:left;
     // margin-left:15px;
@@ -31,7 +32,7 @@ flex-basis: 100px;
 // height: 200px;
 `
 export const HomeRight = styled.div`
-flex: 1;
+flex: 0.7;
 // height: 200px;
 border: 1px solid blue;
 `
@@ -100,13 +101,17 @@ export const RecommendItem = styled.div`
     background-size:contain;
 `
 export const WriterWrapper = styled.div`
-    width: 278px;
-    border: 1px solid #dcdcdc;
+    width: 100%;
+    border-top: 1px solid #dcdcdc;
     border-radius: 3px;
     height: 300px;
-    line-height: 300px;
-    text-align:center;
 `
+export const WTitle = styled.div`
+    width: 100%;
+    font-size: 18px;
+
+`
+
 export const LoadMore = styled.div`
 width: 100%;
 height: 40px;
