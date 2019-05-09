@@ -158,7 +158,11 @@ export const BackTop = styled.div`
     font-size: 14px;
 `
 export const InterviewWrapper = styled.div`
-height:50%;
+<<<<<<< HEAD
+height:300px;
+=======
+height:20rem;
+>>>>>>> 994fbcdb778d49e542d1ca79e6281fce7299c5c1
 width:100%;
 `
 
@@ -205,4 +209,11 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:#C5CCF0;
 `
+export const PWrapper = styled.p
+`
+height:100%;
+margin-left:5%;
+padding-top:5%;
+`
+
 
