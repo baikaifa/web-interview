@@ -69,17 +69,7 @@ class Header extends Component {
     render() {
         const { focused, handleInputFocus, handleInputBlur, list, login, logout } = this.props;
         return (
-                // <div className="HeaderWrapper">
-                //     <div className="logo">前端面试指南</div>
-                //     <Link  to='/'>
-                //         <div>发现</div>
-                //         {
-                //         login ?
-                //             <NavItem onClick={logout} className='right'>退出</NavItem> :
-                //             <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
-                //      }
-                //     </Link>
-                // </div>
+            
             <HeaderWrapper>
                 <Nav>
                     <NavItem className="logo">前端面试指南</NavItem>

@@ -8,7 +8,6 @@ export const HeaderWrapper = styled.div`
 `
 export const SearchInfoList = styled.div`
     overflow:hidden;
-    
     li{
         list-style:none;
         cursor:pointer;

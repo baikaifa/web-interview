@@ -34,7 +34,7 @@ export const RightWhite= styled.div`
 export const HomeRight = styled.div`
     flex: 0.7;
     // height: 200px;
-    border: 1px solid blue;
+    
 `
 export const TopicWrapper = styled.div`
     overflow:hidden;
@@ -156,3 +156,52 @@ export const BackTop = styled.div`
     border: 1px solid #ccc;
     font-size: 14px;
 `
+export const InterviewWrapper = styled.div`
+height:50%;
+width:100%;
+`
+
+export const Div1Wrapper = styled.div
+`
+width:80%；
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:orange;
+`
+export const Div2Wrapper = styled.div
+`
+width:80%；
+
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#F7C2D4;
+`
+export const Div3Wrapper = styled.div
+`
+width:80%；
+
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#BAE389;
+`
+export const Div4Wrapper = styled.div
+`
+width:80%；
+
+margin-right:10%;
+margin-top:5%;
+height:17%;
+border:1px solid whitesmoke;
+border-radius:10px;
+background:#C5CCF0;
+`
+
