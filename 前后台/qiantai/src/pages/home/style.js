@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 
 export const HomeWrapper = styled.div`
-display: flex;
-flex-direction: row;
-width: 100%;
-// height: 200px;
-margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    // height: 200px;
+    margin: 0 auto;
 `
 export const HomeLeft = styled.div`
-flex: 1.5;
-// height: 200px;
-margin-right: 30px;
-border: 1px solid red;
+    flex: 1.5;
+    // height: 200px;
+    margin-right: 30px;
+    border: 1px solid red;
     // float:left;
     // margin-left:15px;
     // padding-top:30px;
@@ -23,18 +23,18 @@ border: 1px solid red;
     }
 `
 export const LeftWhite= styled.div`
-flex-basis: 100px;
-order: -1;
-// height: 200px;
+    flex-basis: 100px;
+    order: -1;
+    // height: 200px;
 `
 export const RightWhite= styled.div`
-flex-basis: 100px;
-// height: 200px;
+    flex-basis: 100px;
+    // height: 200px;
 `
 export const HomeRight = styled.div`
-flex: 0.7;
-// height: 200px;
-border: 1px solid blue;
+    flex: 0.7;
+    // height: 200px;
+    border: 1px solid blue;
 `
 export const TopicWrapper = styled.div`
     overflow:hidden;
@@ -76,8 +76,8 @@ export const ListItem = styled.div`
     }
 `
 export const ListInfo = styled.div`
-width: 500px;
-float:left;
+    width: 500px;
+    float:left;
     .title{
         line-height: 27px;
         font-size: 18px;
@@ -100,6 +100,7 @@ export const RecommendItem = styled.div`
     background: url(${(props) => props.imgUrl});
     background-size:contain;
 `
+//writer组件
 export const WriterWrapper = styled.div`
     width: 100%;
     border-top: 1px solid #dcdcdc;
@@ -108,28 +109,50 @@ export const WriterWrapper = styled.div`
 `
 export const WTitle = styled.div`
     width: 100%;
-    font-size: 18px;
-
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px auto;
+`
+export const Wfor = styled.div`
+    width: 100%;
+    margin: 5px auto;
+    height: 85px;
+`
+export const WImg = styled.div`
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hiidden;
+    background-color: #ccc;
+    float: left;
+    margin-right: 10px;
+`
+export const WName = styled.p`
+    float: left;
+`
+export const Wxq = styled.p`
+    float: left;
+    padding-top: 20px;
 `
 
 export const LoadMore = styled.div`
-width: 100%;
-height: 40px;
-line-height: 40px;
-margin: 30px 0;
-background: #a5a5a5;
-text-align:center;
-border-radius: 20px;
-cursor:pointer;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px 0;
+    background: #a5a5a5;
+    text-align:center;
+    border-radius: 20px;
+    cursor:pointer;
 `
 export const BackTop = styled.div`
-position:fixed;
-right:100px;
-bottom:100px;
-width: 60px;
-height: 60px;
-line-height: 60px;
-text-align:center;
-border: 1px solid #ccc;
-font-size: 14px;
+    position:fixed;
+    right:100px;
+    bottom:100px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align:center;
+    border: 1px solid #ccc;
+    font-size: 14px;
 `
