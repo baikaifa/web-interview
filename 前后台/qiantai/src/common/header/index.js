@@ -19,7 +19,9 @@ import {
     Button,
     SearchWrapper
 } from './style.js'
+import  './index.css'
 class Header extends Component {
+
     getListArea() {
         const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage, handleSearch } = this.props;
         const newList = list.toJS();//List是一个immutable对象，转换为js数组
@@ -33,6 +35,12 @@ class Header extends Component {
         }
         if (focused || mouseIn) {
             return (
+                // <div className="container">
+                //         <div className="leftWhite"></div>
+                //         <div className="leftContent"></div>
+                //         <div className="rightContent"></div>
+                //         <div className="rightWhite"></div>
+                // </div>
                 <SearchInfo
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -41,7 +49,7 @@ class Header extends Component {
                         热门搜索
                 <SearChInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}
                         >
-                        {/* <i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i> */}
+                            {/* <i ref={(icon) => { this.spinIcon = icon }} className="iconfont spin">&#xe851;</i> */}
                             换一批</SearChInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList >
@@ -61,8 +69,18 @@ class Header extends Component {
     render() {
         const { focused, handleInputFocus, handleInputBlur, list, login, logout } = this.props;
         return (
+                // <div className="HeaderWrapper">
+                //     <div className="logo">前端面试指南</div>
+                //     <Link  to='/'>
+                //         <div>发现</div>
+                //         {
+                //         login ?
+                //             <NavItem onClick={logout} className='right'>退出</NavItem> :
+                //             <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
+                //      }
+                //     </Link>
+                // </div>
             <HeaderWrapper>
-
                 <Nav>
                     <NavItem className="logo">前端面试指南</NavItem>
                     <Link to='/'> <NavItem className='left active' >发现</NavItem></Link>

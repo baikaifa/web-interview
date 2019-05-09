@@ -4,23 +4,24 @@ import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
 import Writer from './components/Writer';
+import Interview from './components/Interview';
 import { actionCreators } from './store'
-import { HomeWrapper, HomeLeft, HomeRight } from './style'
+import { HomeWrapper, HomeLeft, HomeRight,LeftWhite,RightWhite } from './style'
 import { BackTop } from './style'
 import axios from 'axios'
 import { Carousel } from 'antd';
 import './style.css'
 class Home extends PureComponent {
-
     handleScrollTop() {
         window.scrollTo(0, 0);
     }
     render() {
+
         return (
             <HomeWrapper>
-          
+                
                 <HomeLeft>
-                    <Carousel effect="fade">
+                    <Carousel className="carousel" effect="fade">
                         <div><h3>1</h3></div>
                         <div><h3>2</h3></div>
                         <div><h3>3</h3></div>
@@ -32,9 +33,14 @@ class Home extends PureComponent {
                 <HomeRight>
                     {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null}
                     <Recommend />
+                    <Interview/>
                     <Writer />
                 </HomeRight>
+                <LeftWhite></LeftWhite>
+                <RightWhite></RightWhite>
             </HomeWrapper>
+
+
         )
     }
     componentDidMount() {
