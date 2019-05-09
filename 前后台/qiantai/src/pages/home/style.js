@@ -157,7 +157,7 @@ export const BackTop = styled.div`
     font-size: 14px;
 `
 export const InterviewWrapper = styled.div`
-height:50%;
+height:300px;
 width:100%;
 `
 
