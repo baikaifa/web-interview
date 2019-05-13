@@ -22,8 +22,8 @@ class Tiaocao extends PureComponent {
                  高级面试课程，BAT高级面试，架构师面试，高级工程师面试，java就业面试，校招面试，算法面试，mysql
                  数据库面试，前端面试宝典，笔试题，就业指导笔记，企业级……</div>
                  <div className="font">
-                    <i className="iconfont icon-eye"></i><span>469</span>
-                    <i className="iconfont icon-talk2"></i><span>33</span>
+                    <i className="iconfont icon-ai-eye"></i><span>469</span>
+                    <i className="iconfont icon-pinglun"></i><span>33</span>
                     <i className="iconfont icon-xin"></i><span>679</span>
                 </div>
               </div>
@@ -41,8 +41,8 @@ class Tiaocao extends PureComponent {
                 低于5%，所以对于候选人一定要……知道设立面试的初衷以及每个环节的意义，有的放矢... 第2章 面试准备 
                 </div>
                 <div className="font">
-                    <i className="iconfont icon-eye"></i><span>469</span>
-                    <i className="iconfont icon-talk2"></i><span>33</span>
+                    <i className="iconfont icon-ai-eye"></i><span>469</span>
+                    <i className="iconfont icon-pinglun"></i><span>33</span>
                     <i className="iconfont icon-xin"></i><span>679</span>
                 </div>
              </div>
@@ -61,8 +61,8 @@ class Tiaocao extends PureComponent {
                 写自己开发的产品有……
                 </div>
                 <div className="font">
-                    <i className="iconfont icon-eye"></i><span>469</span>
-                    <i className="iconfont icon-talk2"></i><span>33</span>
+                    <i className="iconfont icon-ai-eye"></i><span>469</span>
+                    <i className="iconfont icon-pinglun"></i><span>33</span>
                     <i className="iconfont icon-xin"></i><span>679</span>
                 </div>
              </div>
