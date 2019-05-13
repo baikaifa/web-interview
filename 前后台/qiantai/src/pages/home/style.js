@@ -33,6 +33,7 @@ export const RightWhite= styled.div`
 `
 export const HomeRight = styled.div`
     flex: 0.7;
+    border: 1px solid blue;
     // height: 200px;
     
 `
@@ -157,7 +158,11 @@ export const BackTop = styled.div`
     font-size: 14px;
 `
 export const InterviewWrapper = styled.div`
+<<<<<<< HEAD
+height:300px;
+=======
 height:20rem;
+>>>>>>> 994fbcdb778d49e542d1ca79e6281fce7299c5c1
 width:100%;
 `
 
