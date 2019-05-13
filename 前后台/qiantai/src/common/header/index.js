@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import {
     HeaderWrapper,
-    Logo,
     Nav,
     NavItem,
     NavSearch,
