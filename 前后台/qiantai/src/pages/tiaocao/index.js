@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import  './style.css'
 class Tiaocao extends PureComponent {
     render() {
-     
             return (
               <div>
                   我是跳槽页面
