@@ -33,6 +33,7 @@ export const RightWhite= styled.div`
 `
 export const HomeRight = styled.div`
     flex: 0.7;
+    border: 1px solid blue;
     // height: 200px;
     
 `
