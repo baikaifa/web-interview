@@ -8,7 +8,7 @@ class Write extends PureComponent {
     render() {
         const { loginStatus } = this.props;
         console.log(loginStatus);
-        if (loginStatus) {
+        // if (loginStatus) {
             return (
                 <HomeWrapper>
                     <HomeLeft className="homeLeft">
@@ -31,11 +31,11 @@ class Write extends PureComponent {
                     <LeftWhite></LeftWhite>
                     <RightWhite></RightWhite>
                 </HomeWrapper>
-            )
-        } else {
-            return <Redirect to='/login' />
-        }
-    }
+            )}
+    //     } else {
+    //         return <Redirect to='/login' />
+    //     }
+    // }
 }
 
 const mapState = (state) => ({
