@@ -51,9 +51,10 @@ class Home extends PureComponent {
             const result = res.data.data;
             const action = {
                 type: 'change_home_data',
-                topicList: result.articleList,
+                topicList: result.topicList,
                 articleList: result.articleList,
-                recommendList: result.recommendList
+                recommendList: result.recommendList,
+                fourList:result.fourList
             }
             this.props.changeHomeData(action);
         })

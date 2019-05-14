@@ -1,9 +1,10 @@
 <template>
   <div class="container">
+              <el-button type="primary" size="small" class="add_btn" icon="view" @click="handleAdd()">添加</el-button>
     <div>
       <el-form :inline="true" ref="add_data">
         <el-form-item class="btnRight">
-          <el-button type="primary" size="small" icon="view" @click="handleAdd()">添加</el-button>
+
         </el-form-item>
       </el-form>
     </div>
@@ -207,5 +208,8 @@ export default {
 .pagination {
   text-align: center;
   margin-top: 10px;
+}
+.add_btn{
+    margin-left:90%;
 }
 </style>

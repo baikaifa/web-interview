@@ -13,6 +13,7 @@ const homeList=require('./routers/api/homeList');
 const topicList=require('./routers/api/topicList');
 const articleList=require('./routers/api/articleList');
 const recommendList=require('./routers/api/recommendList');
+const fourList=require('./routers/api/fourList');
 const loadMore=require('./routers/api/loadMore');
 //使用body-parser中间件
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,6 +33,7 @@ app.use('/api/home',home);
 app.use('/api/homeList',homeList)
 app.use('/api/topicList',topicList)
 app.use('/api/articleList',articleList)
+app.use('/api/fourList',fourList)
 app.use('/api/recommendList',recommendList)
 app.use('/api/loadMore',loadMore)
 const port = process.env.PORT || 5000;

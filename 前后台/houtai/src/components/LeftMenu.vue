@@ -45,21 +45,19 @@ export default {
           children: [
             { path: "topicList", name: "topicList数据" },
             { path: "articleList", name: "articleList数据" },
-            { path: "recommendList", name: "recommendList数据" }
+            { path: "recommendList", name: "recommendList数据" },
+            { path: "fourList", name: "fourList数据" }
           ]
         },
-          {
+        {
           name: "加载更多管理",
           path: "more",
-          children: [
-            { path: "loadMore", name: "加载更多数据" },
-          ]
-        }, {
+          children: [{ path: "loadMore", name: "加载更多数据" }]
+        },
+        {
           name: "详情管理",
           path: "detail",
-          children: [
-            { path: "detail", name: "详情管理" },
-          ]
+          children: [{ path: "detail", name: "详情管理" }]
         },
         {
           icon: "fa-asterisk",

@@ -1,11 +1,9 @@
 <template>
   <div class="container">
- 
-  <el-button type="primary" size="small" icon="view" class="add_btn" @click="handleAdd()">添加</el-button>
+       <el-button type="primary" size="small" icon="view" class="add_btn" @click="handleAdd()">添加</el-button>
     <div>
       <el-form :inline="true" ref="add_data">
         <el-form-item class="btnRight">
-        
         </el-form-item>
       </el-form>
     </div>
@@ -29,15 +27,10 @@
             <span style="color:#f56767">{{scope.row.id}}</span>
           </template>
         </el-table-column>
-
+        
                 <el-table-column prop="title" label="标题" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.title}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column prop="content" label="内容" width="130" align="center">
-          <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.content}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
@@ -74,13 +67,13 @@
         </div>
       </el-col>
     </el-row>
-    <Detail :dialog="dialog" :formData="formData" @update="getProfile"></Detail>
+    <FourList :dialog="dialog" :formData="formData" @update="getProfile"></FourList>
   </div>
 </template>
 <script>
-import Detail from "../components/Detail";
+import FourList from "../components/FourList";
 export default {
-  name: "detail",
+  name: "fourList",
   data() {
     return {
       paginations: {
@@ -93,7 +86,8 @@ export default {
       tableData: [],
       allTableData: [],
       formData: {
-        content: "",
+        desc: "",
+        imgUrl: "",
         title: "",
         id: "",
         _id:"",
@@ -112,7 +106,7 @@ export default {
     getProfile() {
       //获取表格数据
       this.$axios
-        .get("/api/detail")
+        .get("/api/fourList")
         .then(res => {
           this.allTableData = res.data;
           //设置分页数据
@@ -136,15 +130,17 @@ export default {
         title: "修改资金信息",
         option: "edit"
       };
+      
       this.formData = {
-        content: row.content,
+        desc: row.desc,
+        imgUrl: row.imgUrl,
         title: row.title,
-        id:row.id,
+        id: row.id,
         _id:row._id,
       };
     },
     handleDelete(index, row) {
-      this.$axios.delete(`/api/detail/delete/${row._id}`).then(res => {
+      this.$axios.delete(`/api/fourList/delete/${row._id}`).then(res => {
         this.$message("删除成功");
         this.getProfile();
       });
@@ -156,10 +152,11 @@ export default {
         option: "add"
       };
       this.formData = {
-        contnet: "",
+        imgUrl: "",
+        desc: "",
         title: "",
         id: "",
-        _id:"",
+        _id:""
       };
 
       this.dialog.show = true;
@@ -191,7 +188,7 @@ export default {
     }
   },
   components: {
-    Detail
+    FourList
   }
 };
 </script>

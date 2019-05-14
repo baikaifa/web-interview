@@ -1,21 +1,41 @@
 import React, { PureComponent } from 'react';
+import { ListItem, ListInfo, LoadMore } from '../style';
 import { InterviewWrapper, Div1Wrapper, Div2Wrapper, Div3Wrapper, Div4Wrapper, PWrapper } from '../style';
 import { Link } from 'react-router-dom'
-import '../style.css'
+import { connect } from 'react-redux'
 class Interview extends PureComponent {
     render() {
+        const { list } = this.props;
         return (
-            // <p id="interview">我是interview组件</p>
-            <InterviewWrapper>
-
-                <Link to='/tiaocao'><Div1Wrapper><PWrapper>前端工程师跳槽面试></PWrapper></Div1Wrapper></Link>
-                <Div2Wrapper><PWrapper>前端JS专项目面试></PWrapper></Div2Wrapper>
-                <Div3Wrapper><PWrapper>前端初级工程面试></PWrapper></Div3Wrapper>
-                <Div4Wrapper><PWrapper>Web前端性能优化></PWrapper></Div4Wrapper>
-
-            </InterviewWrapper>
+            <div>
+                {
+                    list.map((item, index) => {
+                        switch (index) {
+                            case 0:
+                                return (
+                                    <Link to='/tiaocao'><Div1Wrapper><PWrapper>{item.get('title')}></PWrapper></Div1Wrapper></Link>
+                                )
+                            case 1:
+                                return (
+                                    <Div2Wrapper><PWrapper>{item.get('title')}></PWrapper></Div2Wrapper>
+                                )
+                            case 2:
+                                return (
+                                    <Div3Wrapper><PWrapper>{item.get('title')}></PWrapper></Div3Wrapper>
+                                )
+                            case 3:
+                                return (
+                                    <Div4Wrapper><PWrapper>{item.get('title')}></PWrapper></Div4Wrapper>
+                                )
+                        }
+                    })
+                }
+            </div>
         )
     }
 }
 
-export default Interview;
+const mapState = (state) => ({
+    list: state.getIn(['home', 'fourList'])
+})
+export default connect(mapState, null)(Interview);
