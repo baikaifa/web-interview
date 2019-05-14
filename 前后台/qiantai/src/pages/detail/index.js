@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { DetailWrapper, Header, Content, DImg, DTop, Ddet, DName, DButton, DArticle,} from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
+import  './style.css';
 class Detail extends PureComponent {
     render() {
         return (
@@ -56,7 +57,12 @@ class Detail extends PureComponent {
                     &nbsp;&nbsp;&nbsp;&nbsp;你需要了解到，公司对你或者说这个岗位的人的定位是什么？有没有什么计划，未来3年有什么目标，需要达成什么结果，这个岗位的人向谁汇报工作等这些问题。这些问题涉及到你个人在这家公司的成长问题，有可能也将决定你未来是否偏向技术型人才还是管理型人才。如果这些问题没有了解清楚，如何给自己的薪资报价?  <br />
                     详细询问这些问题后，你再报出期望薪资都不迟。
                     <div className="like">
-                        喜欢&nbsp;&nbsp;|&nbsp;&nbsp;376
+                        <i className="iconfont icon-xin" ></i>&nbsp;&nbsp;喜欢&nbsp;&nbsp;|&nbsp;&nbsp;376
+                    </div>
+                    <div className="talk">
+                        <p>您的评论</p>
+                        <textarea col="80" rows="6" className="pl"></textarea>
+                        <button className="sub">提交</button>
                     </div>
                 </DArticle>
 
