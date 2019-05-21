@@ -81,7 +81,7 @@ class Header extends Component {
                         <NavItem className='reg'>注册</NavItem>
                     </Link>
                     <NavItem className='right'>
-                        <i className="iconfont icon-Aa"></i>
+                     <Link to={'/spa'}> <i className="iconfont icon-Aa"> </i></Link>  
                     </NavItem>
                     <SearchWrapper>
                         <CSSTransition

@@ -9,6 +9,8 @@ import Login from './pages/login';
 import Register from './pages/register';
 import Write from './pages/write';
 import Tiaocao from './pages/tiaocao';
+import Button from './pages/spaPages/button';
+import Spa from './pages/spaPages';
 // import Search from './pages/search'
 import store from './store';
 class App extends Component {
@@ -25,6 +27,9 @@ class App extends Component {
             <Route path='/register' exact component={Register}></Route>
             <Route path='/detail/:id' exact component={Detail}></Route>
             <Route path='/search' exact component={Search}></Route>
+            <Route path='/spa' exact component={Spa}></Route>
+            <Route path='/button' exact component={Button}></Route>
+
           </div>
         </BrowserRouter>
       </Provider>
