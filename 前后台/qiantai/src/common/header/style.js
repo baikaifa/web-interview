@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import logoPic from '../../statics/Logo.png';
 
 export const HeaderWrapper = styled.div`
     position:relative;

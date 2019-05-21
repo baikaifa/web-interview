@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const HomeWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -131,7 +130,7 @@ export const WImg = styled.div`
 export const WName = styled.p`
     float: left;
 `
-export const Wxq = styled.p`
+export const Wxq = styled.span`
     float: left;
     padding-top: 20px;
 `
@@ -162,8 +161,7 @@ height:300px;
 width:100%;
 `
 
-export const Div1Wrapper = styled.div
-`
+export const Div1Wrapper = styled.div`
 width:80%；
 margin-right:10%;
 margin-top:5%;
@@ -172,10 +170,8 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:orange;
 `
-export const Div2Wrapper = styled.div
-`
+export const Div2Wrapper = styled.div`
 width:80%；
-
 margin-right:10%;
 margin-top:5%;
 height:17%;
@@ -183,8 +179,7 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:#F7C2D4;
 `
-export const Div3Wrapper = styled.div
-`
+export const Div3Wrapper = styled.div`
 width:80%；
 
 margin-right:10%;
@@ -194,10 +189,8 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:#BAE389;
 `
-export const Div4Wrapper = styled.div
-`
+export const Div4Wrapper = styled.div`
 width:80%；
-
 margin-right:10%;
 margin-top:5%;
 height:17%;
@@ -205,8 +198,7 @@ border:1px solid whitesmoke;
 border-radius:10px;
 background:#C5CCF0;
 `
-export const PWrapper = styled.p
-`
+export const PWrapper = styled.p`
 height:100%;
 margin-left:5%;
 padding-top:5%;

@@ -37,7 +37,6 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import React, { Component } from 'react'
 import { Row, Col, Form, Icon, Input, Button, Checkbox, } from 'antd';
-import { createForm, formShape } from 'rc-form';
 class NormalLoginForm extends Component {
 
     handleSubmit = (e) => {

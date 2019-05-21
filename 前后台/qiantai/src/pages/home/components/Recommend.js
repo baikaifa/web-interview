@@ -5,14 +5,14 @@ import { WriterWrapper, WTitle, WImg, WName, Wxq, Wfor } from '../style';
 class Recommend extends PureComponent {
     render() {
         return ( 
-                this.props.list.map((item) => {
+                this.props.list.map((item,index) => {
                     return (
-                        <WriterWrapper>
+                        <WriterWrapper key={index}>
                             <WTitle>推荐作者</WTitle>
                             <Wfor>
                                 <WImg></WImg>
                                 <WName>
-                                {item.get('title')}
+                                {item.get('title')}  
                                     <br />
                                     <Wxq>{item.get('desc')}</Wxq>
                                 </WName>

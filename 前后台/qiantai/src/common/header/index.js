@@ -28,7 +28,7 @@ class Header extends Component {
         if (newList.length) {
             for (let i = ((page - 1) * 10); i < page * 10; i++) {
                 pageList.push(
-                    <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+                   <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
                 )
             }
         }
@@ -54,7 +54,7 @@ class Header extends Component {
                     <SearchInfoList >
                         {
                             pageList.map((item, index) => (
-                                <a key={index} onClick={() => handleSearch(item)}>{item}</a>
+                                <Link key={index}  to={'/search'}>      <a key={index} onClick={() => handleSearch(item)}>{item}</a></Link>
                             ))
                         }
                     </SearchInfoList>
