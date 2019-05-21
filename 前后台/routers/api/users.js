@@ -63,7 +63,6 @@ router.post("/login", (req, res) => {
   User.findOne({ email })
     .then(user => {
       if (!user) {
-        console.log('1');
         res.json('用户不存在');
         // return res.status(404).json("!" );
       }
