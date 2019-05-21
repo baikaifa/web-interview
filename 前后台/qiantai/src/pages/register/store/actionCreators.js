@@ -12,10 +12,14 @@ export const logout = () => ({
 
 export const register = (account, password) => {
     return (dispatch) => {
-        console.log(account,password);
         axios.post('/api/users/register',{'email':account,'password':password}).then((res) => {
-            alert('注册成功');
-            window.location ='/login'
+            console.log(res.data);
+            if(res.data=="注册成功"){
+                alert("注册成功");
+                window.location ='/login'
+            }else{
+        alert(res.data);
+            }
         })
     }
 }

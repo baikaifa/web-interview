@@ -6,8 +6,8 @@ import  {Link} from 'react-router-dom'
 class List extends PureComponent {
     render() {
         const { list, getMoreList, page } = this.props;
+
         return (
-    
             <div>
                 {
                     list.map((item, index) => {

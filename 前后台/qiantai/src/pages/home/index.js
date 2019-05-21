@@ -34,7 +34,7 @@ class Home extends PureComponent {
                     {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null}
                     {/* <Recommend /> */}
                     <Interview/>
-                    <Writer />
+                    <Recommend />
                 </HomeRight>
                 <LeftWhite></LeftWhite>
                 <RightWhite></RightWhite>

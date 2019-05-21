@@ -9,6 +9,12 @@ const RecommendSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    title:{
+        type:String
+    },
+    desc:{
+        type:String
+    },
     imgUrl:{
         type:String
     }

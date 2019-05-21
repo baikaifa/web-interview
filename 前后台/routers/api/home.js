@@ -29,6 +29,7 @@ var result = {
     },
     "success": true
 }
+
 router.get("/home", (req, res) => {
     TopicList.find()
         .then(topicList => {

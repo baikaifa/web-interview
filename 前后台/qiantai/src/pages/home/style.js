@@ -123,7 +123,7 @@ export const WImg = styled.div`
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    overflow: hiidden;
+    overflow: hidden;
     background-color: #ccc;
     float: left;
     margin-right: 10px;

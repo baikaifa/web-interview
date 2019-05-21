@@ -55,7 +55,6 @@ class Header extends Component {
                         {
                             pageList.map((item, index) => (
                                 <a key={index} onClick={() => handleSearch(item)}>{item}</a>
-                                // <li key={index} onClick={() => handleSearch(item)}>{item}</li>
                             ))
                         }
                     </SearchInfoList>

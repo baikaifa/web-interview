@@ -9,11 +9,11 @@ class Detail extends PureComponent {
     render() {
         return (
             <DetailWrapper>
-                <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header>
+                {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
                 <Content
                     dangerouslySetInnerHTML={{ __html: this.props.content }}
                 />
-                <DTop>
+                {/* <DTop>
                     <DImg className="tx"/>
                     <DName>阿德邦HRSaaS<br />
                         <Ddet>
@@ -21,8 +21,8 @@ class Detail extends PureComponent {
                         </Ddet>
                     </DName>
                     <DButton>+ 关注</DButton>
-                </DTop>
-                <DArticle>
+                </DTop> */}
+                {/* <DArticle>
                     亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
                     怎么巧妙回答薪资问题？  <br />
                     怎么保证自己的利益最大化？  <br />
@@ -64,7 +64,7 @@ class Detail extends PureComponent {
                         <textarea col="80" rows="6" className="pl"></textarea>
                         <button className="sub">提交</button>
                     </div>
-                </DArticle>
+                </DArticle> */}
 
             </DetailWrapper>
         )
@@ -75,14 +75,14 @@ class Detail extends PureComponent {
 
     }
     bindEvents() {
-        function pushHistory() {
-            var state = {
-                title: "title",
-                url: "#"
-            };
-            window.history.pushState(state, "title", "#xx");
-        }
-        pushHistory();
+        // function pushHistory() {
+        //     var state = {
+        //         title: "title",
+        //         url: "#"
+        //     };
+        //     window.history.pushState(state, "title", "#xx");
+        // }
+        // pushHistory();
         window.addEventListener("popstate", (e) => {
             this.props.reductionPages();
         }, false);

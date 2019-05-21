@@ -33,6 +33,16 @@
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
           </template>
         </el-table-column>
+           <el-table-column prop="title" label="标题" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.title}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="desc" label="描述desc" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.desc}}</span>
+          </template>
+        </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
           <template slot-scope="scope">
             <el-button
@@ -89,6 +99,8 @@ export default {
         imgUrl: "",
         id: "",
         _id:"",
+        desc:"",
+        title:""
       },
       dialog: {
         show: false,
@@ -135,6 +147,8 @@ export default {
         title: row.title,
         id: row.id,
         _id:row._id,
+        desc:row.desc,
+        title:row.title
       };
     },
     handleDelete(index, row) {

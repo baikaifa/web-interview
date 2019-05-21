@@ -42,8 +42,6 @@ router.post("/edit/:id",  (req, res) => {
 });
 
 router.delete("/delete/:id",  (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     FourList.findOneAndDelete({ _id: req.params.id }).then(fourList => {
         fourList.save().then(fourList => res.json(fourList))
     })

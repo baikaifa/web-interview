@@ -42,8 +42,6 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     ArticleList.findOneAndDelete({ _id: req.params.id }).then(articleList => {
         articleList.save().then(articleList => res.json(articleList))
     })

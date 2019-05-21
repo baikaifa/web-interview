@@ -21,7 +21,7 @@ router.post("/register", (req, res) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
       if (user) {
-        return res.status(400).json( "邮箱已被注册！")
+        return res.json( "邮箱已被注册！")
       } else {
         const avatar = gravatar.url(req.body.email, { s: '200', r: 'pg', d: 'mm' })//404是报错mm是头像
         const newUser = new User({
@@ -43,10 +43,10 @@ router.post("/register", (req, res) => {
               newUser.save()//调用存储方法
                 .then(user => res.json(user))
                 .catch(err => console.log(err))
+                res.json("注册成功")
             }
           });
         });
-        // return res.status(200).json({email:"可以注册！"})
       }
     }).catch(() => {
       console.log('查询出错');
