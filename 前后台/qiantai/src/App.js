@@ -10,6 +10,8 @@ import Register from './pages/register';
 import Write from './pages/write';
 import Tiaocao from './pages/tiaocao';
 import Button from './pages/spaPages/button';
+import Button2 from './pages/spaPages/button2';
+import Words from './pages/spaPages/words';
 import Spa from './pages/spaPages';
 // import Search from './pages/search'
 import store from './store';
@@ -29,7 +31,8 @@ class App extends Component {
             <Route path='/search' exact component={Search}></Route>
             <Route path='/spa' exact component={Spa}></Route>
             <Route path='/button' exact component={Button}></Route>
-
+            <Route path='/button2' exact component={Button2}></Route>
+            <Route path='/words' exact component={Words}></Route>
           </div>
         </BrowserRouter>
       </Provider>
