@@ -36,21 +36,32 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import React, { Component } from 'react'
-import { Row, Col, Form, Icon, Input, Button, Checkbox, } from 'antd';
+import  {Link} from 'react-router-dom'
+import { Row, Col, Form, message,Icon, Input, Button, Checkbox, } from 'antd';
 class NormalLoginForm extends Component {
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        let userInfo = this.props.form.getFieldsValue();
         this.props.form.validateFields((err, values) => {
-            if (!err) {
-                console.log('Received values of form: ', values);
+            if(!err){
+                message.success(`${userInfo.userName} 恭喜你，登陆成功，当前密码为：${userInfo.password}`)
             }
-        });
-        this.props.login(this.account.props.value,this.password.props.value );
+        })
+
+        e.preventDefault();
+        // this.props.form.validateFields((err, values) => {
+        //     if (!err) {
+        //         console.log('Received values of form: ', values);
+        //     }
+        // });
+        
+        this.props.login(userInfo.userName, userInfo.password);
+        // this.props.login(this.account.props.value, this.password.props.value);
     }
     render() {
         const { getFieldDecorator } = this.props.form;
         const { loginStatus } = this.props;
+let text="&nbsp;";
         console.log(this.props.loginStatus);
         if (!loginStatus) {
             return (
@@ -58,11 +69,24 @@ class NormalLoginForm extends Component {
                     <Col offset={9} span={6}>
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item hasFeedback>
+                                {
+                                    this.handleValidator = (rule, val, callback) => {
+
+                                        if (!val) {
+                                            callback('不能为空');
+                                        }
+                                        if (!/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(val)) {
+                                            callback('邮箱格式错误');
+                                        }
+                                        callback();
+                                    }
+                                }
                                 {getFieldDecorator('userName', {
                                     rules: [
-                                        { required: true, message: 'Please input your username!' },
-                                        { pattern: /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/, message: '请输入正确的邮箱格式' },
-                                        // {min:6,max:10,message:'长度是6-10'}
+                                        { validator: this.handleValidator }
+                                        // {required: true, message: 'Please input your username!' },
+                                        // {pattern: /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/, message: '请输入正确的邮箱格式' },
+                                        // {min: 6,max:10,message:'长度是6-10'}
                                     ],
                                 })(
                                     <Input ref={(input) => { this.account = input }} addonBefore={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
@@ -86,20 +110,21 @@ class NormalLoginForm extends Component {
                                     <Checkbox>Remember me</Checkbox>
                                 )}
                                 <a className="login-form-forgot" href="">Forgot password</a>
-                                <Button  type="primary" htmlType="submit"  className="login-form-button" >
-                                    Log in
+                                <Button type="primary" htmlType="submit" className="login-form-button" >
+                                    Log in 
                     </Button>
-                                Or <a href="">register now!</a>
+                    
+                 <span dangerouslySetInnerHTML={{__html:text}}></span>   or  <Link to={'/register'} > <span dangerouslySetInnerHTML={{__html:text}}></span> register now!</Link>
                             </Form.Item>
                         </Form>
                     </Col>
                 </Row>
             );
         }
-        else{
+        else {
             return <Redirect to='/' />
         }
-    } 
+    }
 }
 
 const mapState = (state) => ({
