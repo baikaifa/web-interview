@@ -54,7 +54,6 @@ class NormalLoginForm extends Component {
         //         console.log('Received values of form: ', values);
         //     }
         // });
-        
         this.props.login(userInfo.userName, userInfo.password);
         // this.props.login(this.account.props.value, this.password.props.value);
     }

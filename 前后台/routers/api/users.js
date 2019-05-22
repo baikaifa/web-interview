@@ -16,6 +16,9 @@ const User = require('../../models/User');
 //$route POST api/users/test
 //@desc 返回请求的json数据
 //@access public 接口类型
+router.get('/getUser',passport.authenticate('jwt',{session:false}),(req,res)=>{
+  res.send('我是user')
+})
 router.post("/register", (req, res) => {
   //查询数据库中是否拥有邮箱
   User.findOne({ email: req.body.email })

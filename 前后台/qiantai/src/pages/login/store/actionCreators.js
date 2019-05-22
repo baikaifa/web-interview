@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../../http'
 import * as constants from './constants'
 const changeLogin = () => ({
     type: constants.CHANGE_LOGIN,
