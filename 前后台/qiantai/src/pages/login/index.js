@@ -42,12 +42,6 @@ class NormalLoginForm extends Component {
 
     handleSubmit = (e) => {
         let userInfo = this.props.form.getFieldsValue();
-        this.props.form.validateFields((err, values) => {
-            if(!err){
-                message.success(`${userInfo.userName} 恭喜你，登陆成功，当前密码为：${userInfo.password}`)
-            }
-        })
-
         e.preventDefault();
         // this.props.form.validateFields((err, values) => {
         //     if (!err) {

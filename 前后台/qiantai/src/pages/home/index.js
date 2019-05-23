@@ -46,18 +46,7 @@ class Home extends PureComponent {
     componentDidMount() {
         this.props.changeHomeData();
         this.bindEvents();
-        // axios.get('/api/home.json').then((res) => {
-        //     console.log(res);
-        //     const result = res.data.data;
-        //     const action = {
-        //         type: 'change_home_data',
-        //         topicList: result.topicList,
-        //         articleList: result.articleList,
-        //         recommendList: result.recommendList,
-        //         fourList:result.fourList
-        //     }
-        //     this.props.changeHomeData(action);
-        // })
+
     }
     componentWillMount() {
         window.removeEventListener('scroll', this.props.changeScrollTopShow)

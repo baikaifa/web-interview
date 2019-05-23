@@ -28,6 +28,7 @@ axios.interceptors.response.use(response => {
     //获取错误状态码
     console.log('响应拦截');
     const { status } = error.response;
+    console.log(status);
     if (status == 401) {
         message.error('token失效，请重新登录！');
         //清除token
