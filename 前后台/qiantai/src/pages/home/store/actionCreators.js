@@ -21,7 +21,6 @@ export const getHomeInfo = () => {
     return (dispatch) => {
         axios.get('/api/home/home').then((res) => {
             const result = res.data.data;
-            console.log(result);
             const action = {
                 type: 'change_home_data',
                 topicList: result.topicList,

@@ -55,7 +55,7 @@ class Header extends Component {
                     <SearchInfoList >
                         {
                             pageList.map((item, index) => (
-                                <Link key={index}  to={'/search'}>      <a key={index} onClick={() => handleSearch(item)}>{item}</a></Link>
+                                <Link key={index}  to={'/search'}>      <div key={index} onClick={() => handleSearch(item)}>{item}</div></Link>
                             ))
                         }
                     </SearchInfoList>
@@ -66,7 +66,7 @@ class Header extends Component {
         }
     }
     render() {
-        const { focused, handleInputFocus, handleInputBlur, list, login, logout,changeLoginState } = this.props;
+        const { focused, handleInputFocus, handleInputBlur, list, login, logout, } = this.props;
         return (
             
             <HeaderWrapper>

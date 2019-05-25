@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Toast } from 'antd-mobile'
 import  {message} from 'antd'
-import 'element-theme-default'
+// import 'element-theme-default'
 
 //请求拦截 每次http请求都会走这个 
 axios.interceptors.request.use(config => {
@@ -29,7 +29,7 @@ axios.interceptors.response.use(response => {
     console.log('响应拦截');
     const { status } = error.response;
     console.log(status);
-    if (status == 401) {
+    if (status === 401) {
         message.error('token失效，请重新登录！');
         //清除token
         localStorage.removeItem('eleToken');

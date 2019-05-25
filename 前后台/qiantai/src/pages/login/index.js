@@ -37,7 +37,8 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import React, { Component } from 'react'
 import  {Link} from 'react-router-dom'
-import { Row, Col, Form, message,Icon, Input, Button, Checkbox, } from 'antd';
+// message,
+import { Row, Col, Form, Icon, Input, Button, Checkbox, } from 'antd';
 class NormalLoginForm extends Component {
 
     handleSubmit = (e) => {
@@ -102,7 +103,7 @@ let text="&nbsp;";
                                 })(
                                     <Checkbox>Remember me</Checkbox>
                                 )}
-                                <a className="login-form-forgot" href="">Forgot password</a>
+                                <a className="login-form-forgot" href="www.baidu.com">Forgot password</a>
                                 <Button type="primary" htmlType="submit" className="login-form-button" >
                                     Log in 
                     </Button>

@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.4"
-  }
+  },
+  "plugins":[
+    ["import", { "libraryName": "antd-mobile", "style": "css" }]
+  ]
 }

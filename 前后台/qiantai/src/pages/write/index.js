@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { HomeWrapper, HomeRight, LeftWhite, RightWhite } from '../home/style.js'
 import  {HomeLeft,NewArticle,NoTitleArticle} from './style.js'
