@@ -1,6 +1,6 @@
 import axios from '../../../http'
 import * as constants from './constants'
-const changeLogin = () => ({
+export const changeLogin = () => ({
     type: constants.CHANGE_LOGIN,
     value: true
 })
@@ -13,8 +13,6 @@ export const logout = () => ({
 export const login = (account, password) => {
     return (dispatch) => {
         axios.post('/api/users/login',{'email':account,'password':password}).then((res) => {
-            console.log(account,password);
-            console.log(res);
             if (res.data.success) {
                 dispatch(changeLogin())
             } else {

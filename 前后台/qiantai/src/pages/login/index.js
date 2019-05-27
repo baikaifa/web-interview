@@ -37,17 +37,12 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import React, { Component } from 'react'
 import  {Link} from 'react-router-dom'
-import { Row, Col, Form, message,Icon, Input, Button, Checkbox, } from 'antd';
+// message,
+import { Row, Col, Form, Icon, Input, Button, Checkbox, } from 'antd';
 class NormalLoginForm extends Component {
 
     handleSubmit = (e) => {
         let userInfo = this.props.form.getFieldsValue();
-        this.props.form.validateFields((err, values) => {
-            if(!err){
-                message.success(`${userInfo.userName} 恭喜你，登陆成功，当前密码为：${userInfo.password}`)
-            }
-        })
-
         e.preventDefault();
         // this.props.form.validateFields((err, values) => {
         //     if (!err) {
@@ -108,7 +103,7 @@ let text="&nbsp;";
                                 })(
                                     <Checkbox>Remember me</Checkbox>
                                 )}
-                                <a className="login-form-forgot" href="">Forgot password</a>
+                                <a className="login-form-forgot" href="www.baidu.com">Forgot password</a>
                                 <Button type="primary" htmlType="submit" className="login-form-button" >
                                     Log in 
                     </Button>

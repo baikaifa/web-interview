@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { DetailWrapper, Header, Content, DImg, DTop, Ddet, DName, DButton, DArticle,} from './style.js'
+// , Header, DImg, DTop, Ddet, DName, DButton, DArticle,
+import { DetailWrapper, Content} from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import  './style.css';
