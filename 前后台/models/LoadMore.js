@@ -17,6 +17,15 @@ const LoadMoreSchema = new Schema({
     },
     id:{
         type:String
+    },
+    DName:{
+        type:String
+    },
+    Ddet:{
+        type:String
+    },
+    DArticle:{
+        type:String
     }
 })
 module.exports = LoadMore = mongoose.model("loadMore", LoadMoreSchema)

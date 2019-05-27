@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-// , Header, DImg, DTop, Ddet, DName, DButton, DArticle,
-import { DetailWrapper, Content} from './style.js'
+// 
+import { DetailWrapper,  Header, DImg, DTop, Ddet, DName, DButton, DArticle,Content} from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import  './style.css';
@@ -10,21 +10,27 @@ class Detail extends PureComponent {
     render() {
         return (
             <DetailWrapper>
-                {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
-                <Content
+                  {/* <Content
                     dangerouslySetInnerHTML={{ __html: this.props.content }}
-                />
-                {/* <DTop>
+                /> */}
+                  {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
+                <Header>{this.props.title}"</Header>
+              
+                <DTop>
                     <DImg className="tx"/>
-                    <DName>阿德邦HRSaaS<br />
+                    <DName>{this.props.DName}<br />
+                    {/* <DName>阿德邦HRSaaS<br /> */}
                         <Ddet>
-                            2019.03.21&nbsp;&nbsp;字数&nbsp;14330&nbsp;&nbsp;阅读&nbsp;7853&nbsp;&nbsp;评论&nbsp;863&nbsp;&nbsp;喜欢&nbsp;87682
+                        {/* <Ddet> */}
+                        {this.props.Ddet}
+                            {/* 2019.03.21&nbsp;&nbsp;字数&nbsp;14330&nbsp;&nbsp;阅读&nbsp;7853&nbsp;&nbsp;评论&nbsp;863&nbsp;&nbsp;喜欢&nbsp;87682 */}
                         </Ddet>
                     </DName>
                     <DButton>+ 关注</DButton>
                 </DTop> */}
-                {/* <DArticle>
-                    亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
+                 <DArticle>
+                     {this.props.DArticle}
+                    {/* 亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
                     怎么巧妙回答薪资问题？  <br />
                     怎么保证自己的利益最大化？  <br />
                     怎么把“白菜价”开成“翡翠价”？  <br />
@@ -64,8 +70,8 @@ class Detail extends PureComponent {
                         <p>您的评论</p>
                         <textarea col="80" rows="6" className="pl"></textarea>
                         <button className="sub">提交</button>
-                    </div>
-                </DArticle> */}
+                    </div> */}
+                </DArticle>
 
             </DetailWrapper>
         )
