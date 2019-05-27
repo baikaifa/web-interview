@@ -55,11 +55,17 @@ router.post("/register", (req, res) => {
       console.log('查询出错');
     })
 })
+router.get("/login", (req, res) => {
+  console.log(req.cookies);
+  const {userEmail}=req.cookies;
+  res.json(userEmail);
+})
 //$route POST api/users/login
 //@desc 返回token jwt passport
 //@access public 接口类型
 router.post("/login", (req, res) => {
-  console.log(req.body);
+  // res.cookie('userEmail',req.body.email)
+  res.cookie('userEmail',req.body.email,{maxAge:24*3600*1000});
   const email = req.body.email;
   const password = req.body.password;
   //查询数据库

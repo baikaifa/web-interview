@@ -1,0 +1,3 @@
+Ajax基于http协议，单向，实时获取数据只能轮询
+socket.io基于websocket双向通信协议，后端可以主动推送数据
+现代浏览器均支持websocket协议

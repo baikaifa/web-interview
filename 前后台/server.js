@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const cookieParser=require('cookie-parser');
 const app = express();
 //引入users.js
 const users = require('./routers/api/users');
@@ -16,6 +17,7 @@ const recommendList = require('./routers/api/recommendList');
 const fourList = require('./routers/api/fourList');
 const loadMore = require('./routers/api/loadMore');
 //使用body-parser中间件
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 //passport初始化   初始化之后才能使用
