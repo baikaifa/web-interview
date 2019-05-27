@@ -22,7 +22,7 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.id) { profileFields.id = req.body.id; }
-    console.log('1',profileFields);
+    if (req.body.desc) { profileFields.desc = req.body.desc; }
     new RecommendList(profileFields).save().then(recommentList => {
         res.json(recommentList)
     }).catch(err=>res.json(err));
@@ -33,6 +33,7 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.id) { profileFields.id = req.body.id; }
+    if (req.body.desc) { profileFields.desc = req.body.desc; }
     RecommendList.findOneAndUpdate(
         { _id: req.params.id },
         { $set: profileFields },
@@ -41,8 +42,6 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     RecommendList.findOneAndDelete({ _id: req.params.id }).then(recommentList => {
         recommentList.save().then(recommentList => res.json(recommentList))
     })

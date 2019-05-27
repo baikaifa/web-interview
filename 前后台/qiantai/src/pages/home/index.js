@@ -34,7 +34,7 @@ class Home extends PureComponent {
                     {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null}
                     {/* <Recommend /> */}
                     <Interview/>
-                    <Writer />
+                    <Recommend />
                 </HomeRight>
                 <LeftWhite></LeftWhite>
                 <RightWhite></RightWhite>
@@ -46,17 +46,18 @@ class Home extends PureComponent {
     componentDidMount() {
         this.props.changeHomeData();
         this.bindEvents();
-        axios.get('/api/home.json').then((res) => {
-            console.log(res);
-            const result = res.data.data;
-            const action = {
-                type: 'change_home_data',
-                topicList: result.articleList,
-                articleList: result.articleList,
-                recommendList: result.recommendList
-            }
-            this.props.changeHomeData(action);
-        })
+        // axios.get('/api/home.json').then((res) => {
+        //     console.log(res);
+        //     const result = res.data.data;
+        //     const action = {
+        //         type: 'change_home_data',
+        //         topicList: result.topicList,
+        //         articleList: result.articleList,
+        //         recommendList: result.recommendList,
+        //         fourList:result.fourList
+        //     }
+        //     this.props.changeHomeData(action);
+        // })
     }
     componentWillMount() {
         window.removeEventListener('scroll', this.props.changeScrollTopShow)

@@ -4,15 +4,16 @@ import { withRouter } from 'react-router-dom'
 import { DetailWrapper, Header, Content, DImg, DTop, Ddet, DName, DButton, DArticle,} from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
+import  './style.css';
 class Detail extends PureComponent {
     render() {
         return (
             <DetailWrapper>
-                <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header>
+                {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
                 <Content
                     dangerouslySetInnerHTML={{ __html: this.props.content }}
                 />
-                <DTop>
+                {/* <DTop>
                     <DImg className="tx"/>
                     <DName>阿德邦HRSaaS<br />
                         <Ddet>
@@ -20,8 +21,8 @@ class Detail extends PureComponent {
                         </Ddet>
                     </DName>
                     <DButton>+ 关注</DButton>
-                </DTop>
-                <DArticle>
+                </DTop> */}
+                {/* <DArticle>
                     亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
                     怎么巧妙回答薪资问题？  <br />
                     怎么保证自己的利益最大化？  <br />
@@ -56,9 +57,14 @@ class Detail extends PureComponent {
                     &nbsp;&nbsp;&nbsp;&nbsp;你需要了解到，公司对你或者说这个岗位的人的定位是什么？有没有什么计划，未来3年有什么目标，需要达成什么结果，这个岗位的人向谁汇报工作等这些问题。这些问题涉及到你个人在这家公司的成长问题，有可能也将决定你未来是否偏向技术型人才还是管理型人才。如果这些问题没有了解清楚，如何给自己的薪资报价?  <br />
                     详细询问这些问题后，你再报出期望薪资都不迟。
                     <div className="like">
-                        喜欢&nbsp;|&nbsp;376
+                        <i className="iconfont icon-xin" ></i>&nbsp;&nbsp;喜欢&nbsp;&nbsp;|&nbsp;&nbsp;376
                     </div>
-                </DArticle>
+                    <div className="talk">
+                        <p>您的评论</p>
+                        <textarea col="80" rows="6" className="pl"></textarea>
+                        <button className="sub">提交</button>
+                    </div>
+                </DArticle> */}
 
             </DetailWrapper>
         )
@@ -69,14 +75,14 @@ class Detail extends PureComponent {
 
     }
     bindEvents() {
-        function pushHistory() {
-            var state = {
-                title: "title",
-                url: "#"
-            };
-            window.history.pushState(state, "title", "#xx");
-        }
-        pushHistory();
+        // function pushHistory() {
+        //     var state = {
+        //         title: "title",
+        //         url: "#"
+        //     };
+        //     window.history.pushState(state, "title", "#xx");
+        // }
+        // pushHistory();
         window.addEventListener("popstate", (e) => {
             this.props.reductionPages();
         }, false);

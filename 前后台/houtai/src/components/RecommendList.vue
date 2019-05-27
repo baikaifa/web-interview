@@ -21,6 +21,12 @@
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
+                 <el-form-item prop="title" label="标题:">
+            <el-input type="title" v-model="formData.title"></el-input>
+          </el-form-item>
+                 <el-form-item prop="desc" label="描述desc:">
+            <el-input type="desc" v-model="formData.desc"></el-input>
+          </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
             <el-button type="primary" @click="onSubmit('form')">提交</el-button>
@@ -38,7 +44,9 @@ export default {
     return {
       form_rules: {
          id: [{ required: true, message: "id不能为空", trigger: "blur" }],
-        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
+        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }],
+        title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
+        desc: [{ required: true, message: "描述不能为空", trigger: "blur" }]
       }
     };
   },

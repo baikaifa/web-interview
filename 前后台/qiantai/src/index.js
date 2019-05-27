@@ -3,5 +3,4 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './style.js';
 import   './statics/iconfont/iconfont.css'
-// import   './assets/fonts/iconfont.css'
 ReactDOM.render(<App />,document.getElementById('root'))
