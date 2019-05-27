@@ -27,6 +27,15 @@
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
+          <el-form-item prop="DName" label="名字:">
+            <el-input type="DName" v-model="formData.DName"></el-input>
+          </el-form-item>
+          <el-form-item prop="Ddet" label="日期:">
+            <el-input type="Ddet" v-model="formData.Ddet"></el-input>
+          </el-form-item>
+          <el-form-item prop="DArticle" label="文章:">
+            <el-input type="DArticle" v-model="formData.DArticle"></el-input>
+          </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
             <el-button type="primary" @click="onSubmit('form')">提交</el-button>

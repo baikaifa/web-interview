@@ -40,6 +40,21 @@
             <span style="color:#4db3ff">{{scope.row.content}}</span>
           </template>
         </el-table-column>
+        <el-table-column prop="DName" label="名字" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.DName}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="Ddet" label="日期" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="DArticle" label="文章" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
+          </template>
+        </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
           <template slot-scope="scope">
             <el-button
@@ -97,6 +112,9 @@ export default {
         title: "",
         id: "",
         _id:"",
+        DName:"",
+        Ddet:"",
+        DArticle:"",
       },
       dialog: {
         show: false,
@@ -141,6 +159,9 @@ export default {
         title: row.title,
         id:row.id,
         _id:row._id,
+        DName: row.DName,
+        Ddet: row.Ddet,
+        DArticle:row.DArticle,
       };
     },
     handleDelete(index, row) {

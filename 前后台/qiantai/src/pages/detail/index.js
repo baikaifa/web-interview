@@ -20,16 +20,16 @@ class Detail extends PureComponent {
                     <DImg className="tx"/>
                     <DName>{this.props.DName}<br />
                     {/* <DName>阿德邦HRSaaS<br /> */}
-                        <Ddet>
+                        <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
                         {/* <Ddet> */}
-                        {this.props.Ddet}
+                        {/* {this.props.Ddet} */}
                             {/* 2019.03.21&nbsp;&nbsp;字数&nbsp;14330&nbsp;&nbsp;阅读&nbsp;7853&nbsp;&nbsp;评论&nbsp;863&nbsp;&nbsp;喜欢&nbsp;87682 */}
                         </Ddet>
                     </DName>
                     <DButton>+ 关注</DButton>
-                </DTop> */}
-                 <DArticle>
-                     {this.props.DArticle}
+                </DTop>
+                 <DArticle  dangerouslySetInnerHTML={{ __html: this.props.DArticle }}>
+                     {/* {this.props.DArticle} */}
                     {/* 亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
                     怎么巧妙回答薪资问题？  <br />
                     怎么保证自己的利益最大化？  <br />
@@ -98,7 +98,10 @@ class Detail extends PureComponent {
 const mapState = (state) => ({
     title: state.getIn(['detail', 'title']),
     content: state.getIn(['detail', 'content']),
-    page: state.getIn(['home', 'articlePage'])
+    page: state.getIn(['home', 'articlePage']),
+    DName: state.getIn(['detail','DName']),
+    Ddet: state.getIn(['detail','Ddet']),
+    DArticle: state.getIn(['detail','DArticle']),
 })
 const mapDispatch = (dispatch) => ({
     getDetail(id) {
