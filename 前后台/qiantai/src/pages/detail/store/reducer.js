@@ -5,7 +5,8 @@ const defaultState = fromJS({
     content: '',
     DName:'',
     Ddet:'',
-    DArticle:''
+    DArticle:'',
+    Comment:''
 })
 
 export default (state = defaultState, action) => {
@@ -16,7 +17,8 @@ export default (state = defaultState, action) => {
                 content: action.content,
                 DName: action.DName,
                 Ddet: action.Ddet,
-                DArticle: action.DArticle
+                DArticle: action.DArticle,
+                Comment: action.Comment
             })
         default:
             return state;

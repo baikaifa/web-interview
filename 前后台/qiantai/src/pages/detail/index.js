@@ -1,35 +1,47 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 // 
-import { DetailWrapper,  Header, DImg, DTop, Ddet, DName, DButton, DArticle,Content} from './style.js'
+import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Content } from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
-import  './style.css';
+import './style.css';
 class Detail extends PureComponent {
+    constructor(props) {
+        super(props);
+        //当组建的state或者props发生改变的时候，render函数就会重新执行
+        this.state = {
+            inputValue:'',
+            list: []
+        }
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleBtnClick = this.handleBtnClick.bind(this)
+        this.handleItemDelete = this.handleItemDelete.bind(this)
+    }
+    
     render() {
+        
         return (
             <DetailWrapper>
-                  {/* <Content
+                {/* <Content
                     dangerouslySetInnerHTML={{ __html: this.props.content }}
                 /> */}
-                  {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
+                {/* <Header>{this.props.title}面试官的陷阱:"你的期望薪资是多少？"</Header> */}
                 <Header>{this.props.title}"</Header>
-              
                 <DTop>
-                    <DImg className="tx"/>
+                    <DImg className="tx" />
                     <DName>{this.props.DName}<br />
-                    {/* <DName>阿德邦HRSaaS<br /> */}
+                        {/* <DName>阿德邦HRSaaS<br /> */}
                         <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
-                        {/* <Ddet> */}
-                        {/* {this.props.Ddet} */}
+                            {/* <Ddet> */}
+                            {/* {this.props.Ddet} */}
                             {/* 2019.03.21&nbsp;&nbsp;字数&nbsp;14330&nbsp;&nbsp;阅读&nbsp;7853&nbsp;&nbsp;评论&nbsp;863&nbsp;&nbsp;喜欢&nbsp;87682 */}
                         </Ddet>
                     </DName>
                     <DButton>+ 关注</DButton>
                 </DTop>
-                 <DArticle  dangerouslySetInnerHTML={{ __html: this.props.DArticle }}>
-                     {/* {this.props.DArticle} */}
+                <DArticle dangerouslySetInnerHTML={{ __html: this.props.DArticle }}>
+                    {/* {this.props.DArticle} */}
                     {/* 亲爱的小伙伴们，想必各位或多或少都经历过谈薪的阶段，当HR问：你期望的薪资是多少？说低了总觉得委屈自己，说高了又怕offer不保，好不容易在前面几轮面试积攒的自信，在这个问题上就变成“emm差不多就行吧”然后面试一结束就开始无限后悔……<br />  
                     怎么巧妙回答薪资问题？  <br />
                     怎么保证自己的利益最大化？  <br />
@@ -72,9 +84,65 @@ class Detail extends PureComponent {
                         <button className="sub">提交</button>
                     </div> */}
                 </DArticle>
-
+                <p></p>
+                <Fragment>
+                    <div>
+                    <ul ref={(ul) => { this.ul = ul }}>
+                        {this.getTodoItem()}
+                    </ul>
+                        <label htmlFor="insertArea">你的评论</label>
+                        <input
+                            id="insertArea"
+                            className='input'
+                            value={this.state.inputValue}
+                            onChange={this.handleInputChange}
+                            ref={(input) => { this.input = input }}
+                            type="text"
+                        />
+                        <button onClick={this.handleBtnClick}>提交</button>
+                    </div>
+                </Fragment>
             </DetailWrapper>
         )
+    }
+
+    getTodoItem() {
+        return this.state.list.map((item, index) => {
+            return (
+                <div>
+                    <li
+                        key={index}
+                        onClick={this.handleItemDelete.bind(this, index)}
+                        dangerouslySetInnerHTML={{ __html: item }}
+                    >
+                    </li>
+                </div>
+            )
+        })
+    }
+    handleInputChange(e) {
+        const value = this.input.value;
+        this.setState(() => ({
+            inputValue: value
+        }))
+    }
+
+    handleBtnClick() {
+        this.setState((prevState) => ({
+            list: [...prevState.list, prevState.inputValue],
+            inputValue: ''
+        }), //() => {
+            //console.log(this.ul.querySelectorAll('div').length);
+        //}
+        )
+    }
+
+    handleItemDelete(index) {
+        this.setState((prevState) => {
+            const list = [...prevState.list]
+            list.splice(index, 1);
+            return { list }
+        })
     }
     componentDidMount() {
         this.props.getDetail(this.props.match.params.id);
@@ -99,9 +167,10 @@ const mapState = (state) => ({
     title: state.getIn(['detail', 'title']),
     content: state.getIn(['detail', 'content']),
     page: state.getIn(['home', 'articlePage']),
-    DName: state.getIn(['detail','DName']),
-    Ddet: state.getIn(['detail','Ddet']),
-    DArticle: state.getIn(['detail','DArticle']),
+    DName: state.getIn(['detail', 'DName']),
+    Ddet: state.getIn(['detail', 'Ddet']),
+    DArticle: state.getIn(['detail', 'DArticle']),
+
 })
 const mapDispatch = (dispatch) => ({
     getDetail(id) {
