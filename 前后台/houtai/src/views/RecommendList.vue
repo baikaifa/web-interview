@@ -1,9 +1,10 @@
 <template>
   <div class="container">
+     <el-button type="primary" size="small" class="add_btn" icon="view" @click="handleAdd()">添加</el-button>
     <div>
       <el-form :inline="true" ref="add_data">
         <el-form-item class="btnRight">
-          <el-button type="primary" size="small" icon="view" @click="handleAdd()">添加</el-button>
+         
         </el-form-item>
       </el-form>
     </div>
@@ -30,6 +31,16 @@
         <el-table-column prop="imgUrl" label="图片地址" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
+          </template>
+        </el-table-column>
+           <el-table-column prop="title" label="标题" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.title}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="desc" label="描述desc" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.desc}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
@@ -88,6 +99,8 @@ export default {
         imgUrl: "",
         id: "",
         _id:"",
+        desc:"",
+        title:""
       },
       dialog: {
         show: false,
@@ -134,6 +147,8 @@ export default {
         title: row.title,
         id: row.id,
         _id:row._id,
+        desc:row.desc,
+        title:row.title
       };
     },
     handleDelete(index, row) {
@@ -204,5 +219,8 @@ export default {
 .pagination {
   text-align: center;
   margin-top: 10px;
+}
+.add_btn{
+    margin-left:90%;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
+      <el-button type="primary" size="small" icon="view" class="add_btn" @click="handleAdd()">添加</el-button>
     <div>
       <el-form :inline="true" ref="add_data">
         <el-form-item class="btnRight">
-          <el-button type="primary" size="small" icon="view" @click="handleAdd()">添加</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -43,6 +43,54 @@
             <span style="color:#4db3ff">{{scope.row.desc}}</span>
           </template>
         </el-table-column>
+        <el-table-column prop="Like" label="喜欢" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.Like}}</span>
+          </template>
+<<<<<<< HEAD
+          <el-table-column prop="Ddet" label="Ddet" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+          </template>
+          <el-table-column prop="DArticle" label="文章" width="130" align="center">
+=======
+        </el-table-column>
+        <el-table-column prop="Comment" label="评论" width="130" align="center">
+          <template slot-scope="scope">
+<<<<<<< HEAD
+            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="DArticle" label="文章" width="130" align="center">
+>>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
+          </template>
+        </el-table-column>
+<<<<<<< HEAD
+        </el-table-column>
+        </el-table-column>
+=======
+=======
+            <span style="color:#4db3ff">{{scope.row.Comment}}</span>
+          </template>
+        </el-table-column>
+        
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
+
+          <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.inputValue}}</span>
+          </template>
+           </el-table-column>
+           
+            <el-table-column prop="CommentList" label="CommentList" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.CommentList}}</span>
+          </template>
+        </el-table-column>
+
+>>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
         <el-table-column label="操作" align="center" width="180" prop="operation">
           <template slot-scope="scope">
             <el-button
@@ -101,6 +149,19 @@ export default {
         title: "",
         id: "",
         _id:"",
+<<<<<<< HEAD
+        DName:"",
+        Ddet:"",
+        DArticle:"",
+<<<<<<< HEAD
+=======
+=======
+        Like:"",
+        Comment:"",
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
+        CommentList:[],
+        inputValue:""
+>>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
       },
       dialog: {
         show: false,
@@ -147,6 +208,22 @@ export default {
         title: row.title,
         id: row.id,
         _id:row._id,
+<<<<<<< HEAD
+<<<<<<< HEAD
+        DName:row.DName,
+        Ddet:row.Ddet,
+        DArticle:row.DArticle,
+=======
+        DName: row.DName,
+        Ddet: row.Ddet,
+        DArticle:row.DArticle,
+=======
+        Like:row.Like,
+        Comment:row.Comment,
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
+        CommentList:row.CommentList,
+        inputValue:row.inputValue
+>>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
       };
     },
     handleDelete(index, row) {
@@ -166,7 +243,11 @@ export default {
         desc: "",
         title: "",
         id: "",
-        _id:""
+        _id:"",
+        inputValue:"",
+        CommentList:[],
+        Like:"",
+        Comment:""
       };
 
       this.dialog.show = true;
@@ -217,5 +298,8 @@ export default {
 .pagination {
   text-align: center;
   margin-top: 10px;
+}
+.add_btn{
+    margin-left:90%;
 }
 </style>

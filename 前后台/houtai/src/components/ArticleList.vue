@@ -24,8 +24,29 @@
           <el-form-item prop="desc" label="描述:">
             <el-input type="desc" v-model="formData.desc"></el-input>
           </el-form-item>
+          <el-form-item prop="DName" label="名字:">
+            <el-input type="DName" v-model="formData.DName"></el-input>
+          </el-form-item>
+          <el-form-item prop="Ddet" label="Ddet:">
+            <el-input type="Ddet" v-model="formData.Ddet"></el-input>
+          </el-form-item>
+          <el-form-item prop="DArticle" label="文章:">
+            <el-input type="DArticle" v-model="formData.DArticle"></el-input>
+          </el-form-item>
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
+          </el-form-item>
+          <el-form-item prop="Like" label="喜欢:">
+            <el-input type="Like" v-model="formData.Like"></el-input>
+          </el-form-item>
+          <el-form-item prop="Comment" label="评论:">
+            <el-input type="Comment" v-model="formData.Comment"></el-input>
+          </el-form-item>
+              <el-form-item prop="inputValue" label="inputValue:">
+            <el-input type="inputValue" v-model="formData.inputValue"></el-input>
+          </el-form-item>
+                   <el-form-item prop="CommentList" label="CommentList:">
+            <el-input type="CommentList" v-model="formData.CommentList"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
@@ -46,9 +67,11 @@ export default {
         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
         desc: [{ required: true, message: "描述不能为空", trigger: "blur" }],
         title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
-        imgUrl: [
-          { required: true, message: "图片地址不能为空", trigger: "blur" }
-        ]
+        // imgUrl: [
+        //   { required: true, message: "图片地址不能为空", trigger: "blur" }
+        // ]
+        Like: [{required: true,message: "喜欢不能为空",trigger: "blur"}],
+        Comment: [{required: true, message:"评论不能为空", trigger:"blur"}]
       }
     };
   },
@@ -58,7 +81,6 @@ export default {
   },
   methods: {
     onSubmit(form) {
-      console.log('bb',this.formData);
       this.$refs[form].validate(valid => {
         if (valid) {
           const url =
@@ -71,6 +93,7 @@ export default {
                 message: "数据添加成功",
                 type: "success"
               });
+               console.log(this.formData);
             });
           //隐藏dialog
           this.dialog.show = false;

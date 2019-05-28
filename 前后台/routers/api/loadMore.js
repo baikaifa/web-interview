@@ -23,6 +23,9 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.id) { profileFields.id = req.body.id; }
+    if (req.body.DName) { profileFields.DName = req.body.DName; }
+    if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
+    if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
     new LoadMore(profileFields).save().then(loadMore => {
         res.json(loadMore)
     }).catch(err=>res.json(err));
@@ -34,6 +37,9 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.id) { profileFields.id = req.body.id; }
+    if (req.body.DName) { profileFields.DName = req.body.DName; }
+    if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
+    if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
     LoadMore.findOneAndUpdate(
         { _id: req.params.id },
         { $set: profileFields },
@@ -42,8 +48,6 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     LoadMore.findOneAndDelete({ _id: req.params.id }).then(loadMore => {
         loadMore.save().then(loadMore => res.json(loadMore))
     })

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group'
 import { actionCreators } from './store'
 import { Link } from 'react-router-dom'
+import  axios from 'axios'
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import {
     HeaderWrapper,
@@ -28,7 +29,7 @@ class Header extends Component {
         if (newList.length) {
             for (let i = ((page - 1) * 10); i < page * 10; i++) {
                 pageList.push(
-                    <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+                   <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
                 )
             }
         }
@@ -54,8 +55,7 @@ class Header extends Component {
                     <SearchInfoList >
                         {
                             pageList.map((item, index) => (
-                                <a key={index} onClick={() => handleSearch(item)}>{item}</a>
-                                // <li key={index} onClick={() => handleSearch(item)}>{item}</li>
+                                <Link key={index}  to={'/search'}>      <div key={index} onClick={() => handleSearch(item)}>{item}</div></Link>
                             ))
                         }
                     </SearchInfoList>
@@ -66,7 +66,7 @@ class Header extends Component {
         }
     }
     render() {
-        const { focused, handleInputFocus, handleInputBlur, list, login, logout } = this.props;
+        const { focused, handleInputFocus, handleInputBlur, list, login, logout, } = this.props;
         return (
             
             <HeaderWrapper>
@@ -82,7 +82,7 @@ class Header extends Component {
                         <NavItem className='reg'>注册</NavItem>
                     </Link>
                     <NavItem className='right'>
-                        <i className="iconfont icon-Aa"></i>
+                     <Link to={'/spa'}> <i className="iconfont icon-Aa"> </i></Link>  
                     </NavItem>
                     <SearchWrapper>
                         <CSSTransition
@@ -109,6 +109,16 @@ class Header extends Component {
             </HeaderWrapper>
         )
     }
+    componentDidMount(){
+        axios.get('/api/users/login').then((res) => {
+            console.log(res.data)//得到了cookie,用户登陆过
+            if(res.data){
+                this.props.changeLoginState();
+            }else{//没有cookie用户没有登陆过
+            }
+            
+        }).catch((err)=>{alert(err)})
+    }
 }
 
 const mapStateToProps = (state) => {
@@ -123,6 +133,10 @@ const mapStateToProps = (state) => {
 }
 const mapDispathToProps = (dispatch) => {
     return {
+
+        changeLoginState(){
+            dispatch(loginActionCreators.changeLogin())//改变登录状态
+        },
         handleInputFocus(list) {
             if (list.size === 0) {
                 dispatch(actionCreators.getList());

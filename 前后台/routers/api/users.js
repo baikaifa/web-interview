@@ -16,12 +16,15 @@ const User = require('../../models/User');
 //$route POST api/users/test
 //@desc 返回请求的json数据
 //@access public 接口类型
+router.get('/getUser',passport.authenticate('jwt',{session:false}),(req,res)=>{
+  res.send('我是user')
+})
 router.post("/register", (req, res) => {
   //查询数据库中是否拥有邮箱
   User.findOne({ email: req.body.email })
     .then((user) => {
       if (user) {
-        return res.status(400).json( "邮箱已被注册！")
+        return res.json( "邮箱已被注册！")
       } else {
         const avatar = gravatar.url(req.body.email, { s: '200', r: 'pg', d: 'mm' })//404是报错mm是头像
         const newUser = new User({
@@ -43,27 +46,32 @@ router.post("/register", (req, res) => {
               newUser.save()//调用存储方法
                 .then(user => res.json(user))
                 .catch(err => console.log(err))
+                res.json("注册成功")
             }
           });
         });
-        // return res.status(200).json({email:"可以注册！"})
       }
     }).catch(() => {
       console.log('查询出错');
     })
 })
+router.get("/login", (req, res) => {
+  console.log(req.cookies);
+  const {userEmail}=req.cookies;
+  res.json(userEmail);
+})
 //$route POST api/users/login
 //@desc 返回token jwt passport
 //@access public 接口类型
 router.post("/login", (req, res) => {
-  console.log(req.body);
+  // res.cookie('userEmail',req.body.email)
+  res.cookie('userEmail',req.body.email,{maxAge:24*3600*1000});
   const email = req.body.email;
   const password = req.body.password;
   //查询数据库
   User.findOne({ email })
     .then(user => {
       if (!user) {
-        console.log('1');
         res.json('用户不存在');
         // return res.status(404).json("!" );
       }

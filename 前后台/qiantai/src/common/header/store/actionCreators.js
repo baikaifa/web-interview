@@ -6,6 +6,10 @@ const changeList = (data) => ({
     data: fromJS(data),
     totalPage:Math.ceil(data.length / 10)
 })
+const addSearchData = (data) => ({
+    type: constants.ADD_SEARCH_DATA,
+    data: fromJS(data)
+})
 export const searchFocus = () => ({
     type: constants.SEARCH_FOCUS
 });
@@ -25,12 +29,15 @@ export const changePage = (page) =>({
 export const searchItem =(item)=>{
     // type:constants.SEARCH_ITEM
     return (dispatch)=>{
-        console.log(item.props.children);
         axios.post('/api/headerList/search',{'keywords':item.props.children}).then((res)=>{
-            console.log(res.data);
+            const data=Array(res.data[0]);
+          //注意传过去的必须是数组对象，不然不能使用get方法
+             dispatch(addSearchData((data)));
+            //  this.props.history.push('/search',null)
         }).catch((err) => {
             console.log(err);
         })
+
     }
 }
 export const getList = () => {

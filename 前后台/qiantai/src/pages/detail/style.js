@@ -50,6 +50,7 @@ export const DButton = styled.button`
 export const DArticle = styled.div`
     font-size: 16px;
     margin-top: 5px;
+    float: left;
 `
 export const Content = styled.div`
     color: #2f2f2f;

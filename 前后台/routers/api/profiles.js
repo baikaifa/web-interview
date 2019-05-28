@@ -15,7 +15,6 @@ router.get("/test", (req, res) => {
 //@access Private 接口类型
 router.post("/add", passport.authenticate('jwt', { session: false }), (req, res) => {
     const profileFields = {};
-    console.log(req.body);
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
@@ -68,8 +67,6 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
 //@desc 删除信息接口
 //@access Private 接口类型
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     Profile.findOneAndDelete({ _id: req.params.id }).then(profile => {
         profile.save().then(profile => res.json(profile))
     })

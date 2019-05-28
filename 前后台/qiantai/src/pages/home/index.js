@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
-import Writer from './components/Writer';
+// import Writer from './components/Writer';
 import Interview from './components/Interview';
 import { actionCreators } from './store';
 import { HomeWrapper, HomeLeft, HomeRight,LeftWhite,RightWhite } from './style'
 import { BackTop } from './style';
-import axios from 'axios';
-import { Carousel } from 'antd';
+// import axios from 'axios';
+// import { Carousel } from 'antd';
 import './style.css'
 class Home extends PureComponent {
     handleScrollTop() {
@@ -34,7 +34,7 @@ class Home extends PureComponent {
                     {this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null}
                     {/* <Recommend /> */}
                     <Interview/>
-                    <Writer />
+                    <Recommend />
                 </HomeRight>
                 <LeftWhite></LeftWhite>
                 <RightWhite></RightWhite>
@@ -46,17 +46,7 @@ class Home extends PureComponent {
     componentDidMount() {
         this.props.changeHomeData();
         this.bindEvents();
-        axios.get('/api/home.json').then((res) => {
-            console.log(res);
-            const result = res.data.data;
-            const action = {
-                type: 'change_home_data',
-                topicList: result.articleList,
-                articleList: result.articleList,
-                recommendList: result.recommendList
-            }
-            this.props.changeHomeData(action);
-        })
+
     }
     componentWillMount() {
         window.removeEventListener('scroll', this.props.changeScrollTopShow)

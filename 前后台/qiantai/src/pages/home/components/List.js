@@ -6,18 +6,21 @@ import  {Link} from 'react-router-dom'
 class List extends PureComponent {
     render() {
         const { list, getMoreList, page } = this.props;
+
         return (
             <div>
                 {
                     list.map((item, index) => {
                         return (
-                     
                             <Link key={index} to={'/detail/' + item.get('id')}>
                             <ListItem key={index}>
                                 <img alt='' className='pic' src={item.get('imgUrl')} />
                                 <ListInfo>
                                     <h3 className='title'>{item.get('title')}</h3>
                                     <p className='desc'>{item.get('desc')}</p>
+                                    <p className='desc'> <i className="iconfont icon-xin " ></i>&nbsp;&nbsp;{item.get('Like')}
+                                    <i className="iconfont icon-pinglun " ></i>&nbsp;&nbsp;{item.get('Comment')}</p>
+                                   
                                 </ListInfo>
                             </ListItem>
                             </Link>

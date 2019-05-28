@@ -4,6 +4,7 @@ const TopicList = require('../../models/TopicList');
 const Home = require('../../models/Home');
 const RecommendList = require('../../models/RecommendList');
 const ArticleList = require('../../models/ArticleList');
+const FourList = require('../../models/FourList');
 var result = {
     "data": {
         "topicList": [{
@@ -20,10 +21,15 @@ var result = {
         "recommendList": [{
             "id": 1,
             "imgUrl": ""
-        }]
+        }],
+        "fourList": [{
+            "id": 1,
+            "imgUrl": ""
+        }],
     },
     "success": true
 }
+
 router.get("/home", (req, res) => {
     TopicList.find()
         .then(topicList => {
@@ -45,14 +51,15 @@ router.get("/home", (req, res) => {
                 return res.status(404).json("没有任何内容")
             }
             result.data.recommendList = recommendList;
-
-            // const profileFields = result;
-            // new Home(result).save().then(home => {
-            //     res.json(home)
-            // })
+        }).catch(err => res.status(404).json(err));
+        FourList.find()
+        .then(fourList => {
+            if (!fourList) {
+                return res.status(404).json("没有任何内容")
+            }
+            result.data.fourList = fourList;
             res.json(result);
         }).catch(err => res.status(404).json(err));
-
 })
 // export const result,router;
 module.exports = router;

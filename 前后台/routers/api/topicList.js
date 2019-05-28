@@ -22,7 +22,6 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.id) { profileFields.id = req.body.id; }
-    console.log('1',profileFields);
     new TopicList(profileFields).save().then(topicList => {
         res.json(topicList)
     }).catch(err=>res.json(err));
@@ -41,8 +40,6 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
-    console.log(req.params.id);
-    console.log('我在删除');
     TopicList.findOneAndDelete({ _id: req.params.id }).then(topicList => {
         topicList.save().then(topicList => res.json(topicList))
     })

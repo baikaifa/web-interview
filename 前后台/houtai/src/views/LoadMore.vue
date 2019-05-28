@@ -1,10 +1,9 @@
 <template>
   <div class="container">
+    <el-button type="primary" size="small" icon="view" class="add_btn" @click="handleAdd()">添加</el-button>
     <div>
       <el-form :inline="true" ref="add_data">
-        <el-form-item class="btnRight">
-          <el-button type="primary" size="small" icon="view" @click="handleAdd()">添加</el-button>
-        </el-form-item>
+        <el-form-item class="btnRight"></el-form-item>
       </el-form>
     </div>
     <div class="table_container">
@@ -22,7 +21,7 @@
             <span style="margin-left:10px">{{scope.row.date}}</span>
           </template>
         </el-table-column>
-         <el-table-column prop="id" label="这条消息的id" width="130" align="center">
+        <el-table-column prop="id" label="这条消息的id" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.id}}</span>
           </template>
@@ -32,7 +31,7 @@
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
           </template>
         </el-table-column>
-                <el-table-column prop="title" label="标题" width="130" align="center">
+        <el-table-column prop="title" label="标题" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.title}}</span>
           </template>
@@ -40,6 +39,21 @@
         <el-table-column prop="desc" label="描述" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#4db3ff">{{scope.row.desc}}</span>
+          </template>
+        </el-table-column>
+                <el-table-column prop="Ddet" label="Ddet" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+          </template>
+        </el-table-column>
+                   <el-table-column prop="DArticle" label="DArticle" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="DName" label="DName" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.DName}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
@@ -99,7 +113,10 @@ export default {
         imgUrl: "",
         title: "",
         id: "",
-        _id:"",
+        _id: "",
+        DName:"",
+        Ddet:"",
+        DArticle:""
       },
       dialog: {
         show: false,
@@ -118,7 +135,7 @@ export default {
         .get("/api/loadMore")
         .then(res => {
           this.allTableData = res.data;
-          console.log( this.allTableData);
+          console.log(this.allTableData);
           //设置分页数据
           this.setPaginations();
         })
@@ -144,8 +161,11 @@ export default {
         desc: row.desc,
         imgUrl: row.imgUrl,
         title: row.title,
-        id:row.id,
-        _id:row._id,
+        id: row.id,
+        _id: row._id,
+        DName:row.DName,
+        Ddet:row.Ddet,
+        DArticle:row.DArticle
       };
     },
     handleDelete(index, row) {
@@ -165,7 +185,10 @@ export default {
         desc: "",
         title: "",
         id: "",
-        _id:"",
+        _id: "",
+        DName:"",
+        Ddet:"",
+        DArticle:""
       };
 
       this.dialog.show = true;
@@ -173,25 +196,24 @@ export default {
     handleSizeChange(page_size) {
       //切换size
 
-      this.paginations.page_index=1;
-      this.paginations.page_size=page_size;
+      this.paginations.page_index = 1;
+      this.paginations.page_size = page_size;
       this.tableData = this.allTableData.filter((item, index) => {
         return index < this.paginations.page_size;
       });
     },
     handleCurrentChange(page) {
       //获取当前页
-      let index=this.paginations.page_size*(page-1);
+      let index = this.paginations.page_size * (page - 1);
       //数据的总数
-      let nums=this.paginations.page_size*page;
+      let nums = this.paginations.page_size * page;
       //容器
-      let tables=[];
-      for(let i = index;i < nums; i++)
-      {
-        if(this.allTableData[i]){
-            tables.push(this.allTableData[i]);
+      let tables = [];
+      for (let i = index; i < nums; i++) {
+        if (this.allTableData[i]) {
+          tables.push(this.allTableData[i]);
         }
-        this.tableData=tables;
+        this.tableData = tables;
         console.log(this.tableData);
       }
     }
@@ -208,7 +230,7 @@ export default {
   height: 100%;
   box-sizing: border-box;
 }
-.btnRight{
+.btnRight {
   display: block;
   margin-left: 800px;
   cursor: pointer;
@@ -216,5 +238,8 @@ export default {
 .pagination {
   text-align: center;
   margin-top: 10px;
+}
+.add_btn {
+  margin-left: 90%;
 }
 </style>

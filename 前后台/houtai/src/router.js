@@ -10,6 +10,7 @@ import infoShow from './views/infoShow.vue'
 import TopicList from './views/TopicList.vue'
 import ArticleList from './views/ArticleList.vue'
 import RecommendList from './views/RecommendList'
+import FourList from './views/FourList'
 import Detail from './views/Detail'
 Vue.use(Router)
 
@@ -32,6 +33,7 @@ const router = new Router({
         { path: '/topicList', name: 'topicList', component: TopicList },
         { path: '/articleList', name: 'articleList', component: ArticleList },
         { path: '/recommendList', name: 'recommendList', component: RecommendList },
+        { path: '/fourList', name: 'fourList', component: FourList },
         { path: '/detail', name: 'detail', component: Detail }
       ]
     },
