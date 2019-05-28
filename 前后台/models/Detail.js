@@ -15,7 +15,7 @@ const detailSchema = new Schema({
         type:String
     },
     CommentList:{
-        type:Array
+        type:[String]
     },
     inputValue:{
         type:String

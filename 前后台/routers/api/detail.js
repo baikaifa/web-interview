@@ -46,7 +46,12 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     }).catch(err=>res.json(err));
 });
 
-router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
+router.post("/edit/:id",  (req, res) => {
+    console.log(req.body.CommentList);
+    console.log(typeof req.body.CommentList);
+    var a=Array(req.body.CommentList);
+
+    console.log(typeof a);
     const profileFields = {};
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.content) { profileFields.content = req.body.content; }
@@ -55,12 +60,14 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
     if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
     if (req.body.inputValue) { profileFields.inputValue = req.body.inputValue; }
-    if (req.body.CommentList) { profileFields.CommentList = req.body.CommentList; }
+    // if (req.body.CommentList) { profileFields.CommentList = a; }
+    console.log(profileFields);
     Detail.findOneAndUpdate(
         { _id: req.params.id },
         { $set: profileFields },
         { new: true }
     ).then(detail => res.json(detail))
+    res.json('success');
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {

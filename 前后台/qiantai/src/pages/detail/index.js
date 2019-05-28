@@ -6,6 +6,7 @@ import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Cont
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
+import axios from '../../http.js';
 class Detail extends PureComponent {
 
 
@@ -34,7 +35,7 @@ class Detail extends PureComponent {
                         <ul>
                             {
                                 CommentList.map((item, index) => {
-                                    return <li key={index}>{item}</li>
+                                    return <li key={index} >{item}</li>
                                 })
                             }
                         </ul>
@@ -43,10 +44,37 @@ class Detail extends PureComponent {
             </DetailWrapper>
         )
     }
+    static getDerivedStateFromProps(props, state){
+        axios.post('/api/detail/edit/:5cd01b959f3d58286819063f',{CommentList:props.CommentList},(req,res)=>{
+            console.log(props.CommentList);
+        })
+
+    }
     componentDidMount() {
         this.props.getDetail(this.props.match.params.id);
         this.bindEvents();
 
+    }
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
+    shouldComponentUpdate() {
+        console.log('shouldConponentUpdate');
+        return true;
+    }
+    componentWillUpdate() {
+        console.log('componentWillUpdate');
+    }
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+    componentWillReceiveProps() {
+        console.log('componentWillReceiveProps');
+        console.log(this.props.CommentList)
+        // axios.post()
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
     }
     bindEvents() {
         window.addEventListener("popstate", (e) => {
