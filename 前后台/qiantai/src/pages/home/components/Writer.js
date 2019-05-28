@@ -1,18 +1,23 @@
 import  React,{PureComponent} from 'react';
 import  { WriterWrapper,WTitle,WImg,WName,Wxq,Wfor } from '../style';
+import { Link } from 'react-router-dom';
 class Writer extends PureComponent{
     render(){
         return (
             <WriterWrapper>
                 <WTitle>推荐作者</WTitle>
-                <Wfor>
-                    <WImg></WImg>
-                    <WName>
-                        __前端
-                        <br />
-                        <Wxq>写了19600字，共有293747个喜欢</Wxq>
-                    </WName>
-                </Wfor>
+                <Link to='/zuozhe'>
+                    <Wfor>
+                        <WImg></WImg>
+                        <WName>
+                            __前端
+                            <br />
+                            <Wxq>写了19600字，共有293747个喜欢</Wxq>
+                        </WName>
+                    </Wfor>
+                </Link>
+
+
                 <Wfor>    
                     <WImg></WImg>
                     <WName>

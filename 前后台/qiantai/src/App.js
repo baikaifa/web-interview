@@ -9,6 +9,7 @@ import Login from './pages/login';
 import Register from './pages/register';
 import Write from './pages/write';
 import Tiaocao from './pages/tiaocao';
+import Zuozhe from './pages/zuozhe';
 // import Search from './pages/search'
 import store from './store';
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path='/' exact component={Home}></Route>
             <Route path='/login' exact component={Login}></Route>
             <Route path='/tiaocao' exact component={Tiaocao}></Route>
+            <Route path='/zuozhe' exact component={Zuozhe}></Route>
             <Route path='/write' exact component={Write}></Route>
             <Route path='/register' exact component={Register}></Route>
             <Route path='/detail/:id' exact component={Detail}></Route>

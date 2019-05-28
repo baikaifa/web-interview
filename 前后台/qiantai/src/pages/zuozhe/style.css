@@ -1,0 +1,64 @@
+.picture{
+    width:70px;
+    height:70px;
+    border-radius:50px; 
+    background-color:gray;
+    float:left;
+    /* border:1px solid black; */
+} 
+.content{
+    margin-top:-5px;
+   
+    float:left;
+    margin-left:10px;
+}
+.content-top{
+    font-weight:bold;
+    color:black;
+     margin-bottom:10px;
+}
+.guanzhu{
+    float:left;
+    border-right:1px solid gray;
+    padding-right:10px;
+    margin-right:10px;
+    font-size:12px;
+}
+.fensi{
+     float:left;
+     border-right:1px solid gray;
+     padding-right:10px;
+    margin-right:10px;
+    font-size:12px;
+}
+.wenzhang{
+     float:left;
+     border-right:1px solid gray;
+     padding-right:10px;
+    margin-right:10px;
+    font-size:12px;
+}
+.zishu{
+     float:left;
+     border-right:1px solid gray;
+     padding-right:10px;
+    margin-right:10px;
+    font-size:12px;
+}
+.xihuan{
+     float:left;
+     border-right:1px solid gray;
+     padding-right:10px;
+    margin-right:10px;
+    font-size:12px;
+}
+.btn{
+    float:right;
+    width:80px;
+    height:40px;
+    background-color:#A9D775;
+    border-radius:10px;
+    border:gray;
+    margin-top:15px;
+    margin-right:50px;
+}
