@@ -17,6 +17,15 @@ const ArticleListSchema = new Schema({
     },
     desc:{
         type:String
+    },
+    DName:{
+        type:String
+    },
+    Ddet:{
+        type:String
+    },
+    DArticle:{
+        type:String
     }
 })
 module.exports = ArticleList = mongoose.model("articleList", ArticleListSchema)
