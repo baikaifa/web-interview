@@ -13,6 +13,12 @@ const detailSchema = new Schema({
     },
     DArticle:{
         type:String
+    },
+    CommentList:{
+        type:Array
+    },
+    inputValue:{
+        type:String
     }
 })
 module.exports = Detail = mongoose.model("detail", detailSchema)

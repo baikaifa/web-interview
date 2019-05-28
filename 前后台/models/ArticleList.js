@@ -26,6 +26,12 @@ const ArticleListSchema = new Schema({
     },
     DArticle:{
         type:String
+    },
+    CommentList:{
+        type:Array
+    },
+    inputValue:{
+        type:String
     }
 })
 module.exports = ArticleList = mongoose.model("articleList", ArticleListSchema)

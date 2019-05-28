@@ -58,6 +58,19 @@
             <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
           </template>
         </el-table-column>
+
+          <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.inputValue}}</span>
+          </template>
+           </el-table-column>
+           
+            <el-table-column prop="CommentList" label="CommentList" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#4db3ff">{{scope.row.CommentList}}</span>
+          </template>
+        </el-table-column>
+
         <el-table-column label="操作" align="center" width="180" prop="operation">
           <template slot-scope="scope">
             <el-button
@@ -119,6 +132,8 @@ export default {
         DName:"",
         Ddet:"",
         DArticle:"",
+        CommentList:[],
+        inputValue:""
       },
       dialog: {
         show: false,
@@ -168,6 +183,8 @@ export default {
         DName: row.DName,
         Ddet: row.Ddet,
         DArticle:row.DArticle,
+        CommentList:row.CommentList,
+        inputValue:row.inputValue
       };
     },
     handleDelete(index, row) {
@@ -187,7 +204,12 @@ export default {
         desc: "",
         title: "",
         id: "",
-        _id:""
+        _id:"",
+        inputValue:"",
+        CommentList:[],
+        DArticle:"",
+        Ddet:"",
+        DName:""
       };
 
       this.dialog.show = true;

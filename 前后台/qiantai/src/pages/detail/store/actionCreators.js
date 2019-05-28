@@ -1,21 +1,30 @@
 import axios from 'axios'
 import * as constants from './constants'
 
-const changeDetail = (title, content, DName, Ddet, DArticle,Comment) => ({
+export const changeInputValue = (inputValue) => ({
+    type: constants.CHANGE_INPUT_VALUE,
+    inputValue
+});
+
+export const addItem = () => ({
+    type: constants.ADD_ITEM
+});
+
+const changeDetail = (title, content, DName, Ddet, DArticle, CommentList) => ({
     type: constants.CHANGE_DETAIL,
     title,
     content,
     DName,
     Ddet,
     DArticle,
-    Comment,
+    CommentList,
 })
 
 export const getDetail = (id) => {
     return (dispatch) => {
-        axios.get('/api/detail/detail?id='+ (id-1)).then((res) => {
+        axios.get('/api/detail/detail?id=' + (id - 1)).then((res) => {
             console.log(res.data.data);
-            dispatch(changeDetail(res.data.data.title, res.data.data.content,res.data.data.DName,res.data.data.Ddet,res.data.data.DArticle,res.data.data.Comment));
+            dispatch(changeDetail(res.data.data.title, res.data.data.content, res.data.data.DName, res.data.data.Ddet, res.data.data.DArticle, res.data.data.CommentList));
         })
         // axios.get('/api/detail?id=' + id).then((res) => {
         //     const result = res.data.data;
