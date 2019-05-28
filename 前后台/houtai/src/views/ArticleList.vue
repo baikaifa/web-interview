@@ -43,9 +43,9 @@
             <span style="color:#4db3ff">{{scope.row.desc}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="DName" label="名字" width="130" align="center">
+        <el-table-column prop="Like" label="喜欢" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.DName}}</span>
+            <span style="color:#4db3ff">{{scope.row.Like}}</span>
           </template>
 <<<<<<< HEAD
           <el-table-column prop="Ddet" label="Ddet" width="130" align="center">
@@ -55,8 +55,9 @@
           <el-table-column prop="DArticle" label="文章" width="130" align="center">
 =======
         </el-table-column>
-        <el-table-column prop="Ddet" label="日期" width="130" align="center">
+        <el-table-column prop="Comment" label="评论" width="130" align="center">
           <template slot-scope="scope">
+<<<<<<< HEAD
             <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
           </template>
         </el-table-column>
@@ -70,6 +71,12 @@
         </el-table-column>
         </el-table-column>
 =======
+=======
+            <span style="color:#4db3ff">{{scope.row.Comment}}</span>
+          </template>
+        </el-table-column>
+        
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
 
           <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
           <template slot-scope="scope">
@@ -142,11 +149,16 @@ export default {
         title: "",
         id: "",
         _id:"",
+<<<<<<< HEAD
         DName:"",
         Ddet:"",
         DArticle:"",
 <<<<<<< HEAD
 =======
+=======
+        Like:"",
+        Comment:"",
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
         CommentList:[],
         inputValue:""
 >>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
@@ -197,6 +209,7 @@ export default {
         id: row.id,
         _id:row._id,
 <<<<<<< HEAD
+<<<<<<< HEAD
         DName:row.DName,
         Ddet:row.Ddet,
         DArticle:row.DArticle,
@@ -204,6 +217,10 @@ export default {
         DName: row.DName,
         Ddet: row.Ddet,
         DArticle:row.DArticle,
+=======
+        Like:row.Like,
+        Comment:row.Comment,
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
         CommentList:row.CommentList,
         inputValue:row.inputValue
 >>>>>>> 2d8fc8150ed21d9552d8ae5e3fe3a5db8f07a968
@@ -229,9 +246,8 @@ export default {
         _id:"",
         inputValue:"",
         CommentList:[],
-        DArticle:"",
-        Ddet:"",
-        DName:""
+        Like:"",
+        Comment:""
       };
 
       this.dialog.show = true;

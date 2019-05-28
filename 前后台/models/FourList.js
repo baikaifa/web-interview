@@ -11,6 +11,6 @@ const FourListSchema = new Schema({
     },
     title:{
         type:String
-    }
+    },
 })
 module.exports = FourList = mongoose.model("fourList", FourListSchema);

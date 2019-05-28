@@ -23,9 +23,8 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.id) { profileFields.id = req.body.id; }
-    if (req.body.DName) { profileFields.DName = req.body.DName; }
-    if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
-    if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
+    if (req.body.Like) { profileFields.Like = req.body.Like; }
+    if (req.body.Comment) { profileFields.Comment = req.body.Comment; }
     if (req.body.inputValue) { profileFields.inputValue = req.body.inputValue; }
     if (req.body.CommentList) { profileFields.CommentList = req.body.CommentList; }
     new ArticleList(profileFields).save().then(articleList => {
@@ -39,11 +38,16 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     if (req.body.id) { profileFields.id = req.body.id; }
+<<<<<<< HEAD
     if (req.body.DName) { profileFields.DName = req.body.DName; }
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
     if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
 <<<<<<< HEAD
 =======
+=======
+    if (req.body.Like) { profileFields.Like = req.body.Like; }
+    if (req.body.Comment) { profileFields.Comment = req.body.Comment; }
+>>>>>>> 520b452e032e427a444a6b7edf362b5f16833a05
     if (req.body.inputValue) { profileFields.inputValue = req.body.inputValue; }
     if (req.body.CommentList) { profileFields.CommentList = req.body.CommentList; }
     console.log(profileFields);
