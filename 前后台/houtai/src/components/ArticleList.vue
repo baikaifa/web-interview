@@ -24,6 +24,15 @@
           <el-form-item prop="desc" label="描述:">
             <el-input type="desc" v-model="formData.desc"></el-input>
           </el-form-item>
+          <el-form-item prop="DName" label="名字:">
+            <el-input type="DName" v-model="formData.DName"></el-input>
+          </el-form-item>
+          <el-form-item prop="Ddet" label="Ddet:">
+            <el-input type="Ddet" v-model="formData.Ddet"></el-input>
+          </el-form-item>
+          <el-form-item prop="DArticle" label="文章:">
+            <el-input type="DArticle" v-model="formData.DArticle"></el-input>
+          </el-form-item>
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
