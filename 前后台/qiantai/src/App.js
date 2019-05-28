@@ -10,14 +10,11 @@ import Login from './pages/login';
 import Register from './pages/register';
 import Write from './pages/write';
 import Tiaocao from './pages/tiaocao';
-<<<<<<< HEAD
 import Zuozhe from './pages/zuozhe';
-=======
 import Button from './pages/spaPages/button';
 import Button2 from './pages/spaPages/button2';
 import Words from './pages/spaPages/words';
 import Spa from './pages/spaPages';
->>>>>>> master
 // import Search from './pages/search'
 // import  Protected from './Protected'
 import store from './store';
