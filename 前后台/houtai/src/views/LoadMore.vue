@@ -41,19 +41,14 @@
             <span style="color:#4db3ff">{{scope.row.desc}}</span>
           </template>
         </el-table-column>
-                <el-table-column prop="Ddet" label="Ddet" width="130" align="center">
+        <el-table-column prop="Like" label="喜欢" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+            <span style="color:#4db3ff">{{scope.row.Like}}</span>
           </template>
         </el-table-column>
-                   <el-table-column prop="DArticle" label="DArticle" width="130" align="center">
+        <el-table-column prop="Comment" label="评论" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column prop="DName" label="DName" width="130" align="center">
-          <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.DName}}</span>
+            <span style="color:#4db3ff">{{scope.row.Comment}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center" width="180" prop="operation">
@@ -114,9 +109,8 @@ export default {
         title: "",
         id: "",
         _id: "",
-        DName:"",
-        Ddet:"",
-        DArticle:""
+        Like:"",
+        Comment:"",
       },
       dialog: {
         show: false,
@@ -163,9 +157,8 @@ export default {
         title: row.title,
         id: row.id,
         _id: row._id,
-        DName:row.DName,
-        Ddet:row.Ddet,
-        DArticle:row.DArticle
+        Like: row.Like,
+        Comment: row.Comment,
       };
     },
     handleDelete(index, row) {
@@ -186,9 +179,8 @@ export default {
         title: "",
         id: "",
         _id: "",
-        DName:"",
-        Ddet:"",
-        DArticle:""
+        Like:"",
+        Comment:"",
       };
 
       this.dialog.show = true;

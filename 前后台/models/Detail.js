@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const detailSchema = new Schema({
     id: { type: String },
     title: { type: String },
-    content: { type: String },
     DName:{
         type:String
     },
