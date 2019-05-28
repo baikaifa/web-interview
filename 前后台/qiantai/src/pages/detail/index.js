@@ -44,37 +44,11 @@ class Detail extends PureComponent {
             </DetailWrapper>
         )
     }
-    static getDerivedStateFromProps(props, state){
-        axios.post('/api/detail/edit/:5cd01b959f3d58286819063f',{CommentList:props.CommentList},(req,res)=>{
-            console.log(props.CommentList);
-        })
 
-    }
     componentDidMount() {
         this.props.getDetail(this.props.match.params.id);
         this.bindEvents();
 
-    }
-    componentWillMount() {
-        console.log('componentWillMount');
-    }
-    shouldComponentUpdate() {
-        console.log('shouldConponentUpdate');
-        return true;
-    }
-    componentWillUpdate() {
-        console.log('componentWillUpdate');
-    }
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
-    }
-    componentWillReceiveProps() {
-        console.log('componentWillReceiveProps');
-        console.log(this.props.CommentList)
-        // axios.post()
-    }
-    componentWillUnmount() {
-        console.log('componentWillUnmount');
     }
     bindEvents() {
         window.addEventListener("popstate", (e) => {
@@ -89,10 +63,12 @@ const mapState = (state) => ({
     DName: state.getIn(['detail', 'DName']),
     Ddet: state.getIn(['detail', 'Ddet']),
     DArticle: state.getIn(['detail', 'DArticle']),
-    inputValue:state.getIn(['detail','inputValue']),
-    CommentList:state.getIn(['detail','CommentList'])
+    inputValue: state.getIn(['detail', 'inputValue']),
+    CommentList: state.getIn(['detail', 'CommentList'])
 })
+var a="";
 const mapDispatch = (dispatch) => ({
+
     getDetail(id) {
         dispatch(actionCreators.getDetail(id))
     },
@@ -101,9 +77,16 @@ const mapDispatch = (dispatch) => ({
     },
     changeInputValue(e) {
         dispatch(actionCreators.changeInputValue(e.target.value));
+       
+        a=e.target.value
     },
-    handleClick() {
+    handleClick(e) {
         dispatch(actionCreators.addItem())
+        console.log(a);
+        axios.post('/api/detail/change', { "CommentList": a }, (req, res) => {
+            console.log('');
+        })
     }
+
 })
 export default connect(mapState, mapDispatch)(withRouter(Detail));//让Detail有能力获取到router里面所有的内容
