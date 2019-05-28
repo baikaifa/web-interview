@@ -18,14 +18,11 @@ const ArticleListSchema = new Schema({
     desc:{
         type:String
     },
-    DName:{
-        type:String
+    Like:{
+        type:Number
     },
-    Ddet:{
-        type:String
-    },
-    DArticle:{
-        type:String
+    Comment:{
+        type:Number
     },
     CommentList:{
         type:[String]
