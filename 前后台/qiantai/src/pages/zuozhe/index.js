@@ -34,7 +34,7 @@ class Zuozhe extends PureComponent {
                 <button className="btn">+关注</button>
             </div>
             <div className="center">
-                <i className="iconfont icon-ai-eye"></i>
+                <i className="iconfont icon-bell"></i>
             </div>
            </div>
        )
