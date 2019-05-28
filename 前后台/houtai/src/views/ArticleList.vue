@@ -43,21 +43,17 @@
             <span style="color:#4db3ff">{{scope.row.desc}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="DName" label="名字" width="130" align="center">
+        <el-table-column prop="Like" label="喜欢" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.DName}}</span>
+            <span style="color:#4db3ff">{{scope.row.Like}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="Ddet" label="日期" width="130" align="center">
+        <el-table-column prop="Comment" label="评论" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.Ddet}}</span>
+            <span style="color:#4db3ff">{{scope.row.Comment}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="DArticle" label="文章" width="130" align="center">
-          <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.DArticle}}</span>
-          </template>
-        </el-table-column>
+        
 
           <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
           <template slot-scope="scope">
@@ -129,9 +125,8 @@ export default {
         title: "",
         id: "",
         _id:"",
-        DName:"",
-        Ddet:"",
-        DArticle:"",
+        Like:"",
+        Comment:"",
         CommentList:[],
         inputValue:""
       },
@@ -180,9 +175,8 @@ export default {
         title: row.title,
         id: row.id,
         _id:row._id,
-        DName: row.DName,
-        Ddet: row.Ddet,
-        DArticle:row.DArticle,
+        Like:row.Like,
+        Comment:row.Comment,
         CommentList:row.CommentList,
         inputValue:row.inputValue
       };
@@ -207,9 +201,8 @@ export default {
         _id:"",
         inputValue:"",
         CommentList:[],
-        DArticle:"",
-        Ddet:"",
-        DName:""
+        Like:"",
+        Comment:""
       };
 
       this.dialog.show = true;

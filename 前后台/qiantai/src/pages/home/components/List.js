@@ -18,8 +18,8 @@ class List extends PureComponent {
                                 <ListInfo>
                                     <h3 className='title'>{item.get('title')}</h3>
                                     <p className='desc'>{item.get('desc')}</p>
-                                    <p className='desc'> <i className="iconfont icon-xin " ></i>&nbsp;&nbsp;喜欢&nbsp;&nbsp;|&nbsp;&nbsp;376
-                                    <i className="iconfont icon-pinglun " ></i>&nbsp;&nbsp;评论&nbsp;&nbsp;|&nbsp;&nbsp;376</p>
+                                    <p className='desc'> <i className="iconfont icon-xin " ></i>&nbsp;&nbsp;{item.get('Like')}
+                                    <i className="iconfont icon-pinglun " ></i>&nbsp;&nbsp;{item.get('Comment')}</p>
                                    
                                 </ListInfo>
                             </ListItem>
