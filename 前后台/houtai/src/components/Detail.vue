@@ -24,6 +24,21 @@
           <el-form-item prop="content" label="内容:">
             <el-input type="content" v-model="formData.content"></el-input>
           </el-form-item>
+          <el-form-item prop="DName" label="名字:">
+            <el-input type="DName" v-model="formData.DName"></el-input>
+          </el-form-item>
+          <el-form-item prop="Ddet" label="日期:">
+            <el-input type="Ddet" v-model="formData.Ddet"></el-input>
+          </el-form-item>
+          <el-form-item prop="DArticle" label="文章:">
+            <el-input type="DArticle" v-model="formData.DArticle"></el-input>
+          </el-form-item>
+            <el-form-item prop="inputValue" label="inputValue:">
+            <el-input type="inputValue" v-model="formData.inputValue"></el-input>
+          </el-form-item>
+                   <el-form-item prop="CommentList" label="CommentList:">
+            <el-input type="CommentList" v-model="formData.CommentList"></el-input>
+          </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
             <el-button type="primary" @click="onSubmit('form')">提交</el-button>
