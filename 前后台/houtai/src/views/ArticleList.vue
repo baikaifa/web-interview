@@ -53,8 +53,6 @@
             <span style="color:#4db3ff">{{scope.row.Comment}}</span>
           </template>
         </el-table-column>
-        
-
           <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#4db3ff">{{scope.row.inputValue}}</span>
