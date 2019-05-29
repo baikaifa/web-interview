@@ -9,7 +9,7 @@ const RecommendSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    title:{
+    name:{
         type:String
     },
     desc:{

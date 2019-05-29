@@ -20,7 +20,7 @@ router.get("/", passport.authenticate('jwt', { session: false }), (req, res) => 
 router.post("/add", passport.authenticate('jwt', { session: false }), (req, res) => {
     const profileFields = {};
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
-    if (req.body.title) { profileFields.title = req.body.title; }
+    if (req.body.name) { profileFields.name = req.body.name; }
     if (req.body.id) { profileFields.id = req.body.id; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     new RecommendList(profileFields).save().then(recommentList => {
@@ -31,7 +31,7 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
 router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
     const profileFields = {};
     if (req.body.imgUrl) { profileFields.imgUrl = req.body.imgUrl; }
-    if (req.body.title) { profileFields.title = req.body.title; }
+    if (req.body.name) { profileFields.name = req.body.name; }
     if (req.body.id) { profileFields.id = req.body.id; }
     if (req.body.desc) { profileFields.desc = req.body.desc; }
     RecommendList.findOneAndUpdate(
