@@ -3,17 +3,18 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import './style.css'
 import $ from 'jquery';
+import { Button } from 'antd'
 class Tiaocao extends PureComponent {
     render() {
         return (
             <div>
                 <div className="tiaocao_left">
-                    <p></p>
+                <p></p>
                     <ul>
-                        <li><a className="a"> 1</a></li>
-                        <li><a className="b"> 2</a></li>
-                        <li><a className="c"> 3</a></li>
-                        <li><a className="d"> 4</a></li>
+                        <li><a className="a"><Button className="button_style"> 文章</Button></a></li>
+                        <li><a className="b"><Button className="button_style"> 用户</Button></a></li>
+                        <li><a className="c"><Button className="button_style"> 专题</Button></a></li>
+                        <li><a className="d"><Button className="button_style"> 文集</Button></a></li>
                     </ul>
                 </div>
                 <div className="firstPage">
@@ -21,7 +22,6 @@ class Tiaocao extends PureComponent {
                         <div className="top1" >
                             <div className="picture"></div>
                             <div className="name">dsdqvj</div>
-
                         </div>
                         <div className="title">前端跳槽面试必备技巧，从面试准备，到一、二、三终面真实面试的终极分析教程</div>
                         <div className="content">……12套JAVA高级面试课程，BAT高级面试，架构师面试，高级工程师面试，

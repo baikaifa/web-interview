@@ -50,7 +50,7 @@ margin-left: 20px;
 .top{
     width:60%;
     margin-left:20%;
-    margin-top:10px;
+    /* margin-top:10px; */
     margin-bottom:3%;
 }
  .picture{
@@ -103,4 +103,12 @@ span{
     color:red;
     float: left;
     position: fixed;
+    margin-left: 5rem;
+    margin-top:15%;
+}
+.tiaocao_left>ul>li{
+    list-style: none;
+}
+.button_style{
+    width: 10rem;
 }
