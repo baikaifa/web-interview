@@ -2,7 +2,7 @@
   <div class="login">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">前端面试指南后台管理系统</span>
         <el-form
           :model="loginUser"
           :rules="rules"
