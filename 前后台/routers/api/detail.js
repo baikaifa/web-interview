@@ -79,7 +79,6 @@ router.post("/change", (req, res) => {
             console.log(result);
         }).catch(err => res.status(404).json(err));
     var MongoClient = require('mongodb').MongoClient;
-
     result.push(req.body.CommentList);
     console.log(result);
     var url = 'mongodb://localhost:27017/';

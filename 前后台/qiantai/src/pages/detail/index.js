@@ -18,7 +18,7 @@ class Detail extends PureComponent {
             <DetailWrapper>
                 <Header>{this.props.title}"</Header>
                 <DTop>
-                    <img src={this.props.img} className="tx"/>
+                    <img src={this.props.img} className="tx" />
                     <DName>{this.props.DName}<br />
                         <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
                         </Ddet>
@@ -69,15 +69,27 @@ const mapState = (state) => ({
 })
 var a = "";
 
-const mapDispatch = (dispatch,Promise) => ({
+const mapDispatch = (dispatch) => ({
     handleDelete(index, item) {
-        dispatch(actionCreators.deleteItem(index, item))
-        this.props.storageToDatabase(co)
-    },
-    storageToDatabase(co) {
-        axios.post('/api/detail/deleteItem', { "CommentList": co }, (req, res) => {
+        // dispatch(actionCreators.deleteItem(index, item))
+        //  this.props.storageToDatabase(co)
+         console.log(co);
+        var b = new Promise(function (succ, err) {
+            setTimeout(function () {
+                console.log('a');
+                dispatch(actionCreators.deleteItem(index, item))
+                succ("test")
+            }, 500)
+        })
+        b.then(function (data) {
+            axios.post('/api/detail/deleteItem', { "CommentList": co }, (req, res) => {
+            })
         })
     },
+    // storageToDatabase(co) {
+    //     axios.post('/api/detail/deleteItem', { "CommentList": co }, (req, res) => {
+    //     })
+    // },
     getDetail(id) {
         dispatch(actionCreators.getDetail(id))
     },
