@@ -11,7 +11,6 @@ export const HomeLeft = styled.div`
     flex: 1.5;
     // height: 200px;
     margin-right: 30px;
-    border: 1px solid red;
     // float:left;
     // margin-left:15px;
     // padding-top:30px;
@@ -32,7 +31,6 @@ export const RightWhite= styled.div`
 `
 export const HomeRight = styled.div`
     flex: 0.7;
-    border: 1px solid blue;
     // height: 200px;
     
 `
