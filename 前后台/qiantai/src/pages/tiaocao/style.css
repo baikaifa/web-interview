@@ -112,3 +112,12 @@ span{
 .button_style{
     width: 10rem;
 }
+.secondPage{
+    display: none;
+}
+.thirdPage{
+    display: none;
+}
+.forthPage{
+    display: none;
+}
