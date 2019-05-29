@@ -18,14 +18,11 @@ const LoadMoreSchema = new Schema({
     id:{
         type:String
     },
-    DName:{
-        type:String
+    Like:{
+        type:Number
     },
-    Ddet:{
-        type:String
+    Comment:{
+        type:Number
     },
-    DArticle:{
-        type:String
-    }
 })
 module.exports = LoadMore = mongoose.model("loadMore", LoadMoreSchema)

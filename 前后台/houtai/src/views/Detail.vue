@@ -32,12 +32,7 @@
             <span style="color:#f56767">{{scope.row.title}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="content" label="内容" width="130" align="center">
-          <template slot-scope="scope">
-            <span style="color:#4db3ff">{{scope.row.content}}</span>
-          </template>
-        </el-table-column>
-        <el-table-column prop="DName" label="名字" width="130" align="center">
+        <el-table-column prop="DName" label="作者" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#4db3ff">{{scope.row.DName}}</span>
           </template>
@@ -117,7 +112,6 @@ export default {
       tableData: [],
       allTableData: [],
       formData: {
-        content: "",
         title: "",
         id: "",
         _id: "",
@@ -166,7 +160,6 @@ export default {
         option: "edit"
       };
       this.formData = {
-        content: row.content,
         title: row.title,
         id: row.id,
         _id: row._id,
@@ -190,7 +183,6 @@ export default {
         option: "add"
       };
       this.formData = {
-        contnet: "",
         title: "",
         id: "",
         _id: "",

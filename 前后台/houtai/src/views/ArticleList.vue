@@ -47,6 +47,7 @@
           <template slot-scope="scope">
             <span style="color:#4db3ff">{{scope.row.Like}}</span>
           </template>
+<<<<<<< HEAD
 
           <el-table-column prop="Ddet" label="Ddet" width="130" align="center">
           <template slot-scope="scope">
@@ -72,11 +73,19 @@
         </el-table-column>
 
 
+=======
+        </el-table-column>
+        <el-table-column prop="Comment" label="评论" width="130" align="center">
+          <template slot-scope="scope">
+>>>>>>> a3a482780c77367e7f165f2d1a8513a37f8ba6a8
             <span style="color:#4db3ff">{{scope.row.Comment}}</span>
           </template>
         </el-table-column>
         
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3a482780c77367e7f165f2d1a8513a37f8ba6a8
 
           <el-table-column prop="inputValue" label="inputValue" width="130" align="center">
           <template slot-scope="scope">
@@ -148,6 +157,7 @@ export default {
         title: "",
         id: "",
         _id:"",
+<<<<<<< HEAD
 
         DName:"",
         Ddet:"",
@@ -159,6 +169,12 @@ export default {
         CommentList:[],
         inputValue:""
 
+=======
+        Like:"",
+        Comment:"",
+        CommentList:[],
+        inputValue:""
+>>>>>>> a3a482780c77367e7f165f2d1a8513a37f8ba6a8
       },
       dialog: {
         show: false,
@@ -205,6 +221,7 @@ export default {
         title: row.title,
         id: row.id,
         _id:row._id,
+<<<<<<< HEAD
 
         DName:row.DName,
         Ddet:row.Ddet,
@@ -220,6 +237,12 @@ export default {
         CommentList:row.CommentList,
         inputValue:row.inputValue
 
+=======
+        Like:row.Like,
+        Comment:row.Comment,
+        CommentList:row.CommentList,
+        inputValue:row.inputValue
+>>>>>>> a3a482780c77367e7f165f2d1a8513a37f8ba6a8
       };
     },
     handleDelete(index, row) {

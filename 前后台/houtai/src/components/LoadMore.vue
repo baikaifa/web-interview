@@ -27,14 +27,11 @@
           <el-form-item prop="imgUrl" label="图片地址:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
-             <el-form-item prop="DName" label="DName:">
-            <el-input type="DName" v-model="formData.DName"></el-input>
+          <el-form-item prop="Like" label="喜欢:">
+            <el-input type="Like" v-model="formData.Like"></el-input>
           </el-form-item>
-             <el-form-item prop="Ddet" label="Ddet:">
-            <el-input type="Ddet" v-model="formData.Ddet"></el-input>
-          </el-form-item>
-             <el-form-item prop="DArticle" label="DArticle:">
-            <el-input type="DArticle" v-model="formData.DArticle"></el-input>
+          <el-form-item prop="Comment" label="评论:">
+            <el-input type="Comment" v-model="formData.Comment"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
             <el-button @click="dialog.show=false">取消</el-button>
@@ -53,9 +50,11 @@ export default {
     return {
       form_rules: {
         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
-          desc: [{ required: true, message: "描述不能为空", trigger: "blur" }],
+        desc: [{ required: true, message: "描述不能为空", trigger: "blur" }],
         title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
-        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
+        // imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }]
+        Like: [{ required: true, message: "喜欢不能为空", trigger: "blur" }],
+        Comment: [{ required: true, message: "评论不能为空", trigger: "blur" }],
       }
     };
   },
