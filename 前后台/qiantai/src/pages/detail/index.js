@@ -36,7 +36,7 @@ class Detail extends PureComponent {
                                 style={{ marginTop: '10px', width: '300px' }}
                                 // bordered
                                 dataSource={this.props.CommentList}
-                                renderItem={(item, index) => (<List.Item onClick={this.props.handleDelete.bind(this, index, item)} key={index} >{item}</List.Item>)}
+                                renderItem={(item, index) => (<List.Item  onClick={this.props.handleDelete.bind(this, index, item)}  >{item}</List.Item>)}
                             />
                         }
                         <Input value={this.props.inputValue} onChange={this.props.changeInputValue} />
