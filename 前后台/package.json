@@ -1,0 +1,46 @@
+{
+  "name": "houtai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "qiantai-install": "npm install -prefix qiantai",
+    "qiantai": "npm start --prefix qiantai",
+    "houtai-install": "npm install -prefix houtai",
+    "houtai": "npm start --prefix houtai",
+    "dev": "concurrently \"npm run server\" \"npm run houtai\" \"npm run qiantai\"",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "element-ui": "^2.8.2",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.2",
+    "mongoose": "^5.4.20",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "validator": "^10.11.0"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4"
+  },
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile",
+        "style": "css"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+使用mongodb
+const mongoose=require('mongoose');
+vue3.0创建项目
+vue create client
+需要babel router vuex history yes no
+前后端连载
+cnpm i concurrently
+在package.json中配置
+"client-install": "npm install -prefix client",//表示在启动前先安装client中的依赖模块
+"client": "npm start --prefix client",//启动的路径在哪里 启动前端的项目
+"dev": "concurrently \"npm run server\" \"npm run client\"",
+安装elementui
+cnpm i element-ui -S
+使用elementui
+vue.config.js在vue中跨域
