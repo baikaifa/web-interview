@@ -32,6 +32,12 @@ export default (state = defaultState, action) => {
                 'CommentList': state.get('CommentList').concat(newList),
                 inputValue: "",
             })
+        case constants.DELETEITEM:
+            let originState = JSON.parse(JSON.stringify(state.get("CommentList")))
+            originState.splice(action.index, 1)
+            return state.merge({
+                "CommentList": originState
+            })
         default:
             return state;
     }
