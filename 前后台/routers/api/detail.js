@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const Detail = require('../../models/Detail');
+var ObjectId = require('mongodb').ObjectID
 
 router.get("/test", (req, res) => {
     res.json({ msg: 'Detail works' })
@@ -59,6 +60,40 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
         { $set: profileFields },
         { new: true }
     ).then(detail => res.json(detail))
+});
+let result = [];
+router.post("/change", (req, res) => {
+    // result.push(req.body.CommentList)
+    // console.log(typeof result);
+    var once = 0;
+    Detail.find()
+        .then(detail => {
+            if (!detail) {
+                return res.status(404).json("没有任何内容")
+            }
+            if (once == 0) {
+                result.push(detail[0].CommentList[0])
+            }
+            console.log(result);
+        }).catch(err => res.status(404).json(err));
+    var MongoClient = require('mongodb').MongoClient;
+
+    result.push(req.body.CommentList);
+    console.log(result);
+    var url = 'mongodb://localhost:27017/';
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("houtai");
+        var whereStr = { "_id": ObjectId('5cd01b959f3d58286819063f') };  // 查询条件
+        console.log(result);
+        var updateStr = { $set: { "CommentList": result } };
+        dbo.collection("details").updateOne(whereStr, updateStr, function (err, res) {
+            if (err) throw err;
+            console.log("文档更新成功");
+            db.close();
+        });
+    });
+    res.json('success');
 });
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
