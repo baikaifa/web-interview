@@ -1,8 +1,12 @@
 import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+<<<<<<< HEAD
+import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, } from './style.js'
+=======
 import { Input, Button, List } from 'antd'
 import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Content } from './style.js'
+>>>>>>> 0f4e0502bf946628f5b871e1f9cb7e2a7cfad682
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
@@ -18,7 +22,7 @@ class Detail extends PureComponent {
             <DetailWrapper>
                 <Header>{this.props.title}"</Header>
                 <DTop>
-                    <DImg className="tx" />
+                    <img src={this.props.img} className="tx"/>
                     <DName>{this.props.DName}<br />
                         <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
                         </Ddet>

@@ -16,13 +16,13 @@ export const DTop = styled.div`
     //border: 1px solid #333;
     height: 82px;
 `
-export const DImg = styled.img`
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    float: left;
-    border-radius: 50%;
-`
+// export const DImg = styled.img`
+//     width: 80px;
+//     height: 80px;
+//     background-color: #ccc;
+//     float: left;
+//     border-radius: 50%;
+// `
 export const DName = styled.p`
     font-size: 20px;
     float: left;

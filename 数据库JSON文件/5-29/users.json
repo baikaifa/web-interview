@@ -244,3 +244,27 @@
     "date" : ISODate("2019-05-07T09:19:05.483+0000"), 
     "__v" : NumberInt(0)
 }
+{ 
+    "_id" : ObjectId("5ce8146cc0eb3e0bb43e2835"), 
+    "email" : "test@test.com", 
+    "avatar" : "//www.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=200&r=pg&d=mm", 
+    "password" : "$2b$10$l.remqF2HarQIkaET.Jy3eAS73rTfE5xnEiEVYUonHmk1IQ0ckFhK", 
+    "date" : ISODate("2019-05-24T15:57:32.902+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ceb7dd02a102c8958ca594d"), 
+    "email" : "qqqa@qqq.com", 
+    "avatar" : "//www.gravatar.com/avatar/8a22f3311feed07a77e4af03e7e9e403?s=200&r=pg&d=mm", 
+    "password" : "$2b$10$P27ZN/cn8bcgS3Fw4zTP1O.ik8O.BR8nuHV4C7c9jg5t/HgAqoTmS", 
+    "date" : ISODate("2019-05-27T06:04:00.609+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ceb9b5069169b21ac7e6b17"), 
+    "email" : "597232104@qq.com", 
+    "avatar" : "//www.gravatar.com/avatar/d83161d31a3d632051e7a3fc2a2c3306?s=200&r=pg&d=mm", 
+    "password" : "$2b$10$dMFn7ZSZGeVIngN8gLy5u.C5ofGdtdBBjjgw0KWF8vyYZAp1ZpBMS", 
+    "date" : ISODate("2019-05-27T08:09:52.959+0000"), 
+    "__v" : NumberInt(0)
+}
