@@ -1,8 +1,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-// 
-import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Content } from './style.js'
+import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle,  } from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
@@ -29,6 +28,7 @@ class Detail extends PureComponent {
                 <Fragment>
                     <div>
                         <div>
+                            <span className="comment">您的评论：</span><br/>
                             <input value={this.props.inputValue} onChange={this.props.changeInputValue} />
                             <button onClick={this.props.handleClick}>提交</button>
                         </div>
@@ -58,7 +58,6 @@ class Detail extends PureComponent {
 }
 const mapState = (state) => ({
     title: state.getIn(['detail', 'title']),
-    content: state.getIn(['detail', 'content']),
     page: state.getIn(['home', 'articlePage']),
     DName: state.getIn(['detail', 'DName']),
     Ddet: state.getIn(['detail', 'Ddet']),

@@ -36,7 +36,6 @@ router.get("/", (req, res) => {
 router.post("/add", passport.authenticate('jwt', { session: false }), (req, res) => {
     const profileFields = {};
     if (req.body.title) { profileFields.title = req.body.title; }
-    if (req.body.content) { profileFields.content = req.body.content; }
     if (req.body.id) { profileFields.id = req.body.id; }
     if (req.body.DName) { profileFields.DName = req.body.DName; }
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
@@ -51,7 +50,6 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
 router.post("/edit/:id", (req, res) => {
     const profileFields = {};
     if (req.body.title) { profileFields.title = req.body.title; }
-    if (req.body.content) { profileFields.content = req.body.content; }
     if (req.body.id) { profileFields.id = req.body.id; }
     if (req.body.DName) { profileFields.DName = req.body.DName; }
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
