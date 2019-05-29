@@ -36,6 +36,7 @@ router.post("/add", passport.authenticate('jwt', { session: false }), (req, res)
     const profileFields = {};
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.id) { profileFields.id = req.body.id; }
+    if (req.body.img) { profileFields.img = req.body.img; }
     if (req.body.DName) { profileFields.DName = req.body.DName; }
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
     if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
@@ -50,6 +51,7 @@ router.post("/edit/:id", passport.authenticate('jwt', { session: false }), (req,
     const profileFields = {};
     if (req.body.title) { profileFields.title = req.body.title; }
     if (req.body.id) { profileFields.id = req.body.id; }
+    if (req.body.img) { profileFields.img = req.body.img; }
     if (req.body.DName) { profileFields.DName = req.body.DName; }
     if (req.body.Ddet) { profileFields.Ddet = req.body.Ddet; }
     if (req.body.DArticle) { profileFields.DArticle = req.body.DArticle; }
