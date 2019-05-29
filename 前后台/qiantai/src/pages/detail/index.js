@@ -35,7 +35,7 @@ class Detail extends PureComponent {
                         <ul>
                             {
                                 CommentList.map((item, index) => {
-                                    return <li key={index} >{item}</li>
+                                    return <li onClick={this.props.handleDelete.bind(this,index,item)} key={index} >{item}</li>
                                 })
                             }
                         </ul>
@@ -82,10 +82,12 @@ const mapDispatch = (dispatch) => ({
     },
     handleClick(e) {
         dispatch(actionCreators.addItem())
-        console.log(a);
         axios.post('/api/detail/change', { "CommentList": a }, (req, res) => {
-            console.log('');
         })
+    },
+    handleDelete(index,item){
+        console.log(item);
+        dispatch(actionCreators.deleteItem(index,item))
     }
 
 })
