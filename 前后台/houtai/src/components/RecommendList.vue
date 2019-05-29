@@ -18,13 +18,13 @@
         <el-form-item prop="id" label="id:">
             <el-input type="id" v-model="formData.id"></el-input>
           </el-form-item>
-          <el-form-item prop="imgUrl" label="图片地址:">
+          <el-form-item prop="imgUrl" label="头像:">
             <el-input type="imgUrl" v-model="formData.imgUrl"></el-input>
           </el-form-item>
-                 <el-form-item prop="title" label="标题:">
-            <el-input type="title" v-model="formData.title"></el-input>
+                 <el-form-item prop="name" label="作者:">
+            <el-input type="name" v-model="formData.name"></el-input>
           </el-form-item>
-                 <el-form-item prop="desc" label="描述desc:">
+                 <el-form-item prop="desc" label="描述:">
             <el-input type="desc" v-model="formData.desc"></el-input>
           </el-form-item>
           <el-form-item class="text_right">
@@ -43,9 +43,9 @@ export default {
   data() {
     return {
       form_rules: {
-         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
-        imgUrl: [{ required: true, message: "图片地址不能为空", trigger: "blur" }],
-        title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
+        id: [{ required: true, message: "id不能为空", trigger: "blur" }],
+        imgUrl: [{ required: true, message: "头像不能为空", trigger: "blur" }],
+        name: [{ required: true, message: "作者不能为空", trigger: "blur" }],
         desc: [{ required: true, message: "描述不能为空", trigger: "blur" }]
       }
     };
@@ -64,7 +64,7 @@ export default {
           this.$axios.post(`/api/recommendList/${url}`, this.formData).then(res => {
             //添加成功
             this.$message({
-              message: "数据添加成功",
+              message: "作者添加成功",
               type: "success"
             });
           });

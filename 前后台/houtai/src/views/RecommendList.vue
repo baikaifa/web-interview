@@ -28,17 +28,17 @@
             <span style="color:#f56767">{{scope.row.id}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="imgUrl" label="图片地址" width="130" align="center">
+        <el-table-column prop="imgUrl" label="头像" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.imgUrl}}</span>
           </template>
         </el-table-column>
-           <el-table-column prop="title" label="标题" width="130" align="center">
+           <el-table-column prop="name" label="作者" width="130" align="center">
           <template slot-scope="scope">
-            <span style="color:#f56767">{{scope.row.title}}</span>
+            <span style="color:#f56767">{{scope.row.name}}</span>
           </template>
         </el-table-column>
-        <el-table-column prop="desc" label="描述desc" width="130" align="center">
+        <el-table-column prop="desc" label="描述" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#f56767">{{scope.row.desc}}</span>
           </template>
@@ -100,7 +100,7 @@ export default {
         id: "",
         _id:"",
         desc:"",
-        title:""
+        name:""
       },
       dialog: {
         show: false,
@@ -138,17 +138,15 @@ export default {
     handleEdit(index, row) {
       this.dialog = {
         show: true,
-        title: "修改资金信息",
+        title: "修改作者信息",
         option: "edit"
       };
       this.formData = {
         desc: row.desc,
         imgUrl: row.imgUrl,
-        title: row.title,
+        name: row.name,
         id: row.id,
         _id:row._id,
-        desc:row.desc,
-        title:row.title
       };
     },
     handleDelete(index, row) {
@@ -160,13 +158,13 @@ export default {
     handleAdd() {
       this.dialog = {
         show: true,
-        title: "添加资金信息",
+        title: "添加作者信息",
         option: "add"
       };
       this.formData = {
         imgUrl: "",
         desc: "",
-        title: "",
+        name: "",
         id: "",
         _id:"",
       };
