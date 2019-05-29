@@ -32,6 +32,11 @@
             <span style="color:#f56767">{{scope.row.title}}</span>
           </template>
         </el-table-column>
+        <el-table-column prop="img" label="头像" width="130" align="center">
+          <template slot-scope="scope">
+            <span style="color:#f56767">{{scope.row.img}}</span>
+          </template>
+        </el-table-column>
         <el-table-column prop="DName" label="作者" width="130" align="center">
           <template slot-scope="scope">
             <span style="color:#4db3ff">{{scope.row.DName}}</span>
@@ -115,6 +120,7 @@ export default {
         title: "",
         id: "",
         _id: "",
+        img:"",
         DName: "",
         Ddet: "",
         DArticle: "",
@@ -163,6 +169,7 @@ export default {
         title: row.title,
         id: row.id,
         _id: row._id,
+        img: row.img,
         DName: row.DName,
         Ddet: row.Ddet,
         DArticle: row.DArticle,
@@ -186,6 +193,7 @@ export default {
         title: "",
         id: "",
         _id: "",
+        img: "",
         CommentList: [],
         inputValue: "",
         DName: "",

@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 // import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { HomeWrapper, HomeRight, LeftWhite, RightWhite } from '../home/style.js'
-import  {HomeLeft,NewArticle,NoTitleArticle} from './style.js'
+import  {HomeLeft,NewArticle,NoTitleArticle,HomeWrapper, HomeRight, LeftWhite, RightWhite} from './style.js'
 import  './style.css'
 class Write extends PureComponent {
     render() {
@@ -14,33 +13,31 @@ class Write extends PureComponent {
                     <HomeLeft className="homeLeft">
                         <NewArticle>
                             <div className="jiahao_xjwz">
-                            <span className="jiahao">+</span>
-                            <span className="xjwz">新建文章</span>
+                            <span className="xjwz"><i className="iconfont icon-jiahao"></i>新建文章</span>
                             </div>
-                            </NewArticle>
+                        </NewArticle>
                         <NoTitleArticle>
-                            <div id="wbtwz">
-                            无标题文章
-                            </div>
-                            <p className="zs">字数 0</p>
-                            <div className="shezhi">
-                                设置
+                            <div id="left">
+                            <p id="wbtwz">无标题文章<br />
+                            <span className="zs"><i className="iconfont icon-icon_article"></i>字数 0</span>
+                            <span className="set"><i className="iconfont icon-set-s"></i></span>
+                            </p>
                             </div>
                         </NoTitleArticle>
                     </HomeLeft>
                     <HomeRight className="homeRgiht">
                         <div className="wbtwz">
-                                无标题文章
+                            <p>无标题文章</p>
                         </div>
                         <div className="wbtwz_content">
                             <div className="wbtwz_line">
                         <ul>
-                            <li>B</li>
-                            <li>U</li>
+                            <li><i className="iconfont icon-jiacu"></i></li>
+                            <li><i className="iconfont icon-Underline"></i></li>
                             <li>/</li>
-                            <li>图片</li>
-                            <li>表格</li>
-                            <li>笑脸</li>
+                            <li><i className="iconfont icon-fl-tupian"></i></li>
+                            <li><i className="iconfont icon-biaoge"></i></li>
+                            <li><i className="iconfont icon-biaoqing"></i></li>
                         </ul>
                             </div>
                         </div>

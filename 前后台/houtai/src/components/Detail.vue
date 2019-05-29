@@ -21,6 +21,9 @@
           <el-form-item prop="title" label="标题:">
             <el-input type="title" v-model="formData.title"></el-input>
           </el-form-item>
+          <el-form-item prop="img" label="头像:">
+            <el-input type="img" v-model="formData.img"></el-input>
+          </el-form-item>
           <el-form-item prop="DName" label="作者:">
             <el-input type="DName" v-model="formData.DName"></el-input>
           </el-form-item>
