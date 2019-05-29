@@ -33,12 +33,11 @@ export default (state = defaultState, action) => {
                 inputValue: "",
             })
         case constants.DELETEITEM:
-            // console.log(JSON.parse(JSON.stringify(state)));
-            console.log(state.get("CommentList").splice(action.index,1));
-            // const newState=state.get("CommentList").splice(action.index,1)
-              return state.merge({
-                'CommentList':state.get("CommentList").splice(action.index,1)
-              })
+            let originState = JSON.parse(JSON.stringify(state.get("CommentList")))
+            originState.splice(action.index, 1)
+            return state.merge({
+                "CommentList": originState
+            })
         default:
             return state;
     }

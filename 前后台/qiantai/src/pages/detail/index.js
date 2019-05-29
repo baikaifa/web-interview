@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-// 
+import { Input, Button, List } from 'antd'
 import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Content } from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
@@ -26,21 +26,23 @@ class Detail extends PureComponent {
                 <DArticle dangerouslySetInnerHTML={{ __html: this.props.DArticle }}>
                 </DArticle>
                 <p></p>
-                <Fragment>
+<p>你的评论:</p>
+                <div>
                     <div>
-                        <div>
-                            <input value={this.props.inputValue} onChange={this.props.changeInputValue} />
-                            <button onClick={this.props.handleClick}>提交</button>
-                        </div>
-                        <ul>
-                            {
-                                CommentList.map((item, index) => {
-                                    return <li onClick={this.props.handleDelete.bind(this,index,item)} key={index} >{item}</li>
-                                })
-                            }
-                        </ul>
+                        {
+                            <List
+                                style={{ marginTop: '10px', width: '300px' }}
+                                // bordered
+                                dataSource={this.props.CommentList}
+                                renderItem={(item,index) => (<List.Item onClick={this.props.handleDelete.bind(this, index, item)} key={index} >{item}</List.Item>)}
+                            />
+                            
+                        }
+                        <Input value={this.props.inputValue} onChange={this.props.changeInputValue} />
+                        <Button onClick={this.props.handleClick}>提交</Button>
                     </div>
-                </Fragment>
+
+                </div>
             </DetailWrapper>
         )
     }
@@ -66,7 +68,7 @@ const mapState = (state) => ({
     inputValue: state.getIn(['detail', 'inputValue']),
     CommentList: state.getIn(['detail', 'CommentList'])
 })
-var a="";
+var a = "";
 const mapDispatch = (dispatch) => ({
 
     getDetail(id) {
@@ -77,17 +79,17 @@ const mapDispatch = (dispatch) => ({
     },
     changeInputValue(e) {
         dispatch(actionCreators.changeInputValue(e.target.value));
-       
-        a=e.target.value
+
+        a = e.target.value
     },
     handleClick(e) {
         dispatch(actionCreators.addItem())
         axios.post('/api/detail/change', { "CommentList": a }, (req, res) => {
         })
     },
-    handleDelete(index,item){
-        console.log(item);
-        dispatch(actionCreators.deleteItem(index,item))
+    handleDelete(index, item) {
+        console.log(index);
+        dispatch(actionCreators.deleteItem(index, item))
     }
 
 })
