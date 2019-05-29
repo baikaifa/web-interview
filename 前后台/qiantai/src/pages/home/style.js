@@ -105,7 +105,7 @@ export const WriterWrapper = styled.div`
     width: 100%;
     border-top: 1px solid #dcdcdc;
     border-radius: 3px;
-    height: 300px;
+    // height: 300px;
 `
 export const WTitle = styled.div`
     width: 100%;
