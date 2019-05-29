@@ -5,7 +5,9 @@
     "desc" : "你真的了解跨域么", 
     "id" : "4", 
     "date" : ISODate("2019-05-03T10:00:40.812+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(232), 
+    "Like" : NumberInt(342)
 }
 { 
     "_id" : ObjectId("5ccc11775a584b72488b36dd"), 
@@ -14,7 +16,9 @@
     "desc" : "作为前端工程师你能不知道bfc？？？", 
     "id" : "5", 
     "date" : ISODate("2019-05-03T10:01:27.076+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(223), 
+    "Like" : NumberInt(342)
 }
 { 
     "_id" : ObjectId("5ccc117b5a584b72488b36de"), 
@@ -23,7 +27,9 @@
     "desc" : "你遇到过这种问题么？", 
     "id" : "6", 
     "date" : ISODate("2019-05-03T10:01:31.079+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(32), 
+    "Like" : NumberInt(324)
 }
 { 
     "_id" : ObjectId("5ccc117e5a584b72488b36df"), 
@@ -32,7 +38,9 @@
     "desc" : "什么是依赖注入与控制反转", 
     "id" : "7", 
     "date" : ISODate("2019-05-03T10:01:34.774+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(3242), 
+    "Like" : NumberInt(23432)
 }
 { 
     "_id" : ObjectId("5ccc11835a584b72488b36e0"), 
@@ -41,7 +49,9 @@
     "desc" : "圣杯布局与双飞翼布局", 
     "id" : "8", 
     "date" : ISODate("2019-05-03T10:01:39.411+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(43), 
+    "Like" : NumberInt(2434)
 }
 { 
     "_id" : ObjectId("5ccc11895a584b72488b36e1"), 
@@ -50,7 +60,9 @@
     "desc" : "三列宽度自适应", 
     "id" : "9", 
     "date" : ISODate("2019-05-03T10:01:45.272+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(453), 
+    "Like" : NumberInt(4533)
 }
 { 
     "_id" : ObjectId("5ccc118d5a584b72488b36e2"), 
@@ -59,5 +71,7 @@
     "desc" : "前端必会精灵图", 
     "id" : "10", 
     "date" : ISODate("2019-05-03T10:01:49.784+0000"), 
-    "__v" : NumberInt(0)
+    "__v" : NumberInt(0), 
+    "Comment" : NumberInt(3534), 
+    "Like" : NumberInt(45325)
 }
