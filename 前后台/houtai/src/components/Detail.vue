@@ -21,10 +21,7 @@
           <el-form-item prop="title" label="标题:">
             <el-input type="title" v-model="formData.title"></el-input>
           </el-form-item>
-          <el-form-item prop="content" label="内容:">
-            <el-input type="content" v-model="formData.content"></el-input>
-          </el-form-item>
-          <el-form-item prop="DName" label="名字:">
+          <el-form-item prop="DName" label="作者:">
             <el-input type="DName" v-model="formData.DName"></el-input>
           </el-form-item>
           <el-form-item prop="Ddet" label="日期:">
@@ -57,7 +54,9 @@ export default {
       form_rules: {
         id: [{ required: true, message: "id不能为空", trigger: "blur" }],
         title: [{ required: true, message: "标题不能为空", trigger: "blur" }],
-        content: [{ required: true, message: "内容不能为空", trigger: "blur" }]
+        DName: [{ required: true, message: "作者不能为空", trigger: "blur" }],
+        Ddet: [{ required: true, message: "日期不能为空", trigger: "blur" }],
+        DArticle: [{ required: true, message: "文章不能为空", trigger: "blur" }],
       }
     };
   },
