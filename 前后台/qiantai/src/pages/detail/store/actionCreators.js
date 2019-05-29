@@ -9,7 +9,7 @@ export const changeInputValue = (inputValue) => ({
 export const addItem = () => ({
     type: constants.ADD_ITEM
 });
-const changeDetail = (title, content, DName, Ddet, DArticle, CommentList,_id) => ({
+const changeDetail = (title, content, DName, Ddet, DArticle, CommentList, _id) => ({
     type: constants.CHANGE_DETAIL,
     title,
     content,
@@ -19,15 +19,16 @@ const changeDetail = (title, content, DName, Ddet, DArticle, CommentList,_id) =>
     CommentList,
     _id,
 })
-export const deleteItem=(index,item)=>({
-    type:constants.DELETEITEM,
+export const deleteItem = (index, item) => ({
+    type: constants.DELETEITEM,
     item,
     index
 })
+
 export const getDetail = (id) => {
     return (dispatch) => {
         axios.get('/api/detail/detail?id=' + (id - 1)).then((res) => {
-            dispatch(changeDetail(res.data.data.title, res.data.data.content, res.data.data.DName, res.data.data.Ddet, res.data.data.DArticle, res.data.data.CommentList,res.data.data._id));
+            dispatch(changeDetail(res.data.data.title, res.data.data.content, res.data.data.DName, res.data.data.Ddet, res.data.data.DArticle, res.data.data.CommentList, res.data.data._id));
         })
         // axios.get('/api/detail?id=' + id).then((res) => {
         //     const result = res.data.data;

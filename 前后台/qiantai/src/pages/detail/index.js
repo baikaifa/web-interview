@@ -7,11 +7,13 @@ import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
 import axios from '../../http.js';
+import { resolve } from 'path';
+let co = ['123'];
 class Detail extends PureComponent {
-
-
     render() {
         const { CommentList } = this.props;
+        co = CommentList
+        console.log(co);
         return (
             <DetailWrapper>
                 <Header>{this.props.title}"</Header>
@@ -26,7 +28,7 @@ class Detail extends PureComponent {
                 <DArticle dangerouslySetInnerHTML={{ __html: this.props.DArticle }}>
                 </DArticle>
                 <p></p>
-<p>你的评论:</p>
+                <p>你的评论:</p>
                 <div>
                     <div>
                         {
@@ -34,9 +36,8 @@ class Detail extends PureComponent {
                                 style={{ marginTop: '10px', width: '300px' }}
                                 // bordered
                                 dataSource={this.props.CommentList}
-                                renderItem={(item,index) => (<List.Item onClick={this.props.handleDelete.bind(this, index, item)} key={index} >{item}</List.Item>)}
+                                renderItem={(item, index) => (<List.Item onClick={this.props.handleDelete.bind(this, index, item)} key={index} >{item}</List.Item>)}
                             />
-                            
                         }
                         <Input value={this.props.inputValue} onChange={this.props.changeInputValue} />
                         <Button onClick={this.props.handleClick}>提交</Button>
@@ -46,11 +47,9 @@ class Detail extends PureComponent {
             </DetailWrapper>
         )
     }
-
     componentDidMount() {
         this.props.getDetail(this.props.match.params.id);
         this.bindEvents();
-
     }
     bindEvents() {
         window.addEventListener("popstate", (e) => {
@@ -69,8 +68,16 @@ const mapState = (state) => ({
     CommentList: state.getIn(['detail', 'CommentList'])
 })
 var a = "";
-const mapDispatch = (dispatch) => ({
 
+const mapDispatch = (dispatch,Promise) => ({
+    handleDelete(index, item) {
+        dispatch(actionCreators.deleteItem(index, item))
+        this.props.storageToDatabase(co)
+    },
+    storageToDatabase(co) {
+        axios.post('/api/detail/deleteItem', { "CommentList": co }, (req, res) => {
+        })
+    },
     getDetail(id) {
         dispatch(actionCreators.getDetail(id))
     },
@@ -79,18 +86,12 @@ const mapDispatch = (dispatch) => ({
     },
     changeInputValue(e) {
         dispatch(actionCreators.changeInputValue(e.target.value));
-
         a = e.target.value
     },
-    handleClick(e) {
+    handleClick() {
         dispatch(actionCreators.addItem())
         axios.post('/api/detail/change', { "CommentList": a }, (req, res) => {
         })
-    },
-    handleDelete(index, item) {
-        console.log(index);
-        dispatch(actionCreators.deleteItem(index, item))
     }
-
 })
 export default connect(mapState, mapDispatch)(withRouter(Detail));//让Detail有能力获取到router里面所有的内容

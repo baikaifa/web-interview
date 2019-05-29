@@ -97,6 +97,25 @@ router.post("/change", (req, res) => {
     });
     res.json('success');
 });
+router.post("/deleteItem", (req, res) => {
+    // result.push(req.body.CommentList)
+    // console.log(typeof result);
+    console.log(req.body.CommentList);
+    var MongoClient = require('mongodb').MongoClient;
+    var url = 'mongodb://localhost:27017/';
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("houtai");
+        var whereStr = { "_id": ObjectId('5cd01b959f3d58286819063f') };  // 查询条件
+        var updateStr = { $set: { "CommentList": req.body.CommentList } };
+        dbo.collection("details").updateOne(whereStr, updateStr, function (err, res) {
+            if (err) throw err;
+            console.log("文档更新成功");
+            db.close();
+        });
+    });
+    res.json('success');
+});
 
 router.delete("/delete/:id", passport.authenticate('jwt', { session: false }), (req, res) => {
     Detail.findOneAndDelete({ _id: req.params.id }).then(detail => {
