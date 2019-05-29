@@ -1,8 +1,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-// 
-import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Content } from './style.js'
+import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, } from './style.js'
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
@@ -16,7 +15,7 @@ class Detail extends PureComponent {
             <DetailWrapper>
                 <Header>{this.props.title}"</Header>
                 <DTop>
-                    <DImg className="tx" />
+                    <img src={this.props.img} className="tx"/>
                     <DName>{this.props.DName}<br />
                         <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
                         </Ddet>
