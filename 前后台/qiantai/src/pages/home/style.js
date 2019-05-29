@@ -129,10 +129,13 @@ export const WImg = styled.div`
 `
 export const WName = styled.p`
     float: left;
+    font-size: 15px;
+    color: black;
 `
 export const Wxq = styled.span`
     float: left;
     padding-top: 20px;
+    font-size: 13px;
 `
 
 export const LoadMore = styled.div`
