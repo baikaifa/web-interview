@@ -77,13 +77,218 @@ class Tiaocao extends PureComponent {
                     </div>
                 </div>
                 <div className="secondPage">
-                    第二个内容
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/14932828/ed5e9dca-fad7-4f9c-b52e-67cf2eb86daf?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试<br />
+                            <span className="desc">写了4353543字，获得了4533个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/7640286/d556dba4-2199-40fd-8a27-653bbc8d8194?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">写了45353字，获得了5653个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/4385739/6a06dc37-60f7-4f77-985d-9e383824b0df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端达人<br />
+                            <span className="desc">写了75434字，获得了6543个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/1892242/79495352be51?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">写了7435字，获得了5432个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/14932828/ed5e9dca-fad7-4f9c-b52e-67cf2eb86daf?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试<br />
+                            <span className="desc">写了4353543字，获得了4533个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/7640286/d556dba4-2199-40fd-8a27-653bbc8d8194?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">写了45353字，获得了5653个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/4385739/6a06dc37-60f7-4f77-985d-9e383824b0df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端达人<br />
+                            <span className="desc">写了75434字，获得了6543个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="touxiang" src="https://upload.jianshu.io/users/upload_avatars/1892242/79495352be51?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">写了7435字，获得了5432个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
                 </div>
                 <div className="thirdPage">
-                    第三个内容
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/14932828/ed5e9dca-fad7-4f9c-b52e-67cf2eb86daf?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试<br />
+                            <span className="desc">收录768679篇文章，获得了4533个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/7640286/d556dba4-2199-40fd-8a27-653bbc8d8194?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">收录7869篇文章，获得了5653个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/4385739/6a06dc37-60f7-4f77-985d-9e383824b0df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端达人<br />
+                            <span className="desc">收录9870篇文章，获得了6543个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/1892242/79495352be51?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">收录9087篇文章，获得了5432个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/14932828/ed5e9dca-fad7-4f9c-b52e-67cf2eb86daf?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试<br />
+                            <span className="desc">收录768679篇文章，获得了4533个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/7640286/d556dba4-2199-40fd-8a27-653bbc8d8194?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">收录7869篇文章，获得了5653个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/4385739/6a06dc37-60f7-4f77-985d-9e383824b0df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端达人<br />
+                            <span className="desc">收录9870篇文章，获得了6543个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <img className="zhuanti" src="https://upload.jianshu.io/users/upload_avatars/1892242/79495352be51?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"/>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">收录9087篇文章，获得了5432个喜欢</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
                 </div>
                 <div className="forthPage">
-                    第四个内容
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">共8970篇文章，7097人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">共54367篇文章，24565人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端跳槽技巧<br />
+                            <span className="desc">共8970篇文章，7097人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            面试准备<br />
+                            <span className="desc">共56334篇文章，4242人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端<br />
+                            <span className="desc">共8970篇文章，7097人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端面试指南<br />
+                            <span className="desc">共54367篇文章，24565人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            前端跳槽技巧<br />
+                            <span className="desc">共8970篇文章，7097人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
+                    <div className="for">
+                        <div className="wenji">
+                            <i className="iconfont icon-zhuantitu" id="wj"></i>
+                        </div>
+                        <p className="author">
+                            面试准备<br />
+                            <span className="desc">共56334篇文章，4242人关注</span>
+                        </p>
+                        <button className="guanzhu">+ 关注</button>
+                    </div>
                 </div>
             </div>
         )

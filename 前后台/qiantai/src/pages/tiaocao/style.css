@@ -1,52 +1,3 @@
-.jiahao_xjwz{
-    text-align: left;
-    line-height: 3rem;
-    margin-left: 1rem;
-}
-.xjwz{
-    margin-left: 0.5rem;
-}
-.homeLeft{
-    height:500px;
-}
-.homeRgiht{
-    height:1000px;
-}
-.wbtwz{
-    text-align: left;
-    line-height: 2rem;
-    margin-left: 1rem;
-}
-.zs{
-    text-align: left;
-    line-height: 2rem;
-    margin-left: 1rem;
-}
-.shezhi{
-    text-align: right;
-    margin-right: 2rem;
-    margin-top:-2rem;
-}
-.wbtwz{
-    text-align: left;
-    line-height: 2rem;
-    margin-left: 1rem;
-    font-size: 2rem;
-}
-.wbtwz_content{
-    
-    background: red;
-}
-.wbtwz_line{
-    background: green;
-    height: 3rem;
-}
-.wbtwz_line>ul>li{
-    list-style: none;
-    line-height: 3rem;
-float: left;
-margin-left: 20px;
-}
 .top{
     width:60%;
     margin-left:20%;
@@ -103,4 +54,75 @@ span{
     color:red;
     float: left;
     position: fixed;
+}
+
+.secondPage{
+    margin-left: 23%;
+    width:54%;  
+    margin-top: 10px;
+}
+.for{
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #BBBBBB;
+}
+.touxiang{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 10px;
+}
+.author{
+    color: black;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 20px;
+    float: left;
+}
+.desc{
+    float: left;
+    margin-top: 10px;
+}
+.guanzhu{
+    border-style: none;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    background-color: #85BF42;
+    float: right;
+    margin-top: 25px;
+    margin-right: 15px;;
+}
+.thirdPage{
+    margin-left: 23%;
+    width:54%;  
+    margin-top: 10px;
+}
+.zhuanti{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 10px;
+}
+.forthPage{
+    margin-left: 23%;
+    width:54%;  
+    margin-top: 10px;
+}
+.wenji{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 10px;
+    background-color: #ccc;
+    line-height: 70px;
+    text-align: center;
+}
+#wj{
+    color: black;
+    font-size: 30px;
 }
