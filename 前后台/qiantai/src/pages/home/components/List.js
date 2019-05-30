@@ -20,7 +20,6 @@ class List extends PureComponent {
                                     <p className='desc'>{item.get('desc')}</p>
                                     <p className='desc'> <i className="iconfont icon-xin " ></i>&nbsp;&nbsp;{item.get('Like')}
                                     <i className="iconfont icon-pinglun " ></i>&nbsp;&nbsp;{item.get('Comment')}</p>
-                                   
                                 </ListInfo>
                             </ListItem>
                             </Link>

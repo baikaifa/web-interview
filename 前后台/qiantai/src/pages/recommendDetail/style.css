@@ -1,0 +1,123 @@
+/* .like{
+    width: 150px;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+.talk{
+    width: 100%;
+    height: auto;
+}
+.pl{
+    width: 100%;
+    height: 80px;
+    margin-top: 6px;
+}
+.sub{
+    width: 80px;
+    height: 30px;
+    background-color: #85BF42;
+    color: #fff;
+    border-style: none;
+    border-radius: 20px;
+}
+.comment{
+    font-size: 16px;
+
+}
+.tx{
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 50%;
+} */
+html,body{ margin: 0px;width: 100%; }  
+h3{height: 100px;margin:20px 0 0;}  
+.recommendDetail_left{left:0px;position: absolute;margin-top: -64px;}  
+.recommendDetail_right{right: 0px;position: absolute }  
+.recommendDetail_left,.recommendDetail_left{width: 200px;height: 200px; background-color: #ffe6b8;top:120px;}  
+.recommendDetail_center{margin:0px 200px ;background:purple;height: 200px; } 
+.touxiang{
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background: red;
+    position: absolute;
+    margin-left: 10px;
+}
+.rec_f_q{
+    height: 20px;
+    width: 120px;
+    margin-left: 110px;
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: -10px;
+}
+/* .recommendDetail_first_zhongjian{
+    position: relative;
+} */
+
+.recommendDetail_first_zhongjian_xiaokuai{
+    margin-left: 10px;
+    width: 60px;
+    /* height: 80px; */
+    /* display: inline; */
+    float: left;
+}
+.recommendDetail_first_zhongjian_xiaokuai_first{
+    /* position: absolute; */
+    margin-left: 110px;
+    width: 60px;
+    /* height: 80px; */
+    /* display: inline; */
+    float: left;
+}
+.recommendDetail_first_zhongjian_xiaokuai_last{
+    /* position: absolute; */
+    margin-left: 10px;
+    width: 75px;
+    /* height: 80px; */
+    /* display: inline; */
+    float: left;
+}
+.shugang{
+    position: absolute;
+    height: 55px;
+    width:1px;
+    background: black;
+    margin-top: -68px;
+    margin-left: 55px;
+}
+.jianju{
+    margin-top: 10px;
+}
+.aaa{
+
+}
+.ddd{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: red;
+    margin-left: 20px;
+}
+.ccc{
+margin-left: 50px;
+margin-top:-20px;
+}
+.tupian{
+    width: 150px;
+    height: 200px;
+    float: right;
+}
+.art{
+    padding: 20px;
+    width: 800px;
+}
+.sec{
+    margin-right: 20px;
+}

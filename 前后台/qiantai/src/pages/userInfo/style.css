@@ -1,0 +1,123 @@
+.jiahao_xjwz{
+    text-align: left;
+    line-height: 3rem;
+    margin-left: 1rem;
+}
+.xjwz{
+    margin-left: 0.5rem;
+}
+.homeLeft{
+    height:500px;
+}
+.homeRgiht{
+    height:1000px;
+}
+.wbtwz{
+    text-align: left;
+    line-height: 2rem;
+    margin-left: 1rem;
+}
+.zs{
+    text-align: left;
+    line-height: 2rem;
+    margin-left: 1rem;
+}
+.shezhi{
+    text-align: right;
+    margin-right: 2rem;
+    margin-top:-2rem;
+}
+.wbtwz{
+    text-align: left;
+    line-height: 2rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+.wbtwz_content{
+    
+    background: red;
+}
+.wbtwz_line{
+    background: green;
+    height: 3rem;
+}
+.wbtwz_line>ul>li{
+    list-style: none;
+    line-height: 3rem;
+float: left;
+margin-left: 20px;
+}
+.top{
+    width:60%;
+    margin-left:20%;
+    /* margin-top:10px; */
+    margin-bottom:3%;
+}
+ .picture{
+    width:50px;
+    height:50px;
+    border-radius:50px; 
+    background-color:gray;
+    float:left;
+    /* border:1px solid black; */
+} 
+.name{
+    margin-left:10%;
+    font-size:14px;
+   
+    height:50px;
+    line-height:50px;
+}
+.content{
+    font-size:14px;
+    color:gray;
+    line-height:150%;
+    margin-top:2%;
+    
+}
+.title{
+   margin-top:3%;
+  
+}
+.center{
+    /* border:2px solid orange; */
+    width:60%;
+    margin-left:20%;
+    margin-bottom:3%;
+ 
+}
+i{
+    margin-left:3%;
+    font-size:14px;
+      color:gray;
+}
+span{
+    font-size:14px;
+      color:gray;
+}
+.bottom{
+    width:60%;
+    margin-left:20%;
+}
+.tiaocao_left{
+    color:red;
+    float: left;
+    position: fixed;
+    margin-left: 5rem;
+    margin-top:15%;
+}
+.tiaocao_left>ul>li{
+    list-style: none;
+}
+.button_style{
+    width: 10rem;
+}
+.secondPage{
+    display: none;
+}
+.thirdPage{
+    display: none;
+}
+.forthPage{
+    display: none;
+}

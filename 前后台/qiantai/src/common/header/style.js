@@ -11,8 +11,8 @@ export const SearchInfoList = styled.div`
         list-style:none;
         cursor:pointer;
     }
+   
 `
-
 // export const Logo = styled.div`
 //     position:absolute;
 //     top:0;

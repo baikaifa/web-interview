@@ -1,10 +1,12 @@
-import  React,{PureComponent} from 'react';
-import  { WriterWrapper,WTitle,WImg,WName,Wxq,Wfor } from '../style';
-class Writer extends PureComponent{
-    render(){
+import React, { PureComponent } from 'react';
+import { WriterWrapper, WTitle, WImg, WName, Wxq, Wfor } from '../style';
+import { Link } from 'react-router-dom'
+class Writer extends PureComponent {
+    render() {
         return (
             <WriterWrapper>
                 <WTitle>推荐作者</WTitle>
+                <Link to="/userInfo">
                 <Wfor>
                     <WImg></WImg>
                     <WName>
@@ -13,7 +15,8 @@ class Writer extends PureComponent{
                         <Wxq>写了19600字，共有293747个喜欢</Wxq>
                     </WName>
                 </Wfor>
-                <Wfor>    
+                </Link>
+                <Wfor>
                     <WImg></WImg>
                     <WName>
                         Web大神
@@ -21,7 +24,7 @@ class Writer extends PureComponent{
                         <Wxq>写了24324字，共有24342个喜欢</Wxq>
                     </WName>
                 </Wfor>
-                <Wfor> 
+                <Wfor>
                     <WImg></WImg>
                     <WName>
                         前端俱乐部
@@ -29,7 +32,7 @@ class Writer extends PureComponent{
                         <Wxq>写了4343字，共有34335个喜欢</Wxq>
                     </WName>
                 </Wfor>
-                <Wfor> 
+                <Wfor>
                     <WImg></WImg>
                     <WName>
                         一起学前端

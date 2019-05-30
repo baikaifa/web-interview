@@ -7,7 +7,6 @@ import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
 import axios from '../../http.js';
-import { resolve } from 'path';
 let co = ['123'];
 class Detail extends PureComponent {
     render() {
