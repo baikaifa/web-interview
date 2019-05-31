@@ -37,6 +37,8 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import React, { Component } from 'react'
 import  {Link} from 'react-router-dom'
+import { LoginBox } from './style'
+import './style.css'
 // message,
 import { Row, Col, Form, Icon, Input, Button, Checkbox, } from 'antd';
 class NormalLoginForm extends Component {
@@ -59,8 +61,11 @@ let text="&nbsp;";
         console.log(this.props.loginStatus);
         if (!loginStatus) {
             return (
+                <LoginBox>
+                    <h1>登录</h1>
+
                 <Row>
-                    <Col offset={9} span={6}>
+                    <Col offset={3} span={18}>
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item hasFeedback>
                                 {
@@ -89,7 +94,7 @@ let text="&nbsp;";
                             <Form.Item>
                                 {getFieldDecorator('password', {
                                     rules: [
-                                        { required: true, message: 'Please input your Password!' },
+                                        { required: true, message: '请输入您的密码!' },
                                         { pattern: /^[a-zA-Z0-9]{6,10}$/, message: '6位数字或字母' }
                                     ],
                                 })(
@@ -101,18 +106,25 @@ let text="&nbsp;";
                                     valuePropName: 'checked',
                                     initialValue: true,
                                 })(
-                                    <Checkbox>Remember me</Checkbox>
+                                    <Checkbox>记住我</Checkbox>
                                 )}
-                                <a className="login-form-forgot" href="www.baidu.com">Forgot password</a>
-                                <Button type="primary" htmlType="submit" className="login-form-button" >
-                                    Log in 
-                    </Button>
-                    
-                 <span dangerouslySetInnerHTML={{__html:text}}></span>   or  <Link to={'/register'} > <span dangerouslySetInnerHTML={{__html:text}}></span> register now!</Link>
+                                <br />
+                                <Button type="primary" htmlType="submit" className="login-form-button" >登录</Button>
+                                <br />
+                                <a className="login-form-forgot" href="www.baidu.com">忘记密码？</a>
+                                <span dangerouslySetInnerHTML={{__html:text}}></span>   or  <Link to={'/register'} > <span dangerouslySetInnerHTML={{__html:text}}></span> 立即注册</Link>
+                                         
                             </Form.Item>
                         </Form>
                     </Col>
                 </Row>
+                <p className="sjzhdl">—————————&nbsp;&nbsp;社交账号登录&nbsp;&nbsp;—————————</p>
+                <div className="tubiao">
+                    <i className="iconfont icon-weibo" id="weibo"></i>
+                    <i className="iconfont icon-weixin" id="weixin"></i>
+                    <i className="iconfont icon-tubiao215" id="qq"></i>
+                </div>
+                </LoginBox>
             );
         }
         else {

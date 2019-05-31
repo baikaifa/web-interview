@@ -1,0 +1,24 @@
+h1{
+    color: red;
+}
+.tubiao{
+    width: 70%;
+    margin-left: 15%;
+}
+#weibo{
+    color: red;
+    font-size: 30px;
+    margin-right: 20px;
+}
+#weixin{
+    color: green;
+    font-size: 30px;
+    margin-right: 20px;
+}
+#qq{
+    color: #0099ff;
+    font-size: 30px;
+}
+.sjzhdl{
+    color: #BBBBBB;
+}

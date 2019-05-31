@@ -1,38 +1,39 @@
 import styled from 'styled-components';
 
 export const LoginWrapper = styled.div`
-z-index:0,
-position:absolute;
-left:0;
-right:0;
-bottom:0px;
-top:56px;
-background: #eee;
+margin-top: 40px;
+width: 35%;
+margin-left: 32.5%;
+background: #fff;
+padding: 20px;
+text-align: center;
 `
 export const LoginBox = styled.div`
-    width: 400px;
-    height: 180px;
-    margin: 80px auto;
-    background: #fff;
-    box-shadow: 0 0 8px rgba(0,0,0,.1);
+margin-top: 20px;
+width: 80%;
+margin-left: 10%;
     
 `
 export const Input = styled.input`
     display:block;
-    width: 200px;
-    height: 30px;
+    width: 80%;
+    height: 40px;
     line-height: 30px;
     padding:0 10px;
     margin: 10px auto;
     color: #777;
+    border-style: none;
+    background-color: #dcdcdc;
+    border-radius: 10px;
 `
 export const Button = styled.div`
-width: 220px;
+width: 60%;
 height: 30px;
 line-height: 30px;
 color: #fff;
-background: #3194d0;
+background-color: #66cc66;
 border-radius: 15px;
-margin: 10px auto;
+margin-left: 20%;
 text-align:center;
+margin-top: 15px;
 `
