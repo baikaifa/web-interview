@@ -10,12 +10,12 @@ top:56px;
 background: #eee;
 `
 export const LoginBox = styled.div`
-    width: 400px;
-    height: 180px;
-    margin: 80px auto;
+    margin-top: 40px;
+    width: 35%;
+    margin-left: 32.5%;
     background: #fff;
-    box-shadow: 0 0 8px rgba(0,0,0,.1);
-    
+    padding: 20px;
+    text-align: center;
 `
 export const Input = styled.input`
     display:block;
