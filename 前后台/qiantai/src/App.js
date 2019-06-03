@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './common/header/index.js'
 import Home from './pages/home'
 import Detail from './pages/detail/loadable.js';
-import  RecommendDetail from './pages/recommendDetail/loadable.js'
+import RecommendDetail from './pages/recommendDetail/loadable.js'
 import Search from './pages/search/loadable.js';
 import Login from './pages/login';
 // import Login from './Login';
@@ -16,6 +16,7 @@ import Button2 from './pages/spaPages/button2';
 import Words from './pages/spaPages/words';
 import Spa from './pages/spaPages';
 import UserInfo from './pages/userInfo'
+import Chat from './pages/chat'
 // import Search from './pages/search'
 // import  Protected from './Protected'
 import store from './store';
@@ -45,6 +46,7 @@ class App extends Component {
               <Route path='/words' exact component={Words}></Route>
               <Route path='/userInfo' exact component={UserInfo}></Route>
               <Route path='/recommendDetail/:id' exact component={RecommendDetail}></Route>
+              <Route path='/chat' exact component={Chat} ></Route>
             </Fragment>
           </Switch>
         </BrowserRouter>

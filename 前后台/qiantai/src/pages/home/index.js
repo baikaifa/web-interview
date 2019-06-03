@@ -39,8 +39,6 @@ class Home extends PureComponent {
                 <LeftWhite></LeftWhite>
                 <RightWhite></RightWhite>
             </HomeWrapper>
-
-
         )
     }
     componentDidMount() {

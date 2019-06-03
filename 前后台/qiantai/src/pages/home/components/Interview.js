@@ -4,8 +4,16 @@ import React, { PureComponent } from 'react';
 import { Div1Wrapper, Div2Wrapper, Div3Wrapper, Div4Wrapper, PWrapper } from '../style';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import io from 'socket.io-client'
+const socket = io('ws://localhost:5000')
 class Interview extends PureComponent {
+    componentDidMount() {
+        socket.on('recvmsg', (data) => {
+            alert('Interview页面也能收到数据',data);
+        })
+    }
     render() {
+        
         const { list } = this.props;
         return (
             <div>

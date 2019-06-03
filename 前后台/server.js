@@ -4,6 +4,17 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieParser=require('cookie-parser');
 const app = express();
+const server =require('http').Server(app);
+const io=require('socket.io')(server);
+
+io.on('connection',function (socket){
+    socket.on('sendmsg',function (data){
+        console.log('我发送了数据',data);
+        io.emit('recvmsg',data)
+    })
+})
+
+
 //引入users.js
 const users = require('./routers/api/users');
 const profiles = require('./routers/api/profiles');
@@ -47,7 +58,7 @@ var url = 'mongodb://localhost:27017/houtai' //local表示数据库的名称
 mongoose.connect(url, { useNewUrlParser: true })
     .then(() => { console.log('连接成功') })
     .catch(err => console.log(err))
-app.listen(port, () => {
+    server.listen(port, () => {
     console.log(`Server running on port ${port}`);
 })
 
