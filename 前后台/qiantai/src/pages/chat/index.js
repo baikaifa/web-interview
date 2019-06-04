@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { List, InputItem } from 'antd-mobile'
 import io from 'socket.io-client'
 const socket = io('ws://localhost:5000')
