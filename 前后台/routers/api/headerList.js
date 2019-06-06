@@ -10,15 +10,14 @@ router.get("/test", (req, res) => {
 })
 
 router.post("/search",(req,res)=>{
-    ArticleList.find({"title":req.body.keywords})
+    var words=`${req.body.keywords}`
+    ArticleList.find({"title":eval("/"+words+"/g")})
     .then(articleList=>{
         if(!articleList){
             return res.status(404).json("没有任何内容")
         }
         res.json(articleList);
     }).catch(err => res.status(404).json(err));
-
-
 })
 
 router.get("/headerList",(req,res)=>{

@@ -1,9 +1,9 @@
 { 
     "_id" : ObjectId("5cc99032c3eecb5184611b25"), 
     "data" : [
-        "cookie", 
-        "https", 
-        "nginx", 
+        "面试官的陷阱", 
+        "前后端分离后的前端时代", 
+        "这50个经典前端面试题面试者必看", 
         "node服务器部署", 
         "requirejs", 
         "跨域", 

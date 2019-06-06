@@ -31,6 +31,7 @@ export const searchItem =(item)=>{
     return (dispatch)=>{
         axios.post('/api/headerList/search',{'keywords':item.props.children}).then((res)=>{
             const data=Array(res.data[0]);
+            console.log(res);
           //注意传过去的必须是数组对象，不然不能使用get方法
              dispatch(addSearchData((data)));
             //  this.props.history.push('/search',null)

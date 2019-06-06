@@ -36,4 +36,4 @@ const mapDispatch = (dispatch) => ({
     //     dispatch(actionCreators.getMoreList(page))
     // }
 })
-export default connect(mapState, mapDispatch)(Search);
+export default connect(mapState, null)(Search);

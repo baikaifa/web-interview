@@ -80,13 +80,13 @@ class RecommendDetail extends PureComponent {
         )
     }
     componentDidMount() {
-        this.bindEvents();
+        // this.bindEvents();
     }
-    bindEvents() {
-        window.addEventListener("popstate", (e) => {
-            this.props.reductionPages();
-        }, false);
-    }
+    // bindEvents() {
+    //     window.addEventListener("popstate", (e) => {
+    //         this.props.reductionPages();
+    //     }, false);
+    // }
 }
 const mapState = (state) => ({
     title: state.getIn(['detail', 'title']),
