@@ -19,29 +19,21 @@ class Tiaocao extends PureComponent {
                 </div>
                 <div className="firstPage">
                     <div className="top" >
-                        <div className="top1" >
-                            <div className="picture"></div>
-                            <div className="name">dsdqvj</div>
+                        <img className="tx" src="https://upload.jianshu.io/users/upload_avatars/14932828/ed5e9dca-fad7-4f9c-b52e-67cf2eb86daf?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp" />
+                        <p className="name">dddddd</p>
+                        <p className="title">前端跳槽面试必备技巧，从面试准备，到一、二、三终面真实面试的终极分析教程</p>
+                        <div className="content">
+                            ……12套JAVA高级面试课程，BAT高级面试，架构师面试，高级工程师面试，第十套：【前端面试】前端跳槽面试必备技巧，从面试准备，到一、二、三、终面真实面试的完整分析课程第十一套：【高级面试】揭秘一线互联网企业 前端JavaScript高级面试视频课程 第十二套：【高级面试】 MySQL面试指南-中高级IT开发人员晋升加薪的必备佳品视频课程……（只为冲高薪准备） 总目录：12套JAVA高级面试课程，BAT高级面试，架构师面试，高级工程师面试，java就业面试，校招面试，算法面试，mysql数据库面试，前端面试宝典，笔试题，就业指导笔记，企业级……
                         </div>
-                        <div className="title">前端跳槽面试必备技巧，从面试准备，到一、二、三终面真实面试的终极分析教程</div>
-                        <div className="content">……12套JAVA高级面试课程，BAT高级面试，架构师面试，高级工程师面试，
-                         第十套：【前端面试】前端跳槽面试必备技巧，从面试准备，到一、二、三、终面真实面试的完整分析课程
-                         第十一套：【高级面试】揭秘一线互联网企业 前端JavaScript高级面试视频课程 第十二套：【高级面试】
-                         MySQL面试指南-中高级IT开发人员晋升加薪的必备佳品视频课程……（只为冲高薪准备） 总目录：12套JAVA
-                         高级面试课程，BAT高级面试，架构师面试，高级工程师面试，java就业面试，校招面试，算法面试，mysql
-                 数据库面试，前端面试宝典，笔试题，就业指导笔记，企业级……</div>
                         <div className="font">
                             <i className="iconfont icon-ai-eye"></i><span>469</span>
                             <i className="iconfont icon-pinglun"></i><span>33</span>
                             <i className="iconfont icon-xin"></i><span>679</span>
                         </div>
                     </div>
-                    <i className="iconfont icon-eye"></i>
                     <div className="center">
-                        <div>
-                            <div className="picture"></div>
-                            <div className="name">Dmz社区—_前端C</div>
-                        </div>
+                        <div className="picture"></div>
+                        <div className="name">Dmz社区—_前端C</div>
                         <div className="title">前端跳槽面试必备技巧</div>
                         <div className="content">…… 描述在一面/二面要掌握什么技巧，根据前端的知识点划分并分别出一至
                         两道面试题，根据真实面试的发问方式进行考察，并给出对应知识点的讲解、代码演示以及注意事项。 第4章
