@@ -21,7 +21,6 @@ router.post("/search",(req,res)=>{
 })
 
 router.get("/headerList",(req,res)=>{
-
     HeaderList.find()
         .then(headerList=>{
             if(!headerList){
