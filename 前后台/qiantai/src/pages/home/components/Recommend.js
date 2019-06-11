@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 // import { RecommendWrapper, RecommendItem } from '../style'
 import { Link } from 'react-router-dom'
-
-import { WriterWrapper, WTitle, WImg, WName, Wxq, Wfor } from '../style';
+import tx from '../../../statics/images/wz03.jpg'
+import { WriterWrapper, WTitle, WName, Wxq, Wfor } from '../style';
+import '../style.css'
 class Recommend extends PureComponent {
     render() {
         return ( 
@@ -13,7 +14,7 @@ class Recommend extends PureComponent {
                     <WriterWrapper key={index}>
                         <WTitle>推荐作者</WTitle>
                         <Wfor>
-                            <WImg></WImg>
+                            <img src={tx} className="txx" />
                             <WName>
                                 {item.get('name')}  
                                 <br />

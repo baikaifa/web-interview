@@ -116,15 +116,15 @@ export const Wfor = styled.div`
     margin: 5px auto;
     height: 85px;
 `
-export const WImg = styled.div`
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #ccc;
-    float: left;
-    margin-right: 10px;
-`
+// export const WImg = styled.div`
+//     width: 70px;
+//     height: 70px;
+//     border-radius: 50%;
+//     overflow: hidden;
+//     background-color: #ccc;
+//     float: left;
+//     margin-right: 10px;
+// `
 export const WName = styled.p`
     float: left;
     font-size: 15px;

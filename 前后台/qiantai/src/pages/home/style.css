@@ -21,6 +21,12 @@
   overflow: hidden;
   zoom:1;
 }
+.txx{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  float: left;
+}
 /* .wrapper{
     display: flex;
     flex-direction: row;

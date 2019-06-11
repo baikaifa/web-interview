@@ -6,6 +6,7 @@ import { DetailWrapper, Header, DImg, DTop, Ddet, DName, DButton, DArticle, Cont
 import { actionCreators } from './store'
 import { reductionPageAction } from '../home/store/actionCreators';
 import './style.css';
+import tx from '../../statics/images/tx04.jpg'
 import axios from '../../http.js';
 let co = ['123'];
 class Detail extends PureComponent {
@@ -17,7 +18,7 @@ class Detail extends PureComponent {
             <DetailWrapper>
                 <Header>{this.props.title}"</Header>
                 <DTop>
-                    <img src={this.props.img} className="tx" />
+                    <img src={tx} className="tx" />
                     <DName>{this.props.DName}<br />
                         <Ddet dangerouslySetInnerHTML={{ __html: this.props.Ddet }}>
                         </Ddet>
