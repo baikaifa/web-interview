@@ -42,7 +42,7 @@ export const DButton = styled.button`
     height: 40px;
     border-style: none;
     font-size: 20px;
-    border-radius: 15%;
+    border-radius: 15px;
     float: right;
     margin-right: 20px;
     margin-top: 15px;
