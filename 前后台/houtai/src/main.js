@@ -6,6 +6,9 @@ import App from './App.vue';
 import router from './router'
 import store from './store'
 
+//引入mock
+require('./mock.js');
+
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.prototype.$axios=axios;

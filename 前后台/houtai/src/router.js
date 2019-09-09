@@ -12,6 +12,7 @@ import ArticleList from './views/ArticleList.vue'
 import RecommendList from './views/RecommendList'
 import FourList from './views/FourList'
 import Detail from './views/Detail'
+import mock from './components/mock.vue'
 Vue.use(Router)
 
 const router = new Router({
@@ -42,6 +43,11 @@ const router = new Router({
       name: 'register',
       component: Register
     },
+    {
+        path: '/mock',
+        name: 'mocks',
+        component: mock
+      },
     {
       path: '/infoShow',
       name: 'infoShow',
